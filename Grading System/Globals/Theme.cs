@@ -7,5 +7,6 @@ namespace Grading_System.Globals
 {
     public static class Theme
     {
+        public static string selected = "";
     }
 }

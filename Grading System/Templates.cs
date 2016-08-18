@@ -28,18 +28,20 @@ namespace Grading_System
 
         private void Templates_Activated(object sender, EventArgs e)
         {
-            statusLabel.Text = GS.OutputView.ToString();
-        }
-
-        private void imgeTemplateSimple_Click(object sender, EventArgs e)
-        {
-            GS.setTemplate(GS.TableTemplates.Simple,statusLabel);
+            GS.setTheme(lstTemplates);
+            statusLabel.Text = "";
         }
 
         private void imgContinue_Click(object sender, EventArgs e)
         {
             Winforms.GradeType.Show();
             Winforms.Templates.Hide();
+        }
+
+        private void lstTemplates_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            statusLabel.Text = lstTemplates.SelectedItem.ToString();
+            Globals.Theme.selected = lstTemplates.SelectedItem.ToString();
         }
     }
 }

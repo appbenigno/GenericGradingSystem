@@ -8,34 +8,18 @@ namespace Grading_System
 {
     public class GS
     {
-        /// <summary>
-        /// Templates
-        /// </summary>
-        public enum TableTemplates
+        public static void setTheme(ListBox targetListbox)
         {
-            Nothing,
-            Simple,
-            Basic,
-            Corporate,
-        };
-
-        private static TableTemplates outputView = TableTemplates.Nothing;
-        public static TableTemplates OutputView
-        {
-            get
+            try
             {
-                return outputView;
+                GSThemes.List.AllTemplates(targetListbox);
             }
-            set
+            catch
             {
-                outputView = value;
+                MessageBox.Show("Unable to populate themes list. External file library 'GSThemes.dll' is missing or corrupt.\nThe program will load the default theme instead.", "Error Loading Templates", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                targetListbox.Items.Clear();
+                targetListbox.Items.Add("Simple");
             }
-        }
-
-        public static void setTemplate(TableTemplates tableTemplates, ToolStripStatusLabel statusNotify)
-        {
-            OutputView = tableTemplates;
-            statusNotify.Text = OutputView.ToString();
         }
     }
 }

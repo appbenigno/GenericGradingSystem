@@ -144,6 +144,15 @@
   <ItemGroup>
     <None Include="Resources\btn_continue.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Themes\GSThemes.csproj">
+      <Project>{840b91d4-3e63-4157-a130-68825ffb94f4}</Project>
+      <Name>GSThemes</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Templates\simple.htm" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
