@@ -20,7 +20,6 @@ namespace Grading_System
         {
             Winforms.Templates.Show();
             Winforms.Login.Hide();
-            //test
         }
     }
 }
