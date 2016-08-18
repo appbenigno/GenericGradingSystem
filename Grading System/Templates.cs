@@ -40,8 +40,8 @@ namespace Grading_System
 
         private void lstTemplates_SelectedIndexChanged(object sender, EventArgs e)
         {
-            statusLabel.Text = lstTemplates.SelectedItem.ToString();
-            Globals.Theme.selected = lstTemplates.SelectedItem.ToString();
+            statusLabel.Text = (string)lstTemplates.SelectedItem;
+            Globals.Theme.selected = (string)lstTemplates.SelectedItem;
         }
     }
 }
