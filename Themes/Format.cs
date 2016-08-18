@@ -7,5 +7,12 @@ namespace GSThemes
 {
     public class Format
     {
+        public enum Themes
+        {
+            Simple,
+            Blue
+        }
+
+        Themes 
     }
 }

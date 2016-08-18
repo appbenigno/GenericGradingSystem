@@ -52,6 +52,11 @@
     <Compile Include="Builder.Designer.cs">
       <DependentUpon>Builder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Globals\Builder.cs" />
+    <Compile Include="Globals\GradeType.cs" />
+    <Compile Include="Globals\Report.cs" />
+    <Compile Include="Globals\Templates.cs" />
+    <Compile Include="Globals\Transmutation.cs" />
     <Compile Include="GradeType.cs">
       <SubType>Form</SubType>
     </Compile>
