@@ -21,5 +21,9 @@ namespace Grading_System
             Winforms.Templates.Show();
             Winforms.Login.Hide();
         }
+
+        private void imgLogo_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
