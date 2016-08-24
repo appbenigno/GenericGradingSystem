@@ -19,6 +19,7 @@ namespace Grading_System
                 MessageBox.Show("Unable to populate themes list. External file library 'GSThemes.dll' is missing or corrupt.\nThe program will load the default theme instead.", "Error Loading Templates", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 targetListbox.Items.Clear();
                 targetListbox.Items.Add("Simple");
+                //test
             }
         }
     }
