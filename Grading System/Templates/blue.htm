@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Grading System</title>
+    <style type="text/css">
+        table#border {
+            width: 90%;
+            border-width: 1px;
+            border-style: solid;
+            border-color: lightgray;
+        }
+
+        table#header {
+            width: 100%;
+            height: 100px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: cornflowerblue;
+            font-family: Verdana;
+        }
+
+        table#body {
+            width: 100%;
+            border-width: 1px;
+            border-style: solid;
+            border-color: cornflowerblue;
+            font-family: Verdana;
+        }
+
+        td#title {
+            font-size: 36px;
+            background-color: cornflowerblue;
+            color: white;
+        }
+
+        tr#subtitle {
+            font-size: 12px;
+        }
+
+        table#footer {
+            width: 100%;
+            height: 50px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: cornflowerblue;
+            font-family: Verdana;
+        }
+
+        tr#results {
+            font-size: 14px;
+        }
+
+        td#grade {
+            border: 1px solid dodgerblue;
+            width: 125px;
+        }
+
+        td#range {
+            border: 1px solid dodgerblue;
+            width: 125px;
+        }
+
+        td#remarks {
+            border: 1px solid dodgerblue;
+            width: 125px;
+        }
+
+        tr.activities {
+            font-size: 12px;
+        }
+
+        tr#activitytitle {
+            height: 30px;
+            background-color: cornflowerblue;
+        }
+
+        td.type {
+            width: 25%;
+        }
+
+        td.description {
+            width: 25%;
+        }
+
+        td.score {
+            width: 10%;
+            text-align: center;
+        }
+
+        td.maxscore {
+            width: 10%;
+            text-align: center;
+        }
+
+        td.average {
+            text-align: center;
+            font-size: 14px;
+            border-top: 3px ridge blue;
+            border-bottom: 3px inset blue;
+        }
+
+        td.details {
+            text-align: center;
+            font-size: 14px;
+            border-top: 2px solid dodgerblue;
+            border-bottom: 2px solid dodgerblue;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <table id="border" align="center">
+        <tr>
+            <td>
+                <table id="header" align="center">
+                    <tr>
+                        <td id="title" align="center" colspan="6">
+                            Grading System
+                        </td>
+                    </tr>
+                    <tr id="subtitle">
+                        <td width="50px">Name:</td>
+                        <td>John Doe</td>
+                        <td width="125px">Subject/Section:</td>
+                        <td>5 Mulawin</td>
+                        <td width="50px">Period:</td>
+                        <td>3rd Trimester</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------>
+        <tr>
+            <td>
+                <table id="body" align="center">
+                    <tr id="activitytitle">
+                        <th class="activitytitle" width="75%" colspan="4">Assignment (30%)</th>
+                        <th class="activitytitle" width="25%">Average</th>
+                    </tr>
+                    <tr>
+                        <td class="details">Type</td>
+                        <td class="details">Description</td>
+                        <td class="details">Score</td>
+                        <td class="details">Max Score</td>
+                        <td></td>
+                    </tr>
+                    <tr class="activities">
+                        <td class="type">Assignment 1</td>
+                        <td class="description">Introduction to Mathematics</td>
+                        <td class="score">80</td>
+                        <td class="maxscore">100</td>
+                        <td></td>
+                    </tr>
+                    <tr class="activities">
+                        <td class="type">Assignment 2</td>
+                        <td class="description">Introduction to Science</td>
+                        <td class="score">90</td>
+                        <td class="maxscore">100</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="average">170</td>
+                        <td class="average">200</td>
+                        <td class="average">85</td>
+                    </tr>
+                </table>
+                <table id="body" align="center">
+                    <tr id="activitytitle">
+                        <th class="activitytitle" width="75%" colspan="4">Project (70%)</th>
+                        <th class="activitytitle" width="25%">Average</th>
+                    </tr>
+                    <tr>
+                        <td class="details">Type</td>
+                        <td class="details">Description</td>
+                        <td class="details">Score</td>
+                        <td class="details">Max Score</td>
+                        <td></td>
+                    </tr>
+                    <tr class="activities">
+                        <td class="type">Project</td>
+                        <td class="description">Introduction to Quantum Physics</td>
+                        <td class="score">85</td>
+                        <td class="maxscore">100</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="average">95</td>
+                        <td class="average">100</td>
+                        <td class="average">95</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!------------------------------------------------------------------------------------------------>
+        <!------------------------------------------------------------------------------------------------>
+        <tr>
+            <td>
+                <table id="footer" align="center">
+                    <tr id="results">
+                        <td align="right">Grade:</td>
+                        <td id="grade">A+</td>
+                        <td align="right">Range:</td>
+                        <td id="range">99.99</td>
+                        <td align="right">Remarks:</td>
+                        <td id="remarks">Excellent</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
