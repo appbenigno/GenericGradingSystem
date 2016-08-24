@@ -9,7 +9,11 @@ namespace GSThemes.Theme
     {
         public override string Activities()
         {
-            return base.Activities();
+            string result = string.Concat(
+                "tr.activities{" + "\n",
+                "  font-size:12px;" + "\n",
+                "}" + "\n");
+            return result;
         }
         public override string ActivityTitle()
         {
