@@ -151,8 +151,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Templates\blue.htm" />
-    <Content Include="Templates\simple.htm" />
+    <None Include="Resources\template_simple.PNG" />
+    <None Include="Resources\template_blue.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

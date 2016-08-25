@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using GSThemes;
 
 namespace Grading_System
 {
@@ -28,8 +29,7 @@ namespace Grading_System
 
         private void Templates_Activated(object sender, EventArgs e)
         {
-            GS.setTheme(lstTemplates);
-            statusLabel.Text = "";
+            GS.getThemes(lstTemplates);
         }
 
         private void imgContinue_Click(object sender, EventArgs e)
@@ -40,8 +40,8 @@ namespace Grading_System
 
         private void lstTemplates_SelectedIndexChanged(object sender, EventArgs e)
         {
-            statusLabel.Text = (string)lstTemplates.SelectedItem;
-            Globals.Theme.selected = (string)lstTemplates.SelectedItem;
+            Template.setTemplate(lstTemplates, Globals.Theme.selectedTheme, imgTemplatePreview);
+            statusLabel.Text = Globals.Theme.selectedTheme.ToString();
         }
     }
 }

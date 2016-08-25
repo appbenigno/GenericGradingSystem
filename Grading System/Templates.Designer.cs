@@ -34,12 +34,12 @@
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.imgContinue = new System.Windows.Forms.PictureBox();
-            this.imgTemplateSimple = new System.Windows.Forms.PictureBox();
+            this.imgTemplatePreview = new System.Windows.Forms.PictureBox();
             this.lstTemplates = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgContinue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgTemplateSimple)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgTemplatePreview)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTemplateSimple
@@ -65,7 +65,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(107, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(106, 17);
             this.toolStripStatusLabel1.Text = "Selected Template:";
             // 
             // statusLabel
@@ -96,16 +96,15 @@
             this.imgContinue.TabStop = false;
             this.imgContinue.Click += new System.EventHandler(this.imgContinue_Click);
             // 
-            // imgTemplateSimple
+            // imgTemplatePreview
             // 
-            this.imgTemplateSimple.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgTemplateSimple.Image = global::Grading_System.ProjResource.template_simple;
-            this.imgTemplateSimple.Location = new System.Drawing.Point(376, 70);
-            this.imgTemplateSimple.Name = "imgTemplateSimple";
-            this.imgTemplateSimple.Size = new System.Drawing.Size(401, 279);
-            this.imgTemplateSimple.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgTemplateSimple.TabIndex = 0;
-            this.imgTemplateSimple.TabStop = false;
+            this.imgTemplatePreview.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgTemplatePreview.Location = new System.Drawing.Point(376, 70);
+            this.imgTemplatePreview.Name = "imgTemplatePreview";
+            this.imgTemplatePreview.Size = new System.Drawing.Size(401, 279);
+            this.imgTemplatePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgTemplatePreview.TabIndex = 0;
+            this.imgTemplatePreview.TabStop = false;
             // 
             // lstTemplates
             // 
@@ -140,7 +139,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.lblTemplateSimple);
-            this.Controls.Add(this.imgTemplateSimple);
+            this.Controls.Add(this.imgTemplatePreview);
             this.MaximizeBox = false;
             this.Name = "Templates";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -150,7 +149,7 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgContinue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgTemplateSimple)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgTemplatePreview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,7 +157,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox imgTemplateSimple;
+        private System.Windows.Forms.PictureBox imgTemplatePreview;
         private System.Windows.Forms.Label lblTemplateSimple;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;

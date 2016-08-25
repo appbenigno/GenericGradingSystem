@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using GSThemes;
 
 namespace Grading_System.Globals
 {
-    public static class Theme
+    public class Theme
     {
-        public static string selected = "";
+        //public static string selected = "";
+        public static Lister.TableTemplates selectedTheme;
     }
 }

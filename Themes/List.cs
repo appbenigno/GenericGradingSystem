@@ -7,13 +7,13 @@ using System.Windows.Forms;
 
 namespace GSThemes
 {
-    public class List
+    public class Lister
     {
         /// <summary>
         /// Templates
         /// </summary>
         /// 
-        private enum TableTemplates
+        public enum TableTemplates
         {
             Simple,
             Blue
