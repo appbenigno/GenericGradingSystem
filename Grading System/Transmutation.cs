@@ -11,9 +11,63 @@ namespace Grading_System
 {
     public partial class Transmutation : Form
     {
+        string gradeTypeChoice = Globals.GradeType.gradeTypeChoice;
         public Transmutation()
         {
             InitializeComponent();
+            if (gradeTypeChoice == "letter")
+            {
+                lvGrade.Clear();
+                lvGrade.Columns.Add("Grade", 100);
+                lvGrade.View = View.Details;
+                lvGrade.GridLines = true;
+                lvGrade.FullRowSelect = true;
+
+
+                //Add items in the listview
+                string[] arr = new string[4];
+                ListViewItem itm;
+                //Add first item
+                arr[0] = "A+";
+                itm = new ListViewItem(arr);
+                lvGrade.Items.Add(itm);
+                arr[0] = "A";
+                itm = new ListViewItem(arr);
+                lvGrade.Items.Add(itm);
+                arr[0] = "A-";
+                itm = new ListViewItem(arr);
+                lvGrade.Items.Add(itm);
+                arr[0] = "B+";
+                itm = new ListViewItem(arr);
+                lvGrade.Items.Add(itm);
+                arr[0] = "B";
+                itm = new ListViewItem(arr);
+                lvGrade.Items.Add(itm);
+                arr[0] = "B-";
+                itm = new ListViewItem(arr);
+                lvGrade.Items.Add(itm);
+                arr[0] = "C+";
+                itm = new ListViewItem(arr);
+                lvGrade.Items.Add(itm);
+                arr[0] = "C";
+                itm = new ListViewItem(arr);
+                lvGrade.Items.Add(itm);
+                arr[0] = "C-";
+                itm = new ListViewItem(arr);
+                lvGrade.Items.Add(itm);
+                arr[0] = "D+";
+                itm = new ListViewItem(arr);
+                lvGrade.Items.Add(itm);
+                arr[0] = "D";
+                itm = new ListViewItem(arr);
+                lvGrade.Items.Add(itm);
+                arr[0] = "D-";
+                itm = new ListViewItem(arr);
+                lvGrade.Items.Add(itm);
+                arr[0] = "F";
+                itm = new ListViewItem(arr);
+                lvGrade.Items.Add(itm);
+            }
         }
 
         /*private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
