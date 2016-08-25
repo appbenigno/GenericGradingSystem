@@ -28,18 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lvGPA = new System.Windows.Forms.ListView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lvGrade = new System.Windows.Forms.ListView();
+            this.lvPercentage = new System.Windows.Forms.ListView();
+            this.chGrade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chPercentage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
-            // 
-            // lvGPA
-            // 
-            this.lvGPA.Location = new System.Drawing.Point(0, -1);
-            this.lvGPA.Name = "lvGPA";
-            this.lvGPA.Size = new System.Drawing.Size(508, 260);
-            this.lvGPA.TabIndex = 1;
-            this.lvGPA.UseCompatibleStateImageBehavior = false;
-            this.lvGPA.View = System.Windows.Forms.View.Details;
             // 
             // comboBox1
             // 
@@ -54,13 +48,42 @@
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // lvGrade
+            // 
+            this.lvGrade.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chGrade});
+            this.lvGrade.Location = new System.Drawing.Point(80, 25);
+            this.lvGrade.Name = "lvGrade";
+            this.lvGrade.Size = new System.Drawing.Size(152, 248);
+            this.lvGrade.TabIndex = 3;
+            this.lvGrade.UseCompatibleStateImageBehavior = false;
+            // 
+            // lvPercentage
+            // 
+            this.lvPercentage.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chPercentage});
+            this.lvPercentage.Location = new System.Drawing.Point(258, 27);
+            this.lvPercentage.Name = "lvPercentage";
+            this.lvPercentage.Size = new System.Drawing.Size(148, 246);
+            this.lvPercentage.TabIndex = 4;
+            this.lvPercentage.UseCompatibleStateImageBehavior = false;
+            // 
+            // chGrade
+            // 
+            this.chGrade.Text = "Grade";
+            // 
+            // chPercentage
+            // 
+            this.chPercentage.Text = "Percentage";
+            // 
             // Transmutation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 379);
+            this.Controls.Add(this.lvPercentage);
+            this.Controls.Add(this.lvGrade);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.lvGPA);
             this.MaximizeBox = false;
             this.Name = "Transmutation";
             this.Text = "Transmutation Table";
@@ -70,8 +93,11 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView lvGPA;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ListView lvGrade;
+        private System.Windows.Forms.ColumnHeader chGrade;
+        private System.Windows.Forms.ListView lvPercentage;
+        private System.Windows.Forms.ColumnHeader chPercentage;
     }
 }
 

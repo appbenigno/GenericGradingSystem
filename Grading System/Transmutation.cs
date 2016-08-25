@@ -16,7 +16,7 @@ namespace Grading_System
             InitializeComponent();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        /*private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox1.Text == "Letters")
             {
@@ -289,6 +289,7 @@ namespace Grading_System
                 lvGPA.Items.Add(itm);
             }
         }
+        */
     }
 }
 //gab was here
