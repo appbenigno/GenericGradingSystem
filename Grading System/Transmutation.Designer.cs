@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            
             this.lvGrade = new System.Windows.Forms.ListView();
             this.lvPercentage = new System.Windows.Forms.ListView();
             this.chGrade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -37,16 +37,7 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Letters",
-            "Uno is Gold",
-            "4 is Gold"});
-            this.comboBox1.Location = new System.Drawing.Point(194, 294);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(126, 21);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            
             // 
             // lvGrade
             // 
@@ -83,7 +74,6 @@
             this.ClientSize = new System.Drawing.Size(508, 379);
             this.Controls.Add(this.lvPercentage);
             this.Controls.Add(this.lvGrade);
-            this.Controls.Add(this.comboBox1);
             this.MaximizeBox = false;
             this.Name = "Transmutation";
             this.Text = "Transmutation Table";
