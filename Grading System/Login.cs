@@ -25,5 +25,21 @@ namespace Grading_System
         private void imgLogo_Click(object sender, EventArgs e)
         {
         }
+
+        private void imgContinue_Click(object sender, EventArgs e)
+        {
+            Winforms.Templates.Show();
+            Winforms.Login.Hide();
+        }
+
+        private void imgContinue_MouseMove(object sender, MouseEventArgs e)
+        {
+            imgContinue.Image = ProjResource.button_continue_hover;
+        }
+
+        private void imgContinue_MouseLeave(object sender, EventArgs e)
+        {
+            imgContinue.Image = ProjResource.button_continue;
+        }
     }
 }

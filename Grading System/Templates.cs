@@ -40,8 +40,30 @@ namespace Grading_System
 
         private void lstTemplates_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Template.setTemplate(lstTemplates, Globals.Theme.selectedTheme, imgTemplatePreview);
-            statusLabel.Text = Globals.Theme.selectedTheme.ToString();
+            Template.setTemplate(lstTemplates, Globals.Theme.selectedTheme, imgTemplatePreview, statusLabel);
+        }
+
+        private void imgOK_MouseMove(object sender, MouseEventArgs e)
+        {
+            imgOK.Image = ProjResource.button_ok_hover;
+        }
+
+        private void imgOK_MouseLeave(object sender, EventArgs e)
+        {
+            imgOK.Image = ProjResource.button_ok;
+        }
+
+        private void imgOK_Click(object sender, EventArgs e)
+        {
+            if (statusLabel.Text.Equals("-"))
+            {
+                MessageBox.Show("Select a theme first!", "No selected template", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                Winforms.Builder.Show();
+                Winforms.Templates.Hide();
+            }
         }
     }
 }
