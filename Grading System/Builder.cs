@@ -23,5 +23,26 @@ namespace Grading_System
                 e.Cancel = true;
             }
         }
+
+        private void mnuReports_Click(object sender, EventArgs e)
+        {
+            Winforms.Report.Show();
+        }
+
+        private void mnuTransmutationTable_Click(object sender, EventArgs e)
+        {
+            Winforms.TransmutationTable.Show();
+        }
+
+        private void mnuGradeType_Click(object sender, EventArgs e)
+        {
+            Winforms.GradeType.Show();
+        }
+
+        private void mnuTemplates_Click(object sender, EventArgs e)
+        {
+            Winforms.Templates.Show();
+            Winforms.Builder.Hide();
+        }
     }
 }

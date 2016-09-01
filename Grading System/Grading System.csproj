@@ -110,6 +110,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ProjResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Templates.resx">
       <DependentUpon>Templates.cs</DependentUpon>
     </EmbeddedResource>

@@ -40,7 +40,11 @@ namespace Grading_System
 
         private void lstTemplates_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Template.setTemplate(lstTemplates, Globals.Theme.selectedTheme, imgTemplatePreview, statusLabel);
+            try
+            {
+                Template.setTemplate(lstTemplates, Globals.Theme.selectedTheme, imgTemplatePreview, statusLabel);
+            }
+            catch { }
         }
 
         private void imgOK_MouseMove(object sender, MouseEventArgs e)
