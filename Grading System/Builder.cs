@@ -18,10 +18,6 @@ namespace Grading_System
 
         private void Builder_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                e.Cancel = true;
-            }
         }
 
         private void mnuReports_Click(object sender, EventArgs e)
@@ -43,6 +39,21 @@ namespace Grading_System
         {
             Winforms.Templates.Show();
             Winforms.Builder.Hide();
+        }
+
+        private void Builder_Load(object sender, EventArgs e)
+        {
+            GS.getActivities(lvActivitiesList);
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            GS.addremActivity(lvActivitiesList, lvActivities);
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            GS.addremActivity(lvActivities, lvActivitiesList);
         }
     }
 }

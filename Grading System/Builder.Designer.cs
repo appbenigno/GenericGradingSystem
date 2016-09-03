@@ -28,31 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
             "Perez, Angel",
             "Assignment",
             "Introduction to Science and Technology",
             "100",
             "100"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
             "Doe, John",
             "Assignment",
             "Introduction to Science",
             "90",
             "100"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Doe, John");
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("Doe, John");
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuTemplates = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGradeType = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTransmutationTable = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuReports = new System.Windows.Forms.ToolStripMenuItem();
             this.lstClass = new System.Windows.Forms.ListView();
-            this.label1 = new System.Windows.Forms.Label();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label1 = new System.Windows.Forms.Label();
+            this.lvActivitiesList = new System.Windows.Forms.ListView();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lvActivities = new System.Windows.Forms.ListView();
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,21 +80,21 @@
             // mnuTemplates
             // 
             this.mnuTemplates.Name = "mnuTemplates";
-            this.mnuTemplates.Size = new System.Drawing.Size(73, 20);
+            this.mnuTemplates.Size = new System.Drawing.Size(74, 20);
             this.mnuTemplates.Text = "Templates";
             this.mnuTemplates.Click += new System.EventHandler(this.mnuTemplates_Click);
             // 
             // mnuGradeType
             // 
             this.mnuGradeType.Name = "mnuGradeType";
-            this.mnuGradeType.Size = new System.Drawing.Size(78, 20);
+            this.mnuGradeType.Size = new System.Drawing.Size(79, 20);
             this.mnuGradeType.Text = "Grade Type";
             this.mnuGradeType.Click += new System.EventHandler(this.mnuGradeType_Click);
             // 
             // mnuTransmutationTable
             // 
             this.mnuTransmutationTable.Name = "mnuTransmutationTable";
-            this.mnuTransmutationTable.Size = new System.Drawing.Size(127, 20);
+            this.mnuTransmutationTable.Size = new System.Drawing.Size(129, 20);
             this.mnuTransmutationTable.Text = "Transmutation Table";
             this.mnuTransmutationTable.Click += new System.EventHandler(this.mnuTransmutationTable_Click);
             // 
@@ -107,24 +115,15 @@
             this.columnHeader5});
             this.lstClass.FullRowSelect = true;
             this.lstClass.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
-            this.lstClass.Location = new System.Drawing.Point(12, 61);
+            listViewItem10,
+            listViewItem11,
+            listViewItem12});
+            this.lstClass.Location = new System.Drawing.Point(12, 301);
             this.lstClass.Name = "lstClass";
-            this.lstClass.Size = new System.Drawing.Size(730, 335);
+            this.lstClass.Size = new System.Drawing.Size(730, 137);
             this.lstClass.TabIndex = 1;
             this.lstClass.UseCompatibleStateImageBehavior = false;
             this.lstClass.View = System.Windows.Forms.View.Details;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Class Record";
             // 
             // columnHeader1
             // 
@@ -151,11 +150,97 @@
             this.columnHeader5.Text = "Max Score";
             this.columnHeader5.Width = 63;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 282);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Entries";
+            // 
+            // lvActivitiesList
+            // 
+            this.lvActivitiesList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lvActivitiesList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6,
+            this.columnHeader7});
+            this.lvActivitiesList.FullRowSelect = true;
+            this.lvActivitiesList.Location = new System.Drawing.Point(16, 47);
+            this.lvActivitiesList.MultiSelect = false;
+            this.lvActivitiesList.Name = "lvActivitiesList";
+            this.lvActivitiesList.Size = new System.Drawing.Size(221, 220);
+            this.lvActivitiesList.TabIndex = 4;
+            this.lvActivitiesList.UseCompatibleStateImageBehavior = false;
+            this.lvActivitiesList.View = System.Windows.Forms.View.Details;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(243, 136);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 5;
+            this.btnAdd.Text = ">>";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Location = new System.Drawing.Point(243, 165);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(75, 23);
+            this.btnRemove.TabIndex = 6;
+            this.btnRemove.Text = "<<";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Activity Type";
+            this.columnHeader6.Width = 139;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Weight";
+            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader7.Width = 49;
+            // 
+            // lvActivities
+            // 
+            this.lvActivities.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lvActivities.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader8,
+            this.columnHeader9});
+            this.lvActivities.FullRowSelect = true;
+            this.lvActivities.Location = new System.Drawing.Point(324, 47);
+            this.lvActivities.MultiSelect = false;
+            this.lvActivities.Name = "lvActivities";
+            this.lvActivities.Size = new System.Drawing.Size(221, 220);
+            this.lvActivities.TabIndex = 7;
+            this.lvActivities.UseCompatibleStateImageBehavior = false;
+            this.lvActivities.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Activity Type";
+            this.columnHeader8.Width = 139;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Weight";
+            this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader9.Width = 49;
+            // 
             // Builder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(754, 479);
+            this.Controls.Add(this.lvActivities);
+            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.lvActivitiesList);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lstClass);
             this.Controls.Add(this.menuStrip1);
@@ -163,6 +248,7 @@
             this.Name = "Builder";
             this.Text = "Builder";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Builder_FormClosing);
+            this.Load += new System.EventHandler(this.Builder_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -184,5 +270,13 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ListView lvActivitiesList;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.ListView lvActivities;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
     }
 }

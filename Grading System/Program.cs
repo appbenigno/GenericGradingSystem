@@ -15,7 +15,7 @@ namespace Grading_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(Winforms.Login);
+            Application.Run(Winforms.Builder);
         }
     }
 }
