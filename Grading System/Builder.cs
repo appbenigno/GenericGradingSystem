@@ -55,5 +55,46 @@ namespace Grading_System
         {
             GS.addremActivity(lvActivities, lvActivitiesList);
         }
+
+        private void lvActivities_DoubleClick(object sender, EventArgs e)
+        {
+            lvActivitiesList.Enabled = false; lvActivities.Enabled = false; btnAdd.Enabled = false; btnRemove.Enabled = false; txtWeight.Enabled = true;
+            GS.editActivity(lvActivities, txtWeight);
+        }
+
+        private void lvActivitiesList_DoubleClick(object sender, EventArgs e)
+        {
+            GS.addremActivity(lvActivitiesList, lvActivities);
+        }
+
+        private void txtWeight_Click(object sender, EventArgs e)
+        {
+            txtWeight.Select(0, txtWeight.TextLength);
+        }
+
+        private void txtWeight_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int num = Convert.ToInt32(txtWeight.Text);
+            }
+            catch
+            {
+                txtWeight.Text = "0";
+            }
+        }
+
+        private void txtWeight_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                GS.modifyActivityChanges(txtWeight, lvActivities);
+                GS.validateWeight(lvActivities, lblTotalWeight);
+                if (GS.getWeight(lvActivities) <= 100)
+                {
+                    txtWeight.Enabled = false; lvActivities.Enabled = true; lvActivitiesList.Enabled = true; btnAdd.Enabled = true; btnRemove.Enabled = true;
+                }
+            }
+        }
     }
 }
