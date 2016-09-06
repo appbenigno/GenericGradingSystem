@@ -59,6 +59,7 @@ namespace Grading_System
         private void lvActivities_DoubleClick(object sender, EventArgs e)
         {
             lvActivitiesList.Enabled = false; lvActivities.Enabled = false; btnAdd.Enabled = false; btnRemove.Enabled = false; txtWeight.Enabled = true;
+            txtWeight.Focus();
             GS.editActivity(lvActivities, txtWeight);
         }
 
@@ -95,6 +96,11 @@ namespace Grading_System
                     txtWeight.Enabled = false; lvActivities.Enabled = true; lvActivitiesList.Enabled = true; btnAdd.Enabled = true; btnRemove.Enabled = true;
                 }
             }
+        }
+
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {
+            GS.addStudent(txtSection, txtFamilyName, txtGivenName, txtMiddleInitial, lvSection);
         }
     }
 }

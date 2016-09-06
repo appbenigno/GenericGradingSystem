@@ -170,6 +170,38 @@ namespace Grading_System
             }
         }
 
+        public static void addStudent(TextBox section, TextBox familyName, TextBox givenName, TextBox middleInitial, ListView targetList)
+        {
+            if (section.Text.Length > 0 && familyName.Text.Length > 0 && givenName.Text.Length > 0 && middleInitial.Text.Length > 0)
+            {
+                ListViewItem lv = new ListViewItem(section.Text);
+                lv.SubItems.Add(familyName.Text);
+                lv.SubItems.Add(givenName.Text);
+                lv.SubItems.Add(middleInitial.Text);
+
+                if (targetList.Items.Contains(lv))
+                {
+                    MessageBox.Show(string.Concat("'", familyName.Text, ", ", givenName.Text, " ", middleInitial.Text, ".", "'", " already exists!"), "Duplicate record", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    targetList.Items.Add(lv);
+                }
+            }
+            else
+            {
+                MessageBox.Show("All fields are mandatory!", "Empty field(s) detected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public static void modifyStudent(TextBox section, TextBox familyName, TextBox givenName, TextBox middleInitial, ListView targetList)
+        {
+
+        }
+        public static void deleteStudent(TextBox section, TextBox familyName, TextBox givenName, TextBox middleInitial, ListView targetList)
+        {
+
+        }
+
         //--------------------------------------------------
         // Themes
         //--------------------------------------------------
