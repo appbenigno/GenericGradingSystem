@@ -169,5 +169,24 @@ namespace Grading_System
             tabBuilder.Width = this.Width - 40;
             lvEntries.Width = this.Width - 40;
         }
+
+        private void btnCancelEntry_Click(object sender, EventArgs e)
+        {
+            FormControl.Entries.Cancel(txtDescription, txtScore, txtMaxScore, btnAddEntry, btnUpdateEntry, btnDeleteEntry, btnCancelEntry);
+        }
+
+        private void lvEntries_Click(object sender, EventArgs e)
+        {
+            if (flags.isRaised("building"))
+            {
+                try
+                {
+                    txtDescription.Text = lvEntries.SelectedItems[0].SubItems[3].Text;
+                    txtScore.Text = lvEntries.SelectedItems[0].SubItems[4].Text;
+                    txtMaxScore.Text = lvEntries.SelectedItems[0].SubItems[5].Text;
+                }
+                catch { }
+            }
+        }
     }
 }

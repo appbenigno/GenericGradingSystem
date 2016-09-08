@@ -29,50 +29,50 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Science and Technology",
             "150",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Mathematics",
             "125",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Spelling",
             "115",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Cloud Computing",
             "150",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "Jedi Knights",
             "Skywalker",
             "Luke",
             "_"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "Jedi Masters",
             "Skywalker",
             "Anakin",
             "_"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
             "Jedi Masters",
             "Kenobi",
             "Obi-Wan",
             "_"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
             "Sith Lords",
             "Tyranus",
             "Darth",
@@ -141,6 +141,8 @@
             this.btnUpdateEntry = new System.Windows.Forms.Button();
             this.btnDeleteEntry = new System.Windows.Forms.Button();
             this.btnCancelEntry = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupClassList.SuspendLayout();
             this.tabBuilder.SuspendLayout();
@@ -204,10 +206,10 @@
             this.columnHeader5});
             this.lvEntries.FullRowSelect = true;
             this.lvEntries.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem9,
-            listViewItem10,
-            listViewItem11,
-            listViewItem12});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4});
             this.lvEntries.Location = new System.Drawing.Point(12, 524);
             this.lvEntries.Margin = new System.Windows.Forms.Padding(4);
             this.lvEntries.Name = "lvEntries";
@@ -215,6 +217,7 @@
             this.lvEntries.TabIndex = 1;
             this.lvEntries.UseCompatibleStateImageBehavior = false;
             this.lvEntries.View = System.Windows.Forms.View.Details;
+            this.lvEntries.Click += new System.EventHandler(this.lvEntries_Click);
             // 
             // columnHeader1
             // 
@@ -363,10 +366,10 @@
             this.lvSection.FullRowSelect = true;
             this.lvSection.HideSelection = false;
             this.lvSection.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem13,
-            listViewItem14,
-            listViewItem15,
-            listViewItem16});
+            listViewItem5,
+            listViewItem6,
+            listViewItem7,
+            listViewItem8});
             this.lvSection.Location = new System.Drawing.Point(0, 190);
             this.lvSection.Name = "lvSection";
             this.lvSection.Size = new System.Drawing.Size(429, 191);
@@ -661,30 +664,33 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(15, 170);
+            this.txtDescription.Enabled = false;
+            this.txtDescription.Location = new System.Drawing.Point(10, 170);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(363, 22);
+            this.txtDescription.Size = new System.Drawing.Size(412, 22);
             this.txtDescription.TabIndex = 12;
             // 
             // txtScore
             // 
-            this.txtScore.Location = new System.Drawing.Point(15, 109);
+            this.txtScore.Enabled = false;
+            this.txtScore.Location = new System.Drawing.Point(10, 226);
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(169, 22);
             this.txtScore.TabIndex = 13;
             // 
             // txtMaxScore
             // 
-            this.txtMaxScore.Location = new System.Drawing.Point(15, 137);
+            this.txtMaxScore.Enabled = false;
+            this.txtMaxScore.Location = new System.Drawing.Point(253, 226);
             this.txtMaxScore.Name = "txtMaxScore";
             this.txtMaxScore.Size = new System.Drawing.Size(169, 22);
             this.txtMaxScore.TabIndex = 14;
             // 
             // btnAddEntry
             // 
-            this.btnAddEntry.Location = new System.Drawing.Point(15, 40);
+            this.btnAddEntry.Location = new System.Drawing.Point(58, 39);
             this.btnAddEntry.Name = "btnAddEntry";
-            this.btnAddEntry.Size = new System.Drawing.Size(100, 36);
+            this.btnAddEntry.Size = new System.Drawing.Size(312, 36);
             this.btnAddEntry.TabIndex = 15;
             this.btnAddEntry.Text = "Add Entry";
             this.btnAddEntry.UseVisualStyleBackColor = true;
@@ -701,7 +707,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(201, 137);
+            this.label7.Location = new System.Drawing.Point(12, 151);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 16);
             this.label7.TabIndex = 17;
@@ -709,6 +715,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.btnCancelEntry);
             this.groupBox1.Controls.Add(this.btnDeleteEntry);
             this.groupBox1.Controls.Add(this.btnUpdateEntry);
@@ -726,7 +734,8 @@
             // 
             // btnUpdateEntry
             // 
-            this.btnUpdateEntry.Location = new System.Drawing.Point(121, 40);
+            this.btnUpdateEntry.Enabled = false;
+            this.btnUpdateEntry.Location = new System.Drawing.Point(58, 81);
             this.btnUpdateEntry.Name = "btnUpdateEntry";
             this.btnUpdateEntry.Size = new System.Drawing.Size(100, 36);
             this.btnUpdateEntry.TabIndex = 18;
@@ -735,7 +744,8 @@
             // 
             // btnDeleteEntry
             // 
-            this.btnDeleteEntry.Location = new System.Drawing.Point(227, 40);
+            this.btnDeleteEntry.Enabled = false;
+            this.btnDeleteEntry.Location = new System.Drawing.Point(164, 81);
             this.btnDeleteEntry.Name = "btnDeleteEntry";
             this.btnDeleteEntry.Size = new System.Drawing.Size(100, 36);
             this.btnDeleteEntry.TabIndex = 19;
@@ -744,12 +754,32 @@
             // 
             // btnCancelEntry
             // 
-            this.btnCancelEntry.Location = new System.Drawing.Point(227, 82);
+            this.btnCancelEntry.Enabled = false;
+            this.btnCancelEntry.Location = new System.Drawing.Point(270, 81);
             this.btnCancelEntry.Name = "btnCancelEntry";
             this.btnCancelEntry.Size = new System.Drawing.Size(100, 36);
             this.btnCancelEntry.TabIndex = 20;
             this.btnCancelEntry.Text = "Cancel";
             this.btnCancelEntry.UseVisualStyleBackColor = true;
+            this.btnCancelEntry.Click += new System.EventHandler(this.btnCancelEntry_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 207);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 16);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Score";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(251, 207);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 16);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Max Score";
             // 
             // Builder
             // 
@@ -852,5 +882,7 @@
         private System.Windows.Forms.Button btnDeleteEntry;
         private System.Windows.Forms.Button btnUpdateEntry;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
     }
 }

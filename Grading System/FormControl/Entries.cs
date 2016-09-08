@@ -8,25 +8,43 @@ namespace Grading_System.FormControl
 {
     public class Entries
     {
-        public static void Edit()
+        public static void Edit(TextBox description, TextBox score, TextBox maxscore, Button add, Button update, Button delete, Button cancel)
         {
-
+            description.Enabled = true;
+            score.Enabled = true;
+            maxscore.Enabled = true;
+            add.Enabled = false;
+            update.Enabled = true;
+            delete.Enabled = true;
+            cancel.Enabled = true;
         }
         public static void Confirm()
         {
 
         }
-        public static void Delete()
+        public static void Delete(TextBox description, TextBox score, TextBox maxscore, Button add, Button update, Button delete, Button cancel)
         {
-
+            description.Enabled = false;
+            description.Text = "";
+            score.Enabled = false;
+            score.Text = "";
+            maxscore.Enabled = false;
+            maxscore.Text = "";
+            add.Enabled = true;
+            update.Enabled = false;
+            delete.Enabled = false;
+            cancel.Enabled = false;
         }
 
-        public static void Cancel(TextBox description, TextBox score, TextBox maxscore, Button update, Button delete, Button cancel)
+        public static void Cancel(TextBox description, TextBox score, TextBox maxscore, Button add, Button update, Button delete, Button cancel)
         {
             description.Enabled = false;
             score.Enabled = false;
             maxscore.Enabled = false;
-
+            add.Enabled = true;
+            update.Enabled = false;
+            delete.Enabled = false;
+            cancel.Enabled = false;
         }
     }
 }

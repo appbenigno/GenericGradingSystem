@@ -380,6 +380,19 @@ namespace Grading_System
             }
         }
 
+        public static void deleteEntry(ListView targetList)
+        {
+            if (MessageBox.Show("Are you sure you want to delete?", "Confirm deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                targetList.SelectedItems[0].Remove();
+            }
+        }
+
+        public static void editEntry()
+        {
+
+        }
+
         //--------------------------------------------------
         // Themes
         //--------------------------------------------------
