@@ -55,6 +55,7 @@
     <Compile Include="Builder.Designer.cs">
       <DependentUpon>Builder.cs</DependentUpon>
     </Compile>
+    <Compile Include="computation.cs" />
     <Compile Include="flags.cs" />
     <Compile Include="FormControl\Activities.cs" />
     <Compile Include="FormControl\AddStudent.cs" />

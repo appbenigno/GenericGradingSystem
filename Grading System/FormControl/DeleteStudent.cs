@@ -8,13 +8,14 @@ namespace Grading_System.FormControl
 {
     public class DeleteStudent
     {
-        public static void Confirm(TextBox section, TextBox familyName, TextBox givenName,TextBox middleInitial, Button update, Button cancel, Button delete, ListView targetList)
+        public static void Confirm(TextBox section, TextBox familyName, TextBox givenName,TextBox middleInitial, Button update, Button cancel, Button add, Button delete, ListView targetList)
         {
             familyName.Enabled = false;
             givenName.Enabled = false;
             middleInitial.Enabled = false;
             update.Enabled = false;
             cancel.Enabled = false;
+            add.Enabled = true;
             delete.Enabled = false;
             targetList.Enabled = true;
         }

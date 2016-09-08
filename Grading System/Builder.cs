@@ -139,7 +139,7 @@ namespace Grading_System
             GS.deleteStudent(txtSection, txtFamilyName, txtGivenName, txtMiddleInitial, lvSection);
             if (flags.isRaised("deletingstudent"))
             {
-                FormControl.DeleteStudent.Confirm(txtSection, txtFamilyName, txtGivenName, txtMiddleInitial, btnUpdate, btnCancel, btnDeleteStudent, lvSection);
+                FormControl.DeleteStudent.Confirm(txtSection, txtFamilyName, txtGivenName, txtMiddleInitial, btnUpdate, btnCancel, btnAddStudent, btnDeleteStudent, lvSection);
                 flags.destroy("deletingstudent");
             }
         }
@@ -147,6 +147,22 @@ namespace Grading_System
         private void lvSection_Validated(object sender, EventArgs e)
         {
             GS.validateGlobalsEntries(lvEntries);
+        }
+
+        private void lvSection_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GS.validateGlobalsEntries(lvEntries);
+        }
+
+        private void btnApplySection_Click(object sender, EventArgs e)
+        {
+            GS.applySection(txtSection, lvSection);
+        }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            double answer = Math.Round(compute.getAverage("Quiz", lvEntries) * 100 * compute.getPercentage("Quiz", lvActivities),2);
+            MessageBox.Show(answer.ToString());
         }
     }
 }

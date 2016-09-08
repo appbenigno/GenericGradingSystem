@@ -32,23 +32,37 @@
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Perez, Angel",
             "5 Mulawin",
-            "Assignment",
+            "Quiz",
             "Introduction to Science and Technology",
-            "100",
-            "100"}, -1);
+            "150",
+            "150"}, -1);
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Doe, John",
+            "Perez, Angel",
             "5 Mulawin",
-            "Assignment",
-            "Introduction to Science",
-            "90",
-            "100"}, -1);
+            "Quiz",
+            "Introduction to Mathematics",
+            "125",
+            "150"}, -1);
             System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Perez, Angel",
+            "5 Mulawin",
+            "Quiz",
+            "Introduction to Spelling",
+            "115",
+            "150"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Perez, Angel",
+            "5 Mulawin",
+            "Quiz",
+            "Introduction to Cloud Computing",
+            "150",
+            "150"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "5 Mulawin",
             "Alcasid",
             "Ogie",
             "A"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "5 Mulawin",
             "Alcasid",
             "Regine",
@@ -104,6 +118,8 @@
             this.dlgSaveClass = new System.Windows.Forms.SaveFileDialog();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnSaveSection = new System.Windows.Forms.Button();
+            this.btnApplySection = new System.Windows.Forms.Button();
+            this.btnTest = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -165,7 +181,9 @@
             this.lvEntries.FullRowSelect = true;
             this.lvEntries.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1,
-            listViewItem2});
+            listViewItem2,
+            listViewItem3,
+            listViewItem4});
             this.lvEntries.Location = new System.Drawing.Point(13, 492);
             this.lvEntries.Margin = new System.Windows.Forms.Padding(4);
             this.lvEntries.Name = "lvEntries";
@@ -305,6 +323,7 @@
             this.txtWeight.TabIndex = 8;
             this.txtWeight.Text = "0";
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip1.SetToolTip(this.txtWeight, "Hit \'Enter\' to apply changes");
             this.txtWeight.Click += new System.EventHandler(this.txtWeight_Click);
             this.txtWeight.TextChanged += new System.EventHandler(this.txtWeight_TextChanged);
             this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
@@ -331,6 +350,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnApplySection);
             this.groupBox1.Controls.Add(this.btnSaveSection);
             this.groupBox1.Controls.Add(this.btnCancel);
             this.groupBox1.Controls.Add(this.btnUpdate);
@@ -416,8 +436,8 @@
             this.lvSection.FullRowSelect = true;
             this.lvSection.HideSelection = false;
             this.lvSection.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3,
-            listViewItem4});
+            listViewItem5,
+            listViewItem6});
             this.lvSection.Location = new System.Drawing.Point(0, 190);
             this.lvSection.Name = "lvSection";
             this.lvSection.Size = new System.Drawing.Size(429, 191);
@@ -425,6 +445,7 @@
             this.toolTip1.SetToolTip(this.lvSection, "Double click to edit");
             this.lvSection.UseCompatibleStateImageBehavior = false;
             this.lvSection.View = System.Windows.Forms.View.Details;
+            this.lvSection.SelectedIndexChanged += new System.EventHandler(this.lvSection_SelectedIndexChanged);
             this.lvSection.Click += new System.EventHandler(this.lvSection_Click);
             this.lvSection.DoubleClick += new System.EventHandler(this.lvSection_DoubleClick);
             this.lvSection.Validated += new System.EventHandler(this.lvSection_Validated);
@@ -544,6 +565,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnTest);
             this.tabPage2.Controls.Add(this.lvActivitiesList);
             this.tabPage2.Controls.Add(this.lblTotalWeight);
             this.tabPage2.Controls.Add(this.btnAdd);
@@ -578,6 +600,26 @@
             this.btnSaveSection.Text = "Save";
             this.toolTip1.SetToolTip(this.btnSaveSection, "Save Cass List");
             this.btnSaveSection.UseVisualStyleBackColor = true;
+            // 
+            // btnApplySection
+            // 
+            this.btnApplySection.Location = new System.Drawing.Point(341, 93);
+            this.btnApplySection.Name = "btnApplySection";
+            this.btnApplySection.Size = new System.Drawing.Size(75, 50);
+            this.btnApplySection.TabIndex = 16;
+            this.btnApplySection.Text = "Apply to All";
+            this.btnApplySection.UseVisualStyleBackColor = true;
+            this.btnApplySection.Click += new System.EventHandler(this.btnApplySection_Click);
+            // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(599, 245);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(75, 23);
+            this.btnTest.TabIndex = 11;
+            this.btnTest.Text = "Test";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
             // Builder
             // 
@@ -662,5 +704,7 @@
         private System.Windows.Forms.SaveFileDialog dlgSaveClass;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btnSaveSection;
+        private System.Windows.Forms.Button btnApplySection;
+        private System.Windows.Forms.Button btnTest;
     }
 }

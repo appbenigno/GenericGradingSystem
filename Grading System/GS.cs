@@ -37,6 +37,10 @@ namespace Grading_System
             lv.SubItems.Add("0");
             targetListView.Items.Add(lv);
 
+            lv = new ListViewItem("Defense");
+            lv.SubItems.Add("0");
+            targetListView.Items.Add(lv);
+
             lv = new ListViewItem("Drama");
             lv.SubItems.Add("0");
             targetListView.Items.Add(lv);
@@ -69,11 +73,11 @@ namespace Grading_System
             lv.SubItems.Add("0");
             targetListView.Items.Add(lv);
 
-            lv = new ListViewItem("Practical");
+            lv = new ListViewItem("Others");
             lv.SubItems.Add("0");
             targetListView.Items.Add(lv);
 
-            lv = new ListViewItem("Practicum");
+            lv = new ListViewItem("Practical");
             lv.SubItems.Add("0");
             targetListView.Items.Add(lv);
 
@@ -82,6 +86,10 @@ namespace Grading_System
             targetListView.Items.Add(lv);
 
             lv = new ListViewItem("Quiz");
+            lv.SubItems.Add("0");
+            targetListView.Items.Add(lv);
+
+            lv = new ListViewItem("Recitation");
             lv.SubItems.Add("0");
             targetListView.Items.Add(lv);
 
@@ -326,6 +334,10 @@ namespace Grading_System
             catch { }
         }
 
+        /// <summary>
+        /// Validate Entires Global Variable
+        /// </summary>
+        /// <param name="targetList"></param>
         public static void validateGlobalsEntries(ListView targetList)
         {
             Globals.Builder.Entries.Items.Clear();
@@ -343,6 +355,26 @@ namespace Grading_System
             catch
             {
 
+            }
+        }
+
+        /// <summary>
+        /// Applies section to all list
+        /// </summary>
+        /// <param name="targetList"></param>
+        public static void applySection(TextBox section, ListView targetList)
+        {
+            if (targetList.Items.Count > 0)
+            {
+                for (int x = 0; x < targetList.Items.Count; x++)
+                {
+                    targetList.Items[x].SubItems[0].Text = section.Text;
+                }
+                MessageBox.Show(string.Concat("Section: '", section.Text, "' has been applied to current class list."), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(string.Concat("No students in current class to apply the section: ",section.Text), "Empty section", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

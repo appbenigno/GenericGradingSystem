@@ -8,6 +8,14 @@ namespace Grading_System.FormControl
 {
     public class Activities
     {
+        /// <summary>
+        /// Modify Activities
+        /// </summary>
+        /// <param name="targetListLeft"></param>
+        /// <param name="targetListRight"></param>
+        /// <param name="add"></param>
+        /// <param name="remove"></param>
+        /// <param name="weightTextBox"></param>
         public static void Modify(ListView targetListLeft, ListView targetListRight, Button add, Button remove, TextBox weightTextBox)
         {
             try
@@ -22,6 +30,15 @@ namespace Grading_System.FormControl
             }
             catch { }
         }
+
+        /// <summary>
+        /// Confirm activities modification
+        /// </summary>
+        /// <param name="targetListLeft"></param>
+        /// <param name="targetListRight"></param>
+        /// <param name="add"></param>
+        /// <param name="remove"></param>
+        /// <param name="weightTextBox"></param>
         public static void ModifyConfirm(ListView targetListLeft, ListView targetListRight, Button add, Button remove, TextBox weightTextBox)
         {
             try
