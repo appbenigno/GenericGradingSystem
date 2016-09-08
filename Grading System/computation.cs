@@ -8,6 +8,12 @@ namespace Grading_System
 {
     public class compute
     {
+        /// <summary>
+        /// Get Activity Count
+        /// </summary>
+        /// <param name="activityType"></param>
+        /// <param name="targetList"></param>
+        /// <returns></returns>
         public static int getActivityCount(string activityType, ListView targetList)
         {
             int result = 0;
@@ -20,6 +26,13 @@ namespace Grading_System
             }
             return result;
         }
+
+        /// <summary>
+        /// Get Total Score
+        /// </summary>
+        /// <param name="activityType"></param>
+        /// <param name="targetList"></param>
+        /// <returns></returns>
         public static int getTotalScore(string activityType,ListView targetList)
         {
             int result = 0;
@@ -32,6 +45,13 @@ namespace Grading_System
             }
             return result;
         }
+
+        /// <summary>
+        /// Get Total Score of Items
+        /// </summary>
+        /// <param name="activityType"></param>
+        /// <param name="targetList"></param>
+        /// <returns></returns>
         public static int getTotalScoreItems(string activityType, ListView targetList)
         {
             int result = 0;
@@ -45,6 +65,12 @@ namespace Grading_System
             return result;
         }
 
+        /// <summary>
+        /// Get Percentage
+        /// </summary>
+        /// <param name="activityType"></param>
+        /// <param name="activities"></param>
+        /// <returns></returns>
         public static double getPercentage(string activityType, ListView activities)
         {
             double result = 0;
@@ -58,14 +84,46 @@ namespace Grading_System
             }
             return result;
         }
-        public static double getAverage(string activityType,ListView targetList)
+
+        /// <summary>
+        /// Score divided by number of items
+        /// </summary>
+        /// <param name="activityType"></param>
+        /// <param name="targetList"></param>
+        /// <returns></returns>
+        public static double getScoreAve(string activityType, ListView targetList)
         {
             double result = 0;
-            double score = getTotalScore(activityType, targetList);
-            double maxscore = getTotalScoreItems(activityType, targetList);
-            double items = getActivityCount(activityType, targetList);
-            result = Math.Round(score / maxscore,2);
-            return result;
+            int numberOfItems = getActivityCount(activityType, targetList);
+            result = getTotalScore(activityType, targetList) / numberOfItems;
+            return Math.Round(result, 2);
+        }
+
+        /// <summary>
+        /// Total score divided by number of items
+        /// </summary>
+        /// <param name="activityType"></param>
+        /// <param name="targetList"></param>
+        /// <returns></returns>
+        public static double getMaxScoreAve(string activityType, ListView targetList)
+        {
+            double result = 0;
+            int numberOfItems = getActivityCount(activityType, targetList);
+            result = getTotalScoreItems(activityType, targetList) / numberOfItems;
+            return Math.Round(result, 2);
+        }
+
+        /// <summary>
+        /// Get Average
+        /// </summary>
+        /// <param name="activityType"></param>
+        /// <param name="targetList"></param>
+        /// <returns></returns>
+        public static double getWeightedAverage(string activityType,ListView targetList)
+        {
+            double result = 0;
+            result = (getScoreAve(activityType, targetList) / getMaxScoreAve(activityType, targetList)) * 100;
+            return Math.Round(result,2);
         }
     }
 }

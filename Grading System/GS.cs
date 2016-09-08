@@ -349,6 +349,8 @@ namespace Grading_System
                     lv.SubItems.Add(targetList.Items[x].SubItems[1].Text);
                     lv.SubItems.Add(targetList.Items[x].SubItems[2].Text);
                     lv.SubItems.Add(targetList.Items[x].SubItems[3].Text);
+                    lv.SubItems.Add(targetList.Items[x].SubItems[4].Text);
+                    lv.SubItems.Add(targetList.Items[x].SubItems[5].Text);
                     Globals.Builder.Entries.Items.Add(lv);
                 }
             }

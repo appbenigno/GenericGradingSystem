@@ -144,16 +144,6 @@ namespace Grading_System
             }
         }
 
-        private void lvSection_Validated(object sender, EventArgs e)
-        {
-            GS.validateGlobalsEntries(lvEntries);
-        }
-
-        private void lvSection_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            GS.validateGlobalsEntries(lvEntries);
-        }
-
         private void btnApplySection_Click(object sender, EventArgs e)
         {
             GS.applySection(txtSection, lvSection);
@@ -161,8 +151,23 @@ namespace Grading_System
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            double answer = Math.Round(compute.getAverage("Quiz", lvEntries) * 100 * compute.getPercentage("Quiz", lvActivities),2);
+            double answer = Math.Round(compute.getWeightedAverage("Quiz", lvEntries) * compute.getPercentage("Quiz", lvActivities),2);
             MessageBox.Show(answer.ToString());
+        }
+
+        private void imgBuild_Click(object sender, EventArgs e)
+        {
+            FormControl.Build.BuildMode(imgBuild, groupClassList, lvSection);
+            if (flags.isRaised("building"))
+            {
+                tabBuilder.SelectTab(1);
+            }
+        }
+
+        private void Builder_Resize(object sender, EventArgs e)
+        {
+            tabBuilder.Width = this.Width - 40;
+            lvEntries.Width = this.Width - 40;
         }
     }
 }

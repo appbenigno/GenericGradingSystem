@@ -59,8 +59,10 @@
     <Compile Include="flags.cs" />
     <Compile Include="FormControl\Activities.cs" />
     <Compile Include="FormControl\AddStudent.cs" />
+    <Compile Include="FormControl\Build.cs" />
     <Compile Include="FormControl\Cancel.cs" />
     <Compile Include="FormControl\DeleteStudent.cs" />
+    <Compile Include="FormControl\Entries.cs" />
     <Compile Include="FormControl\ModifyStudent.cs" />
     <Compile Include="Globals\Builder.cs" />
     <Compile Include="Globals\GradeType.cs" />
@@ -194,6 +196,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\button_ok_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lbl_entries.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

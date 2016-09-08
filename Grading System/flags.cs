@@ -15,7 +15,10 @@ namespace Grading_System
         /// <param name="flagString"></param>
         public static void raise(string flagString)
         {
-            flagger.Add(flagString.ToUpper());
+            if (!isRaised(flagString))
+            {
+                flagger.Add(flagString.ToUpper());
+            }
         }
         
         /// <summary>
@@ -47,6 +50,11 @@ namespace Grading_System
             {
                 flagger.Remove(flagString.ToUpper());
             }
+        }
+
+        public static void clear()
+        {
+            flagger.Clear();
         }
     }
 }

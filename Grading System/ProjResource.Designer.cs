@@ -143,6 +143,16 @@ namespace Grading_System {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lbl_entries {
+            get {
+                object obj = ResourceManager.GetObject("lbl_entries", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lbl_preview {
             get {
                 object obj = ResourceManager.GetObject("lbl_preview", resourceCulture);

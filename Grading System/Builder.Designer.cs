@@ -29,44 +29,54 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Perez, Angel",
-            "5 Mulawin",
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Skywalker, Luke _.",
+            "Jedi Knights",
             "Quiz",
             "Introduction to Science and Technology",
             "150",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Perez, Angel",
-            "5 Mulawin",
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Skywalker, Luke _.",
+            "Jedi Knights",
             "Quiz",
             "Introduction to Mathematics",
             "125",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Perez, Angel",
-            "5 Mulawin",
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Skywalker, Luke _.",
+            "Jedi Knights",
             "Quiz",
             "Introduction to Spelling",
             "115",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Perez, Angel",
-            "5 Mulawin",
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Skywalker, Luke _.",
+            "Jedi Knights",
             "Quiz",
             "Introduction to Cloud Computing",
             "150",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
-            "5 Mulawin",
-            "Alcasid",
-            "Ogie",
-            "A"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
-            "5 Mulawin",
-            "Alcasid",
-            "Regine",
-            "V"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Jedi Knights",
+            "Skywalker",
+            "Luke",
+            "_"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Jedi Masters",
+            "Skywalker",
+            "Anakin",
+            "_"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Jedi Masters",
+            "Kenobi",
+            "Obi-Wan",
+            "_"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Sith Lords",
+            "Tyranus",
+            "Darth",
+            "_"}, -1);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuTemplates = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGradeType = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,7 +89,6 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label1 = new System.Windows.Forms.Label();
             this.lvActivitiesList = new System.Windows.Forms.ListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -90,19 +99,21 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtWeight = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblTotalWeight = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDeleteStudent = new System.Windows.Forms.Button();
-            this.btnAddStudent = new System.Windows.Forms.Button();
             this.btnLoadSection = new System.Windows.Forms.Button();
             this.lvSection = new System.Windows.Forms.ListView();
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnSaveSection = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblTotalWeight = new System.Windows.Forms.Label();
+            this.groupClassList = new System.Windows.Forms.GroupBox();
+            this.btnApplySection = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDeleteStudent = new System.Windows.Forms.Button();
+            this.btnAddStudent = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtMiddleInitial = new System.Windows.Forms.TextBox();
@@ -111,20 +122,33 @@
             this.txtSection = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabBuilder = new System.Windows.Forms.TabControl();
             this.tabSection = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnTest = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dlgLoadClass = new System.Windows.Forms.OpenFileDialog();
             this.dlgSaveClass = new System.Windows.Forms.SaveFileDialog();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnSaveSection = new System.Windows.Forms.Button();
-            this.btnApplySection = new System.Windows.Forms.Button();
-            this.btnTest = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imgBuild = new System.Windows.Forms.PictureBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.txtScore = new System.Windows.Forms.TextBox();
+            this.txtMaxScore = new System.Windows.Forms.TextBox();
+            this.btnAddEntry = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnUpdateEntry = new System.Windows.Forms.Button();
+            this.btnDeleteEntry = new System.Windows.Forms.Button();
+            this.btnCancelEntry = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.groupClassList.SuspendLayout();
+            this.tabBuilder.SuspendLayout();
             this.tabSection.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBuild)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -137,7 +161,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1005, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -180,14 +204,14 @@
             this.columnHeader5});
             this.lvEntries.FullRowSelect = true;
             this.lvEntries.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4});
-            this.lvEntries.Location = new System.Drawing.Point(13, 492);
+            listViewItem9,
+            listViewItem10,
+            listViewItem11,
+            listViewItem12});
+            this.lvEntries.Location = new System.Drawing.Point(12, 524);
             this.lvEntries.Margin = new System.Windows.Forms.Padding(4);
             this.lvEntries.Name = "lvEntries";
-            this.lvEntries.Size = new System.Drawing.Size(972, 168);
+            this.lvEntries.Size = new System.Drawing.Size(980, 193);
             this.lvEntries.TabIndex = 1;
             this.lvEntries.UseCompatibleStateImageBehavior = false;
             this.lvEntries.View = System.Windows.Forms.View.Details;
@@ -221,16 +245,6 @@
             // 
             this.columnHeader5.Text = "Max Score";
             this.columnHeader5.Width = 83;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 472);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Entries";
             // 
             // lvActivitiesList
             // 
@@ -291,12 +305,13 @@
             this.lvActivities.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvActivities.FullRowSelect = true;
             this.lvActivities.HideSelection = false;
-            this.lvActivities.Location = new System.Drawing.Point(329, 21);
+            this.lvActivities.Location = new System.Drawing.Point(329, 51);
             this.lvActivities.Margin = new System.Windows.Forms.Padding(4);
             this.lvActivities.MultiSelect = false;
             this.lvActivities.Name = "lvActivities";
-            this.lvActivities.Size = new System.Drawing.Size(206, 351);
+            this.lvActivities.Size = new System.Drawing.Size(206, 321);
             this.lvActivities.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.lvActivities, "Double click to edit weight value");
             this.lvActivities.UseCompatibleStateImageBehavior = false;
             this.lvActivities.View = System.Windows.Forms.View.Details;
             this.lvActivities.DoubleClick += new System.EventHandler(this.lvActivities_DoubleClick);
@@ -316,10 +331,10 @@
             // 
             this.txtWeight.Enabled = false;
             this.txtWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWeight.Location = new System.Drawing.Point(543, 21);
+            this.txtWeight.Location = new System.Drawing.Point(493, 21);
             this.txtWeight.Margin = new System.Windows.Forms.Padding(4);
             this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(47, 22);
+            this.txtWeight.Size = new System.Drawing.Size(42, 22);
             this.txtWeight.TabIndex = 8;
             this.txtWeight.Text = "0";
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -327,6 +342,70 @@
             this.txtWeight.Click += new System.EventHandler(this.txtWeight_Click);
             this.txtWeight.TextChanged += new System.EventHandler(this.txtWeight_TextChanged);
             this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
+            // 
+            // btnLoadSection
+            // 
+            this.btnLoadSection.Location = new System.Drawing.Point(341, 37);
+            this.btnLoadSection.Name = "btnLoadSection";
+            this.btnLoadSection.Size = new System.Drawing.Size(75, 23);
+            this.btnLoadSection.TabIndex = 9;
+            this.btnLoadSection.Text = "Load";
+            this.toolTip1.SetToolTip(this.btnLoadSection, "Load Class List");
+            this.btnLoadSection.UseVisualStyleBackColor = true;
+            // 
+            // lvSection
+            // 
+            this.lvSection.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader11,
+            this.columnHeader12,
+            this.columnHeader13,
+            this.columnHeader14});
+            this.lvSection.FullRowSelect = true;
+            this.lvSection.HideSelection = false;
+            this.lvSection.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem13,
+            listViewItem14,
+            listViewItem15,
+            listViewItem16});
+            this.lvSection.Location = new System.Drawing.Point(0, 190);
+            this.lvSection.Name = "lvSection";
+            this.lvSection.Size = new System.Drawing.Size(429, 191);
+            this.lvSection.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.lvSection, "Double click to edit");
+            this.lvSection.UseCompatibleStateImageBehavior = false;
+            this.lvSection.View = System.Windows.Forms.View.Details;
+            this.lvSection.Click += new System.EventHandler(this.lvSection_Click);
+            this.lvSection.DoubleClick += new System.EventHandler(this.lvSection_DoubleClick);
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Section";
+            this.columnHeader11.Width = 91;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Family Name";
+            this.columnHeader12.Width = 121;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Given Name";
+            this.columnHeader13.Width = 150;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "M.I.";
+            this.columnHeader14.Width = 36;
+            // 
+            // btnSaveSection
+            // 
+            this.btnSaveSection.Location = new System.Drawing.Point(341, 64);
+            this.btnSaveSection.Name = "btnSaveSection";
+            this.btnSaveSection.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveSection.TabIndex = 15;
+            this.btnSaveSection.Text = "Save";
+            this.toolTip1.SetToolTip(this.btnSaveSection, "Save Cass List");
+            this.btnSaveSection.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -348,30 +427,40 @@
             this.lblTotalWeight.TabIndex = 10;
             this.lblTotalWeight.Text = "0";
             // 
-            // groupBox1
+            // groupClassList
             // 
-            this.groupBox1.Controls.Add(this.btnApplySection);
-            this.groupBox1.Controls.Add(this.btnSaveSection);
-            this.groupBox1.Controls.Add(this.btnCancel);
-            this.groupBox1.Controls.Add(this.btnUpdate);
-            this.groupBox1.Controls.Add(this.btnDeleteStudent);
-            this.groupBox1.Controls.Add(this.btnAddStudent);
-            this.groupBox1.Controls.Add(this.btnLoadSection);
-            this.groupBox1.Controls.Add(this.lvSection);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtMiddleInitial);
-            this.groupBox1.Controls.Add(this.txtGivenName);
-            this.groupBox1.Controls.Add(this.txtFamilyName);
-            this.groupBox1.Controls.Add(this.txtSection);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(6, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(435, 387);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Class List";
+            this.groupClassList.Controls.Add(this.btnApplySection);
+            this.groupClassList.Controls.Add(this.btnSaveSection);
+            this.groupClassList.Controls.Add(this.btnCancel);
+            this.groupClassList.Controls.Add(this.btnUpdate);
+            this.groupClassList.Controls.Add(this.btnDeleteStudent);
+            this.groupClassList.Controls.Add(this.btnAddStudent);
+            this.groupClassList.Controls.Add(this.btnLoadSection);
+            this.groupClassList.Controls.Add(this.lvSection);
+            this.groupClassList.Controls.Add(this.label6);
+            this.groupClassList.Controls.Add(this.label5);
+            this.groupClassList.Controls.Add(this.txtMiddleInitial);
+            this.groupClassList.Controls.Add(this.txtGivenName);
+            this.groupClassList.Controls.Add(this.txtFamilyName);
+            this.groupClassList.Controls.Add(this.txtSection);
+            this.groupClassList.Controls.Add(this.label4);
+            this.groupClassList.Controls.Add(this.label3);
+            this.groupClassList.Location = new System.Drawing.Point(6, 6);
+            this.groupClassList.Name = "groupClassList";
+            this.groupClassList.Size = new System.Drawing.Size(435, 387);
+            this.groupClassList.TabIndex = 11;
+            this.groupClassList.TabStop = false;
+            this.groupClassList.Text = "Class List";
+            // 
+            // btnApplySection
+            // 
+            this.btnApplySection.Location = new System.Drawing.Point(341, 93);
+            this.btnApplySection.Name = "btnApplySection";
+            this.btnApplySection.Size = new System.Drawing.Size(75, 50);
+            this.btnApplySection.TabIndex = 16;
+            this.btnApplySection.Text = "Apply to All";
+            this.btnApplySection.UseVisualStyleBackColor = true;
+            this.btnApplySection.Click += new System.EventHandler(this.btnApplySection_Click);
             // 
             // btnCancel
             // 
@@ -415,60 +504,6 @@
             this.btnAddStudent.Text = "Add Student";
             this.btnAddStudent.UseVisualStyleBackColor = true;
             this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
-            // 
-            // btnLoadSection
-            // 
-            this.btnLoadSection.Location = new System.Drawing.Point(341, 37);
-            this.btnLoadSection.Name = "btnLoadSection";
-            this.btnLoadSection.Size = new System.Drawing.Size(75, 23);
-            this.btnLoadSection.TabIndex = 9;
-            this.btnLoadSection.Text = "Load";
-            this.toolTip1.SetToolTip(this.btnLoadSection, "Load Class List");
-            this.btnLoadSection.UseVisualStyleBackColor = true;
-            // 
-            // lvSection
-            // 
-            this.lvSection.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader11,
-            this.columnHeader12,
-            this.columnHeader13,
-            this.columnHeader14});
-            this.lvSection.FullRowSelect = true;
-            this.lvSection.HideSelection = false;
-            this.lvSection.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5,
-            listViewItem6});
-            this.lvSection.Location = new System.Drawing.Point(0, 190);
-            this.lvSection.Name = "lvSection";
-            this.lvSection.Size = new System.Drawing.Size(429, 191);
-            this.lvSection.TabIndex = 8;
-            this.toolTip1.SetToolTip(this.lvSection, "Double click to edit");
-            this.lvSection.UseCompatibleStateImageBehavior = false;
-            this.lvSection.View = System.Windows.Forms.View.Details;
-            this.lvSection.SelectedIndexChanged += new System.EventHandler(this.lvSection_SelectedIndexChanged);
-            this.lvSection.Click += new System.EventHandler(this.lvSection_Click);
-            this.lvSection.DoubleClick += new System.EventHandler(this.lvSection_DoubleClick);
-            this.lvSection.Validated += new System.EventHandler(this.lvSection_Validated);
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Section";
-            this.columnHeader11.Width = 91;
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Text = "Family Name";
-            this.columnHeader12.Width = 121;
-            // 
-            // columnHeader13
-            // 
-            this.columnHeader13.Text = "Given Name";
-            this.columnHeader13.Width = 150;
-            // 
-            // columnHeader14
-            // 
-            this.columnHeader14.Text = "M.I.";
-            this.columnHeader14.Width = 36;
             // 
             // label6
             // 
@@ -541,30 +576,33 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Section";
             // 
-            // tabControl1
+            // tabBuilder
             // 
-            this.tabControl1.Controls.Add(this.tabSection);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(12, 41);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(981, 428);
-            this.tabControl1.TabIndex = 12;
+            this.tabBuilder.Controls.Add(this.tabSection);
+            this.tabBuilder.Controls.Add(this.tabPage2);
+            this.tabBuilder.Controls.Add(this.tabPage1);
+            this.tabBuilder.Location = new System.Drawing.Point(12, 41);
+            this.tabBuilder.Name = "tabBuilder";
+            this.tabBuilder.SelectedIndex = 0;
+            this.tabBuilder.Size = new System.Drawing.Size(984, 428);
+            this.tabBuilder.TabIndex = 12;
             // 
             // tabSection
             // 
-            this.tabSection.Controls.Add(this.groupBox1);
+            this.tabSection.Controls.Add(this.imgBuild);
+            this.tabSection.Controls.Add(this.groupClassList);
             this.tabSection.Location = new System.Drawing.Point(4, 25);
             this.tabSection.Name = "tabSection";
             this.tabSection.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSection.Size = new System.Drawing.Size(973, 399);
+            this.tabSection.Size = new System.Drawing.Size(976, 399);
             this.tabSection.TabIndex = 0;
             this.tabSection.Text = "Class/Section";
             this.tabSection.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.btnTest);
             this.tabPage2.Controls.Add(this.lvActivitiesList);
             this.tabPage2.Controls.Add(this.lblTotalWeight);
@@ -576,10 +614,20 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(973, 399);
+            this.tabPage2.Size = new System.Drawing.Size(976, 399);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Activity Type";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(611, 24);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(75, 23);
+            this.btnTest.TabIndex = 11;
+            this.btnTest.Text = "Test";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
             // tabPage1
             // 
@@ -591,44 +639,126 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // btnSaveSection
+            // pictureBox1
             // 
-            this.btnSaveSection.Location = new System.Drawing.Point(341, 64);
-            this.btnSaveSection.Name = "btnSaveSection";
-            this.btnSaveSection.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveSection.TabIndex = 15;
-            this.btnSaveSection.Text = "Save";
-            this.toolTip1.SetToolTip(this.btnSaveSection, "Save Cass List");
-            this.btnSaveSection.UseVisualStyleBackColor = true;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Grading_System.ProjResource.lbl_entries;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 489);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(91, 28);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
-            // btnApplySection
+            // imgBuild
             // 
-            this.btnApplySection.Location = new System.Drawing.Point(341, 93);
-            this.btnApplySection.Name = "btnApplySection";
-            this.btnApplySection.Size = new System.Drawing.Size(75, 50);
-            this.btnApplySection.TabIndex = 16;
-            this.btnApplySection.Text = "Apply to All";
-            this.btnApplySection.UseVisualStyleBackColor = true;
-            this.btnApplySection.Click += new System.EventHandler(this.btnApplySection_Click);
+            this.imgBuild.Image = global::Grading_System.ProjResource.button_long;
+            this.imgBuild.Location = new System.Drawing.Point(555, 167);
+            this.imgBuild.Name = "imgBuild";
+            this.imgBuild.Size = new System.Drawing.Size(302, 85);
+            this.imgBuild.TabIndex = 12;
+            this.imgBuild.TabStop = false;
+            this.imgBuild.Click += new System.EventHandler(this.imgBuild_Click);
             // 
-            // btnTest
+            // txtDescription
             // 
-            this.btnTest.Location = new System.Drawing.Point(599, 245);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(75, 23);
-            this.btnTest.TabIndex = 11;
-            this.btnTest.Text = "Test";
-            this.btnTest.UseVisualStyleBackColor = true;
-            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            this.txtDescription.Location = new System.Drawing.Point(15, 170);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(363, 22);
+            this.txtDescription.TabIndex = 12;
+            // 
+            // txtScore
+            // 
+            this.txtScore.Location = new System.Drawing.Point(15, 109);
+            this.txtScore.Name = "txtScore";
+            this.txtScore.Size = new System.Drawing.Size(169, 22);
+            this.txtScore.TabIndex = 13;
+            // 
+            // txtMaxScore
+            // 
+            this.txtMaxScore.Location = new System.Drawing.Point(15, 137);
+            this.txtMaxScore.Name = "txtMaxScore";
+            this.txtMaxScore.Size = new System.Drawing.Size(169, 22);
+            this.txtMaxScore.TabIndex = 14;
+            // 
+            // btnAddEntry
+            // 
+            this.btnAddEntry.Location = new System.Drawing.Point(15, 40);
+            this.btnAddEntry.Name = "btnAddEntry";
+            this.btnAddEntry.Size = new System.Drawing.Size(100, 36);
+            this.btnAddEntry.TabIndex = 15;
+            this.btnAddEntry.Text = "Add Entry";
+            this.btnAddEntry.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(398, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 16);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Weight Value";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(201, 137);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 16);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Description";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnCancelEntry);
+            this.groupBox1.Controls.Add(this.btnDeleteEntry);
+            this.groupBox1.Controls.Add(this.btnUpdateEntry);
+            this.groupBox1.Controls.Add(this.btnAddEntry);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtDescription);
+            this.groupBox1.Controls.Add(this.txtScore);
+            this.groupBox1.Controls.Add(this.txtMaxScore);
+            this.groupBox1.Location = new System.Drawing.Point(542, 93);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(428, 279);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Modify Entries";
+            // 
+            // btnUpdateEntry
+            // 
+            this.btnUpdateEntry.Location = new System.Drawing.Point(121, 40);
+            this.btnUpdateEntry.Name = "btnUpdateEntry";
+            this.btnUpdateEntry.Size = new System.Drawing.Size(100, 36);
+            this.btnUpdateEntry.TabIndex = 18;
+            this.btnUpdateEntry.Text = "Update Entry";
+            this.btnUpdateEntry.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteEntry
+            // 
+            this.btnDeleteEntry.Location = new System.Drawing.Point(227, 40);
+            this.btnDeleteEntry.Name = "btnDeleteEntry";
+            this.btnDeleteEntry.Size = new System.Drawing.Size(100, 36);
+            this.btnDeleteEntry.TabIndex = 19;
+            this.btnDeleteEntry.Text = "Delete Entry";
+            this.btnDeleteEntry.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelEntry
+            // 
+            this.btnCancelEntry.Location = new System.Drawing.Point(227, 82);
+            this.btnCancelEntry.Name = "btnCancelEntry";
+            this.btnCancelEntry.Size = new System.Drawing.Size(100, 36);
+            this.btnCancelEntry.TabIndex = 20;
+            this.btnCancelEntry.Text = "Cancel";
+            this.btnCancelEntry.UseVisualStyleBackColor = true;
             // 
             // Builder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1005, 673);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1008, 730);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.tabBuilder);
             this.Controls.Add(this.lvEntries);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -638,14 +768,19 @@
             this.Text = "Builder";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Builder_FormClosing);
             this.Load += new System.EventHandler(this.Builder_Load);
+            this.Resize += new System.EventHandler(this.Builder_Resize);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.groupClassList.ResumeLayout(false);
+            this.groupClassList.PerformLayout();
+            this.tabBuilder.ResumeLayout(false);
             this.tabSection.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBuild)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -659,7 +794,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuTransmutationTable;
         private System.Windows.Forms.ToolStripMenuItem mnuReports;
         private System.Windows.Forms.ListView lvEntries;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
@@ -678,7 +812,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTotalWeight;
         private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupClassList;
         private System.Windows.Forms.ListView lvSection;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -693,7 +827,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private System.Windows.Forms.Button btnLoadSection;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabBuilder;
         private System.Windows.Forms.TabPage tabSection;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnAddStudent;
@@ -706,5 +840,17 @@
         private System.Windows.Forms.Button btnSaveSection;
         private System.Windows.Forms.Button btnApplySection;
         private System.Windows.Forms.Button btnTest;
+        private System.Windows.Forms.PictureBox imgBuild;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnAddEntry;
+        private System.Windows.Forms.TextBox txtMaxScore;
+        private System.Windows.Forms.TextBox txtScore;
+        private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnCancelEntry;
+        private System.Windows.Forms.Button btnDeleteEntry;
+        private System.Windows.Forms.Button btnUpdateEntry;
+        private System.Windows.Forms.Label label7;
     }
 }
