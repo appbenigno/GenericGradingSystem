@@ -29,42 +29,50 @@
         private void InitializeComponent()
         {
             this.lvGrade = new System.Windows.Forms.ListView();
-            this.chGrade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lvPercentage = new System.Windows.Forms.ListView();
-            this.chPercentage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Range1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lvEquivalent = new System.Windows.Forms.ListView();
+            this.equivalent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Separator = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Range2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lvGrade
             // 
             this.lvGrade.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.chGrade});
-            this.lvGrade.Location = new System.Drawing.Point(80, 25);
+            this.Range1,
+            this.Separator,
+            this.Range2});
+            this.lvGrade.GridLines = true;
+            this.lvGrade.Location = new System.Drawing.Point(39, 25);
             this.lvGrade.Name = "lvGrade";
-            this.lvGrade.Size = new System.Drawing.Size(131, 248);
+            this.lvGrade.Scrollable = false;
+            this.lvGrade.Size = new System.Drawing.Size(117, 308);
             this.lvGrade.TabIndex = 3;
             this.lvGrade.UseCompatibleStateImageBehavior = false;
             this.lvGrade.View = System.Windows.Forms.View.Details;
             // 
-            // chGrade
+            // Range1
             // 
-            this.chGrade.Text = "Grade";
+            this.Range1.Text = "From";
+            this.Range1.Width = 50;
             // 
-            // lvPercentage
+            // lvEquivalent
             // 
-            this.lvPercentage.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.chPercentage});
-            this.lvPercentage.Location = new System.Drawing.Point(258, 27);
-            this.lvPercentage.Name = "lvPercentage";
-            this.lvPercentage.Size = new System.Drawing.Size(92, 246);
-            this.lvPercentage.TabIndex = 4;
-            this.lvPercentage.UseCompatibleStateImageBehavior = false;
-            this.lvPercentage.View = System.Windows.Forms.View.Details;
+            this.lvEquivalent.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.equivalent});
+            this.lvEquivalent.GridLines = true;
+            this.lvEquivalent.Location = new System.Drawing.Point(162, 25);
+            this.lvEquivalent.Name = "lvEquivalent";
+            this.lvEquivalent.Size = new System.Drawing.Size(87, 308);
+            this.lvEquivalent.TabIndex = 4;
+            this.lvEquivalent.UseCompatibleStateImageBehavior = false;
+            this.lvEquivalent.View = System.Windows.Forms.View.Details;
             // 
-            // chPercentage
+            // equivalent
             // 
-            this.chPercentage.Text = "Percentage";
-            this.chPercentage.Width = 87;
+            this.equivalent.Text = "Equivalent";
+            this.equivalent.Width = 85;
             // 
             // textBox1
             // 
@@ -73,13 +81,25 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 5;
             // 
+            // Separator
+            // 
+            this.Separator.Text = "-";
+            this.Separator.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Separator.Width = 26;
+            // 
+            // Range2
+            // 
+            this.Range2.Text = "To";
+            this.Range2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Range2.Width = 50;
+            // 
             // Transmutation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 379);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lvPercentage);
+            this.Controls.Add(this.lvEquivalent);
             this.Controls.Add(this.lvGrade);
             this.MaximizeBox = false;
             this.Name = "Transmutation";
@@ -93,10 +113,12 @@
 
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ListView lvGrade;
-        private System.Windows.Forms.ColumnHeader chGrade;
-        private System.Windows.Forms.ListView lvPercentage;
-        private System.Windows.Forms.ColumnHeader chPercentage;
+        private System.Windows.Forms.ColumnHeader Range1;
+        private System.Windows.Forms.ListView lvEquivalent;
+        private System.Windows.Forms.ColumnHeader equivalent;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ColumnHeader Separator;
+        private System.Windows.Forms.ColumnHeader Range2;
     }
 }
 
