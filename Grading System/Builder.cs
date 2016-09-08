@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
+using System.IO;
 
 namespace Grading_System
 {
@@ -58,8 +60,7 @@ namespace Grading_System
 
         private void lvActivities_DoubleClick(object sender, EventArgs e)
         {
-            lvActivitiesList.Enabled = false; lvActivities.Enabled = false; btnAdd.Enabled = false; btnRemove.Enabled = false; txtWeight.Enabled = true;
-            txtWeight.Focus();
+            FormControl.Activities.Modify(lvActivitiesList, lvActivities, btnAdd, btnRemove, txtWeight);
             GS.editActivity(lvActivities, txtWeight);
         }
 
@@ -93,14 +94,59 @@ namespace Grading_System
                 GS.validateWeight(lvActivities, lblTotalWeight);
                 if (GS.getWeight(lvActivities) <= 100)
                 {
-                    txtWeight.Enabled = false; lvActivities.Enabled = true; lvActivitiesList.Enabled = true; btnAdd.Enabled = true; btnRemove.Enabled = true;
+                    FormControl.Activities.ModifyConfirm(lvActivitiesList, lvActivities, btnAdd, btnRemove, txtWeight);
                 }
             }
         }
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
-            GS.addStudent(txtSection, txtFamilyName, txtGivenName, txtMiddleInitial, lvSection);
+            GS.addStudent(txtSection, lvSection);
+            if (flags.isRaised("addingstudent"))
+            {
+                FormControl.AddStudent.Confirm(lvSection);
+                flags.destroy("addingstudent");
+            }
+            
+        }
+
+        private void lvSection_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                FormControl.ModifyStudent.EditDetails(txtFamilyName, txtGivenName, txtMiddleInitial, btnUpdate, btnCancel,btnAddStudent, btnDeleteStudent, lvSection);
+            }
+            catch { }
+        }
+
+        private void lvSection_Click(object sender, EventArgs e)
+        {
+            GS.echoList(txtSection, txtFamilyName, txtGivenName, txtMiddleInitial, lvSection);
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            FormControl.Cancel.EditStudent(txtFamilyName, txtGivenName, txtMiddleInitial, btnUpdate, btnCancel, btnAddStudent, btnDeleteStudent, lvSection);
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            GS.modifyStudent(txtSection, txtFamilyName, txtGivenName, txtMiddleInitial, lvSection);
+        }
+
+        private void btnDeleteStudent_Click(object sender, EventArgs e)
+        {
+            GS.deleteStudent(txtSection, txtFamilyName, txtGivenName, txtMiddleInitial, lvSection);
+            if (flags.isRaised("deletingstudent"))
+            {
+                FormControl.DeleteStudent.Confirm(txtSection, txtFamilyName, txtGivenName, txtMiddleInitial, btnUpdate, btnCancel, btnDeleteStudent, lvSection);
+                flags.destroy("deletingstudent");
+            }
+        }
+
+        private void lvSection_Validated(object sender, EventArgs e)
+        {
+            GS.validateGlobalsEntries(lvEntries);
         }
     }
 }

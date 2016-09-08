@@ -170,22 +170,31 @@ namespace Grading_System
             }
         }
 
-        public static void addStudent(TextBox section, TextBox familyName, TextBox givenName, TextBox middleInitial, ListView targetList)
+        /// <summary>
+        /// Add Student
+        /// </summary>
+        /// <param name="section"></param>
+        /// <param name="targetList"></param>
+        public static void addStudent(TextBox section, ListView targetList)
         {
-            if (section.Text.Length > 0 && familyName.Text.Length > 0 && givenName.Text.Length > 0 && middleInitial.Text.Length > 0)
+            string familyName = Microsoft.VisualBasic.Interaction.InputBox("Input Family Name",section.Text);
+            string givenName = Microsoft.VisualBasic.Interaction.InputBox("Input Given Name", section.Text);
+            string middleInitial = Microsoft.VisualBasic.Interaction.InputBox("Input Middle Initial", section.Text);
+            
+            if (familyName.Length > 0 && givenName.Length > 0 && middleInitial.Length > 0)
             {
-                ListViewItem lv = new ListViewItem(section.Text);
-                lv.SubItems.Add(familyName.Text);
-                lv.SubItems.Add(givenName.Text);
-                lv.SubItems.Add(middleInitial.Text);
-
-                if (targetList.Items.Contains(lv))
+                if (!GS.isStudentExist(familyName, givenName, middleInitial, targetList))
                 {
-                    MessageBox.Show(string.Concat("'", familyName.Text, ", ", givenName.Text, " ", middleInitial.Text, ".", "'", " already exists!"), "Duplicate record", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    flags.raise("addingstudent");
+                    ListViewItem lv = new ListViewItem(section.Text);
+                    lv.SubItems.Add(familyName);
+                    lv.SubItems.Add(givenName);
+                    lv.SubItems.Add(middleInitial);
+                    targetList.Items.Add(lv);
                 }
                 else
                 {
-                    targetList.Items.Add(lv);
+                    MessageBox.Show("Existing Record found in current section!", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -193,13 +202,148 @@ namespace Grading_System
                 MessageBox.Show("All fields are mandatory!", "Empty field(s) detected", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        /// <summary>
+        /// Modify Student
+        /// </summary>
+        /// <param name="section"></param>
+        /// <param name="familyName"></param>
+        /// <param name="givenName"></param>
+        /// <param name="middleInitial"></param>
+        /// <param name="targetList"></param>
         public static void modifyStudent(TextBox section, TextBox familyName, TextBox givenName, TextBox middleInitial, ListView targetList)
         {
-
+            try
+            {
+                if (familyName.Text.Length > 0 && givenName.Text.Length > 0 && middleInitial.Text.Length > 0)
+                {
+                    targetList.SelectedItems[0].SubItems[1].Text = familyName.Text;
+                    targetList.SelectedItems[0].SubItems[2].Text = givenName.Text;
+                    targetList.SelectedItems[0].SubItems[3].Text = middleInitial.Text;
+                }
+                else
+                {
+                    MessageBox.Show("All fields are mandatory!", "Missing data detected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Select an entry first", "No selected entry", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
+
+        /// <summary>
+        /// Delete Student
+        /// </summary>
+        /// <param name="section"></param>
+        /// <param name="familyName"></param>
+        /// <param name="givenName"></param>
+        /// <param name="middleInitial"></param>
+        /// <param name="targetList"></param>
         public static void deleteStudent(TextBox section, TextBox familyName, TextBox givenName, TextBox middleInitial, ListView targetList)
         {
+            try
+            {
+                if (MessageBox.Show("Are you sure you want to delete?", "Confirm delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    flags.raise("deletingstudent");
+                    section.Text = ""; familyName.Text = ""; givenName.Text = ""; middleInitial.Text = "";
+                    targetList.SelectedItems[0].Remove();
+                }
+            }
+            catch { }
+        }
 
+        /// <summary>
+        /// Check duplicate entry
+        /// </summary>
+        /// <param name="familyName"></param>
+        /// <param name="givenName"></param>
+        /// <param name="middleInitial"></param>
+        /// <param name="targetList"></param>
+        /// <returns></returns>
+        public static bool isStudentExist(TextBox familyName, TextBox givenName, TextBox middleInitial, ListView targetList)
+        {
+            string fn = "", gn = "", mi = "";
+            bool result = false;
+            for (int x = 0; x < targetList.Items.Count; x++)
+            {
+                fn = targetList.Items[x].SubItems[1].Text;
+                gn = targetList.Items[x].SubItems[2].Text;
+                mi = targetList.Items[x].SubItems[3].Text;
+                if(familyName.Text.Equals(fn) && givenName.Text.Equals(gn) && middleInitial.Text.Equals(mi))
+                {
+                    result = true;
+                    break;
+                }
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// Check duplicate entry
+        /// </summary>
+        /// <param name="familyName"></param>
+        /// <param name="givenName"></param>
+        /// <param name="middleInitial"></param>
+        /// <param name="targetList"></param>
+        /// <returns></returns>
+        public static bool isStudentExist(string familyName, string givenName, string middleInitial, ListView targetList)
+        {
+            string fn = "", gn = "", mi = "";
+            bool result = false;
+            for (int x = 0; x < targetList.Items.Count; x++)
+            {
+                fn = targetList.Items[x].SubItems[1].Text;
+                gn = targetList.Items[x].SubItems[2].Text;
+                mi = targetList.Items[x].SubItems[3].Text;
+                if (familyName.Equals(fn) && givenName.Equals(gn) && middleInitial.Equals(mi))
+                {
+                    result = true;
+                    break;
+                }
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// Echo selected item from ListView to Textboxes
+        /// </summary>
+        /// <param name="section"></param>
+        /// <param name="familyName"></param>
+        /// <param name="givenName"></param>
+        /// <param name="middleInitial"></param>
+        /// <param name="targetList"></param>
+        public static void echoList(TextBox section, TextBox familyName, TextBox givenName, TextBox middleInitial, ListView targetList)
+        {
+            try
+            {
+                section.Text = targetList.SelectedItems[0].SubItems[0].Text;
+                familyName.Text = targetList.SelectedItems[0].SubItems[1].Text;
+                givenName.Text = targetList.SelectedItems[0].SubItems[2].Text;
+                middleInitial.Text = targetList.SelectedItems[0].SubItems[3].Text;
+            }
+            catch { }
+        }
+
+        public static void validateGlobalsEntries(ListView targetList)
+        {
+            Globals.Builder.Entries.Items.Clear();
+            try
+            {
+                for (int x = 0; x < targetList.Items.Count; x++)
+                {
+                    ListViewItem lv = new ListViewItem(targetList.Items[x].SubItems[0].Text);
+                    lv.SubItems.Add(targetList.Items[x].SubItems[1].Text);
+                    lv.SubItems.Add(targetList.Items[x].SubItems[2].Text);
+                    lv.SubItems.Add(targetList.Items[x].SubItems[3].Text);
+                    Globals.Builder.Entries.Items.Add(lv);
+                }
+            }
+            catch
+            {
+
+            }
         }
 
         //--------------------------------------------------
