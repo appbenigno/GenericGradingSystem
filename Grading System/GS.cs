@@ -380,17 +380,97 @@ namespace Grading_System
             }
         }
 
+        /// <summary>
+        /// Delete selected entry
+        /// </summary>
+        /// <param name="targetList"></param>
         public static void deleteEntry(ListView targetList)
         {
             if (MessageBox.Show("Are you sure you want to delete?", "Confirm deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 targetList.SelectedItems[0].Remove();
+                flags.raise("deletingentry");
             }
         }
 
-        public static void editEntry()
+        /// <summary>
+        /// Modify selected entry
+        /// </summary>
+        /// <param name="description"></param>
+        /// <param name="score"></param>
+        /// <param name="maxscore"></param>
+        /// <param name="sourceList"></param>
+        public static void modifyEntryChanges(TextBox description, TextBox score, TextBox maxscore, ListView sourceList)
         {
+            if (description.TextLength < 1 || maxscore.TextLength < 1)
+            {
+                MessageBox.Show("Description and max score fields are mandatory", "Mandatory fields empty", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (score.TextLength<1)
+                {
+                    sourceList.SelectedItems[0].SubItems[3].Text = description.Text;
+                    sourceList.SelectedItems[0].SubItems[4].Text = "0";
+                    sourceList.SelectedItems[0].SubItems[5].Text = maxscore.Text;
+                }
+                else
+                {
+                    sourceList.SelectedItems[0].SubItems[3].Text = description.Text;
+                    sourceList.SelectedItems[0].SubItems[4].Text = score.Text;
+                    sourceList.SelectedItems[0].SubItems[5].Text = maxscore.Text;
+                }
+                flags.raise("updatingentry");
+                MessageBox.Show("Selected entry updated.", "Update success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
 
+        public static void addEntry(ListView classList, ListView activityList, ListView entriesList)
+        {
+            if (flags.isRaised("building"))
+            {
+                try
+                {
+                    for (int x = 0; x < activityList.Items.Count; x++)
+                    {
+                        if (activityList.Items[x].Selected)
+                        {
+                            flags.raise("activityselected");
+                            break;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Select an activity from the left first.", "No selected activity", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    if (flags.isRaised("activityselected"))
+                    {
+                        string name = string.Concat(classList.SelectedItems[0].SubItems[1].Text, ", ", classList.SelectedItems[0].SubItems[2].Text, " ", classList.SelectedItems[0].SubItems[3].Text, ".");
+                        string section = classList.SelectedItems[0].SubItems[0].Text;
+                        string activity = activityList.SelectedItems[0].SubItems[0].Text;
+                        string description = Microsoft.VisualBasic.Interaction.InputBox("Enter description", "Description");
+                        int score = Convert.ToInt32(Microsoft.VisualBasic.Interaction.InputBox("Enter score", "Score", "0"));
+                        int maxscore = Convert.ToInt32(Microsoft.VisualBasic.Interaction.InputBox("Enter max score", "Maximum Score", "100"));
+
+                        ListViewItem lvi = new ListViewItem(name);
+                        lvi.SubItems.Add(section);
+                        lvi.SubItems.Add(activity);
+                        lvi.SubItems.Add(description);
+                        lvi.SubItems.Add(score.ToString());
+                        lvi.SubItems.Add(maxscore.ToString());
+
+                        entriesList.Items.Add(lvi);
+                    }
+                }
+                catch (Exception errAdd)
+                {
+                    MessageBox.Show(errAdd.Message, "Something is wrong", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Unable to create entry without selecting a name and entering build mode.", "Enter build mode first", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         //--------------------------------------------------

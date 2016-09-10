@@ -172,7 +172,7 @@ namespace Grading_System
 
         private void btnCancelEntry_Click(object sender, EventArgs e)
         {
-            FormControl.Entries.Cancel(txtDescription, txtScore, txtMaxScore, btnAddEntry, btnUpdateEntry, btnDeleteEntry, btnCancelEntry);
+            FormControl.Entries.Cancel(txtDescription, txtScore, txtMaxScore, btnAddEntry, btnUpdateEntry, btnDeleteEntry, btnCancelEntry, lvEntries);
         }
 
         private void lvEntries_Click(object sender, EventArgs e)
@@ -186,6 +186,37 @@ namespace Grading_System
                     txtMaxScore.Text = lvEntries.SelectedItems[0].SubItems[5].Text;
                 }
                 catch { }
+            }
+        }
+
+        private void btnUpdateEntry_Click(object sender, EventArgs e)
+        {
+            GS.modifyEntryChanges(txtDescription, txtScore, txtMaxScore, lvEntries);
+            if (flags.isRaised("updatingentry"))
+            {
+                FormControl.Entries.Confirm(txtDescription, txtScore, txtMaxScore, btnAddEntry, btnUpdateEntry, btnDeleteEntry, btnCancelEntry, lvEntries);
+            }
+        }
+
+        private void btnDeleteEntry_Click(object sender, EventArgs e)
+        {
+            GS.deleteEntry(lvEntries);
+            if (flags.isRaised("deletingentry"))
+            {
+                FormControl.Entries.Delete(txtDescription, txtScore, txtMaxScore, btnAddEntry, btnUpdateEntry, btnDeleteEntry, btnCancelEntry, lvEntries);
+            }
+        }
+
+        private void btnAddEntry_Click(object sender, EventArgs e)
+        {
+            GS.addEntry(lvSection, lvActivities, lvEntries);
+        }
+
+        private void lvEntries_DoubleClick(object sender, EventArgs e)
+        {
+            if (flags.isRaised("building"))
+            {
+                FormControl.Entries.Edit(txtDescription, txtScore, txtMaxScore, btnAddEntry, btnUpdateEntry, btnDeleteEntry, btnCancelEntry, lvEntries);
             }
         }
     }

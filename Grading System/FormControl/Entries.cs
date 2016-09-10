@@ -8,7 +8,7 @@ namespace Grading_System.FormControl
 {
     public class Entries
     {
-        public static void Edit(TextBox description, TextBox score, TextBox maxscore, Button add, Button update, Button delete, Button cancel)
+        public static void Edit(TextBox description, TextBox score, TextBox maxscore, Button add, Button update, Button delete, Button cancel, ListView sourceList)
         {
             description.Enabled = true;
             score.Enabled = true;
@@ -17,12 +17,20 @@ namespace Grading_System.FormControl
             update.Enabled = true;
             delete.Enabled = true;
             cancel.Enabled = true;
+            sourceList.Enabled = false;
         }
-        public static void Confirm()
+        public static void Confirm(TextBox description, TextBox score, TextBox maxscore, Button add, Button update, Button delete, Button cancel, ListView sourceList)
         {
-
+            description.Enabled = false;
+            score.Enabled = false;
+            maxscore.Enabled = false;
+            add.Enabled = true;
+            update.Enabled = false;
+            delete.Enabled = false;
+            cancel.Enabled = false;
+            sourceList.Enabled = true;
         }
-        public static void Delete(TextBox description, TextBox score, TextBox maxscore, Button add, Button update, Button delete, Button cancel)
+        public static void Delete(TextBox description, TextBox score, TextBox maxscore, Button add, Button update, Button delete, Button cancel, ListView sourceList)
         {
             description.Enabled = false;
             description.Text = "";
@@ -34,9 +42,10 @@ namespace Grading_System.FormControl
             update.Enabled = false;
             delete.Enabled = false;
             cancel.Enabled = false;
+            sourceList.Enabled = true;
         }
 
-        public static void Cancel(TextBox description, TextBox score, TextBox maxscore, Button add, Button update, Button delete, Button cancel)
+        public static void Cancel(TextBox description, TextBox score, TextBox maxscore, Button add, Button update, Button delete, Button cancel, ListView sourceList)
         {
             description.Enabled = false;
             score.Enabled = false;
@@ -45,6 +54,7 @@ namespace Grading_System.FormControl
             update.Enabled = false;
             delete.Enabled = false;
             cancel.Enabled = false;
+            sourceList.Enabled = true;
         }
     }
 }

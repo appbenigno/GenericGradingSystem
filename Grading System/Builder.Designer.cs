@@ -29,50 +29,50 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Science and Technology",
             "150",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Mathematics",
             "125",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Spelling",
             "115",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Cloud Computing",
             "150",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
             "Jedi Knights",
             "Skywalker",
             "Luke",
             "_"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
             "Jedi Masters",
             "Skywalker",
             "Anakin",
             "_"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
             "Jedi Masters",
             "Kenobi",
             "Obi-Wan",
             "_"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
             "Sith Lords",
             "Tyranus",
             "Darth",
@@ -94,10 +94,6 @@
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
-            this.lvActivities = new System.Windows.Forms.ListView();
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtWeight = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnLoadSection = new System.Windows.Forms.Button();
             this.lvSection = new System.Windows.Forms.ListView();
@@ -106,8 +102,6 @@
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnSaveSection = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblTotalWeight = new System.Windows.Forms.Label();
             this.groupClassList = new System.Windows.Forms.GroupBox();
             this.btnApplySection = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -124,33 +118,39 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tabBuilder = new System.Windows.Forms.TabControl();
             this.tabSection = new System.Windows.Forms.TabPage();
+            this.imgBuild = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnCancelEntry = new System.Windows.Forms.Button();
+            this.btnDeleteEntry = new System.Windows.Forms.Button();
+            this.btnUpdateEntry = new System.Windows.Forms.Button();
+            this.btnAddEntry = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.txtScore = new System.Windows.Forms.TextBox();
+            this.txtMaxScore = new System.Windows.Forms.TextBox();
             this.btnTest = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dlgLoadClass = new System.Windows.Forms.OpenFileDialog();
             this.dlgSaveClass = new System.Windows.Forms.SaveFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.imgBuild = new System.Windows.Forms.PictureBox();
-            this.txtDescription = new System.Windows.Forms.TextBox();
-            this.txtScore = new System.Windows.Forms.TextBox();
-            this.txtMaxScore = new System.Windows.Forms.TextBox();
-            this.btnAddEntry = new System.Windows.Forms.Button();
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lvActivities = new System.Windows.Forms.ListView();
+            this.txtWeight = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblTotalWeight = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnUpdateEntry = new System.Windows.Forms.Button();
-            this.btnDeleteEntry = new System.Windows.Forms.Button();
-            this.btnCancelEntry = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupClassList.SuspendLayout();
             this.tabBuilder.SuspendLayout();
             this.tabSection.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgBuild)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -205,11 +205,12 @@
             this.columnHeader4,
             this.columnHeader5});
             this.lvEntries.FullRowSelect = true;
+            this.lvEntries.HideSelection = false;
             this.lvEntries.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4});
+            listViewItem9,
+            listViewItem10,
+            listViewItem11,
+            listViewItem12});
             this.lvEntries.Location = new System.Drawing.Point(12, 524);
             this.lvEntries.Margin = new System.Windows.Forms.Padding(4);
             this.lvEntries.Name = "lvEntries";
@@ -218,6 +219,7 @@
             this.lvEntries.UseCompatibleStateImageBehavior = false;
             this.lvEntries.View = System.Windows.Forms.View.Details;
             this.lvEntries.Click += new System.EventHandler(this.lvEntries_Click);
+            this.lvEntries.DoubleClick += new System.EventHandler(this.lvEntries_DoubleClick);
             // 
             // columnHeader1
             // 
@@ -282,7 +284,7 @@
             this.btnAdd.Location = new System.Drawing.Point(221, 165);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(100, 28);
+            this.btnAdd.Size = new System.Drawing.Size(54, 28);
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = ">>";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -293,58 +295,11 @@
             this.btnRemove.Location = new System.Drawing.Point(221, 201);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(100, 28);
+            this.btnRemove.Size = new System.Drawing.Size(54, 28);
             this.btnRemove.TabIndex = 6;
             this.btnRemove.Text = "<<";
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-            // 
-            // lvActivities
-            // 
-            this.lvActivities.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lvActivities.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader8,
-            this.columnHeader9});
-            this.lvActivities.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvActivities.FullRowSelect = true;
-            this.lvActivities.HideSelection = false;
-            this.lvActivities.Location = new System.Drawing.Point(329, 51);
-            this.lvActivities.Margin = new System.Windows.Forms.Padding(4);
-            this.lvActivities.MultiSelect = false;
-            this.lvActivities.Name = "lvActivities";
-            this.lvActivities.Size = new System.Drawing.Size(206, 321);
-            this.lvActivities.TabIndex = 7;
-            this.toolTip1.SetToolTip(this.lvActivities, "Double click to edit weight value");
-            this.lvActivities.UseCompatibleStateImageBehavior = false;
-            this.lvActivities.View = System.Windows.Forms.View.Details;
-            this.lvActivities.DoubleClick += new System.EventHandler(this.lvActivities_DoubleClick);
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Activity Type";
-            this.columnHeader8.Width = 139;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Weight";
-            this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader9.Width = 58;
-            // 
-            // txtWeight
-            // 
-            this.txtWeight.Enabled = false;
-            this.txtWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWeight.Location = new System.Drawing.Point(493, 21);
-            this.txtWeight.Margin = new System.Windows.Forms.Padding(4);
-            this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(42, 22);
-            this.txtWeight.TabIndex = 8;
-            this.txtWeight.Text = "0";
-            this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.toolTip1.SetToolTip(this.txtWeight, "Hit \'Enter\' to apply changes");
-            this.txtWeight.Click += new System.EventHandler(this.txtWeight_Click);
-            this.txtWeight.TextChanged += new System.EventHandler(this.txtWeight_TextChanged);
-            this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // btnLoadSection
             // 
@@ -366,10 +321,10 @@
             this.lvSection.FullRowSelect = true;
             this.lvSection.HideSelection = false;
             this.lvSection.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5,
-            listViewItem6,
-            listViewItem7,
-            listViewItem8});
+            listViewItem13,
+            listViewItem14,
+            listViewItem15,
+            listViewItem16});
             this.lvSection.Location = new System.Drawing.Point(0, 190);
             this.lvSection.Name = "lvSection";
             this.lvSection.Size = new System.Drawing.Size(429, 191);
@@ -409,26 +364,6 @@
             this.btnSaveSection.Text = "Save";
             this.toolTip1.SetToolTip(this.btnSaveSection, "Save Cass List");
             this.btnSaveSection.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(370, 376);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 16);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Overall Weight:";
-            // 
-            // lblTotalWeight
-            // 
-            this.lblTotalWeight.AutoSize = true;
-            this.lblTotalWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalWeight.Location = new System.Drawing.Point(490, 376);
-            this.lblTotalWeight.Name = "lblTotalWeight";
-            this.lblTotalWeight.Size = new System.Drawing.Size(16, 16);
-            this.lblTotalWeight.TabIndex = 10;
-            this.lblTotalWeight.Text = "0";
             // 
             // groupClassList
             // 
@@ -602,18 +537,22 @@
             this.tabSection.Text = "Class/Section";
             this.tabSection.UseVisualStyleBackColor = true;
             // 
+            // imgBuild
+            // 
+            this.imgBuild.Image = global::Grading_System.ProjResource.button_long;
+            this.imgBuild.Location = new System.Drawing.Point(555, 167);
+            this.imgBuild.Name = "imgBuild";
+            this.imgBuild.Size = new System.Drawing.Size(302, 85);
+            this.imgBuild.TabIndex = 12;
+            this.imgBuild.TabStop = false;
+            this.imgBuild.Click += new System.EventHandler(this.imgBuild_Click);
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.btnTest);
             this.tabPage2.Controls.Add(this.lvActivitiesList);
-            this.tabPage2.Controls.Add(this.lblTotalWeight);
             this.tabPage2.Controls.Add(this.btnAdd);
-            this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.btnRemove);
-            this.tabPage2.Controls.Add(this.txtWeight);
-            this.tabPage2.Controls.Add(this.lvActivities);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -622,9 +561,127 @@
             this.tabPage2.Text = "Activity Type";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblTotalWeight);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.btnCancelEntry);
+            this.groupBox1.Controls.Add(this.btnDeleteEntry);
+            this.groupBox1.Controls.Add(this.btnUpdateEntry);
+            this.groupBox1.Controls.Add(this.btnAddEntry);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtWeight);
+            this.groupBox1.Controls.Add(this.txtDescription);
+            this.groupBox1.Controls.Add(this.lvActivities);
+            this.groupBox1.Controls.Add(this.txtScore);
+            this.groupBox1.Controls.Add(this.txtMaxScore);
+            this.groupBox1.Location = new System.Drawing.Point(282, 21);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(688, 371);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Add/Edit/Delete Entries";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(491, 247);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 16);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Max Score";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(252, 247);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 16);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Score";
+            // 
+            // btnCancelEntry
+            // 
+            this.btnCancelEntry.Enabled = false;
+            this.btnCancelEntry.Location = new System.Drawing.Point(510, 121);
+            this.btnCancelEntry.Name = "btnCancelEntry";
+            this.btnCancelEntry.Size = new System.Drawing.Size(100, 36);
+            this.btnCancelEntry.TabIndex = 20;
+            this.btnCancelEntry.Text = "Cancel";
+            this.btnCancelEntry.UseVisualStyleBackColor = true;
+            this.btnCancelEntry.Click += new System.EventHandler(this.btnCancelEntry_Click);
+            // 
+            // btnDeleteEntry
+            // 
+            this.btnDeleteEntry.Enabled = false;
+            this.btnDeleteEntry.Location = new System.Drawing.Point(404, 121);
+            this.btnDeleteEntry.Name = "btnDeleteEntry";
+            this.btnDeleteEntry.Size = new System.Drawing.Size(100, 36);
+            this.btnDeleteEntry.TabIndex = 19;
+            this.btnDeleteEntry.Text = "Delete Entry";
+            this.btnDeleteEntry.UseVisualStyleBackColor = true;
+            this.btnDeleteEntry.Click += new System.EventHandler(this.btnDeleteEntry_Click);
+            // 
+            // btnUpdateEntry
+            // 
+            this.btnUpdateEntry.Enabled = false;
+            this.btnUpdateEntry.Location = new System.Drawing.Point(298, 121);
+            this.btnUpdateEntry.Name = "btnUpdateEntry";
+            this.btnUpdateEntry.Size = new System.Drawing.Size(100, 36);
+            this.btnUpdateEntry.TabIndex = 18;
+            this.btnUpdateEntry.Text = "Update Entry";
+            this.btnUpdateEntry.UseVisualStyleBackColor = true;
+            this.btnUpdateEntry.Click += new System.EventHandler(this.btnUpdateEntry_Click);
+            // 
+            // btnAddEntry
+            // 
+            this.btnAddEntry.Location = new System.Drawing.Point(298, 79);
+            this.btnAddEntry.Name = "btnAddEntry";
+            this.btnAddEntry.Size = new System.Drawing.Size(312, 36);
+            this.btnAddEntry.TabIndex = 15;
+            this.btnAddEntry.Text = "Add Entry";
+            this.btnAddEntry.UseVisualStyleBackColor = true;
+            this.btnAddEntry.Click += new System.EventHandler(this.btnAddEntry_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(252, 191);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 16);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Description";
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.Enabled = false;
+            this.txtDescription.Location = new System.Drawing.Point(250, 210);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(412, 22);
+            this.txtDescription.TabIndex = 12;
+            // 
+            // txtScore
+            // 
+            this.txtScore.Enabled = false;
+            this.txtScore.Location = new System.Drawing.Point(250, 266);
+            this.txtScore.Name = "txtScore";
+            this.txtScore.Size = new System.Drawing.Size(169, 22);
+            this.txtScore.TabIndex = 13;
+            // 
+            // txtMaxScore
+            // 
+            this.txtMaxScore.Enabled = false;
+            this.txtMaxScore.Location = new System.Drawing.Point(493, 266);
+            this.txtMaxScore.Name = "txtMaxScore";
+            this.txtMaxScore.Size = new System.Drawing.Size(169, 22);
+            this.txtMaxScore.TabIndex = 14;
+            // 
             // btnTest
             // 
-            this.btnTest.Location = new System.Drawing.Point(611, 24);
+            this.btnTest.Location = new System.Drawing.Point(404, 475);
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(75, 23);
             this.btnTest.TabIndex = 11;
@@ -637,7 +694,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(973, 399);
+            this.tabPage1.Size = new System.Drawing.Size(976, 399);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -652,134 +709,81 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // imgBuild
+            // columnHeader8
             // 
-            this.imgBuild.Image = global::Grading_System.ProjResource.button_long;
-            this.imgBuild.Location = new System.Drawing.Point(555, 167);
-            this.imgBuild.Name = "imgBuild";
-            this.imgBuild.Size = new System.Drawing.Size(302, 85);
-            this.imgBuild.TabIndex = 12;
-            this.imgBuild.TabStop = false;
-            this.imgBuild.Click += new System.EventHandler(this.imgBuild_Click);
+            this.columnHeader8.Text = "Activity Type";
+            this.columnHeader8.Width = 139;
             // 
-            // txtDescription
+            // columnHeader9
             // 
-            this.txtDescription.Enabled = false;
-            this.txtDescription.Location = new System.Drawing.Point(10, 170);
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(412, 22);
-            this.txtDescription.TabIndex = 12;
+            this.columnHeader9.Text = "Weight";
+            this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader9.Width = 58;
             // 
-            // txtScore
+            // lvActivities
             // 
-            this.txtScore.Enabled = false;
-            this.txtScore.Location = new System.Drawing.Point(10, 226);
-            this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(169, 22);
-            this.txtScore.TabIndex = 13;
+            this.lvActivities.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lvActivities.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader8,
+            this.columnHeader9});
+            this.lvActivities.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvActivities.FullRowSelect = true;
+            this.lvActivities.HideSelection = false;
+            this.lvActivities.Location = new System.Drawing.Point(13, 50);
+            this.lvActivities.Margin = new System.Windows.Forms.Padding(4);
+            this.lvActivities.MultiSelect = false;
+            this.lvActivities.Name = "lvActivities";
+            this.lvActivities.Size = new System.Drawing.Size(206, 298);
+            this.lvActivities.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.lvActivities, "Double click to edit weight value");
+            this.lvActivities.UseCompatibleStateImageBehavior = false;
+            this.lvActivities.View = System.Windows.Forms.View.Details;
+            this.lvActivities.DoubleClick += new System.EventHandler(this.lvActivities_DoubleClick);
             // 
-            // txtMaxScore
+            // txtWeight
             // 
-            this.txtMaxScore.Enabled = false;
-            this.txtMaxScore.Location = new System.Drawing.Point(253, 226);
-            this.txtMaxScore.Name = "txtMaxScore";
-            this.txtMaxScore.Size = new System.Drawing.Size(169, 22);
-            this.txtMaxScore.TabIndex = 14;
+            this.txtWeight.Enabled = false;
+            this.txtWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWeight.Location = new System.Drawing.Point(177, 20);
+            this.txtWeight.Margin = new System.Windows.Forms.Padding(4);
+            this.txtWeight.Name = "txtWeight";
+            this.txtWeight.Size = new System.Drawing.Size(42, 22);
+            this.txtWeight.TabIndex = 8;
+            this.txtWeight.Text = "0";
+            this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip1.SetToolTip(this.txtWeight, "Hit \'Enter\' to apply changes");
+            this.txtWeight.Click += new System.EventHandler(this.txtWeight_Click);
+            this.txtWeight.TextChanged += new System.EventHandler(this.txtWeight_TextChanged);
+            this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
-            // btnAddEntry
+            // label2
             // 
-            this.btnAddEntry.Location = new System.Drawing.Point(58, 39);
-            this.btnAddEntry.Name = "btnAddEntry";
-            this.btnAddEntry.Size = new System.Drawing.Size(312, 36);
-            this.btnAddEntry.TabIndex = 15;
-            this.btnAddEntry.Text = "Add Entry";
-            this.btnAddEntry.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(54, 352);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(114, 16);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Overall Weight:";
+            // 
+            // lblTotalWeight
+            // 
+            this.lblTotalWeight.AutoSize = true;
+            this.lblTotalWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalWeight.Location = new System.Drawing.Point(174, 352);
+            this.lblTotalWeight.Name = "lblTotalWeight";
+            this.lblTotalWeight.Size = new System.Drawing.Size(16, 16);
+            this.lblTotalWeight.TabIndex = 10;
+            this.lblTotalWeight.Text = "0";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(398, 24);
+            this.label1.Location = new System.Drawing.Point(82, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 16);
             this.label1.TabIndex = 16;
             this.label1.Text = "Weight Value";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 151);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 16);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Description";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.btnCancelEntry);
-            this.groupBox1.Controls.Add(this.btnDeleteEntry);
-            this.groupBox1.Controls.Add(this.btnUpdateEntry);
-            this.groupBox1.Controls.Add(this.btnAddEntry);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtDescription);
-            this.groupBox1.Controls.Add(this.txtScore);
-            this.groupBox1.Controls.Add(this.txtMaxScore);
-            this.groupBox1.Location = new System.Drawing.Point(542, 93);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(428, 279);
-            this.groupBox1.TabIndex = 18;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Modify Entries";
-            // 
-            // btnUpdateEntry
-            // 
-            this.btnUpdateEntry.Enabled = false;
-            this.btnUpdateEntry.Location = new System.Drawing.Point(58, 81);
-            this.btnUpdateEntry.Name = "btnUpdateEntry";
-            this.btnUpdateEntry.Size = new System.Drawing.Size(100, 36);
-            this.btnUpdateEntry.TabIndex = 18;
-            this.btnUpdateEntry.Text = "Update Entry";
-            this.btnUpdateEntry.UseVisualStyleBackColor = true;
-            // 
-            // btnDeleteEntry
-            // 
-            this.btnDeleteEntry.Enabled = false;
-            this.btnDeleteEntry.Location = new System.Drawing.Point(164, 81);
-            this.btnDeleteEntry.Name = "btnDeleteEntry";
-            this.btnDeleteEntry.Size = new System.Drawing.Size(100, 36);
-            this.btnDeleteEntry.TabIndex = 19;
-            this.btnDeleteEntry.Text = "Delete Entry";
-            this.btnDeleteEntry.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelEntry
-            // 
-            this.btnCancelEntry.Enabled = false;
-            this.btnCancelEntry.Location = new System.Drawing.Point(270, 81);
-            this.btnCancelEntry.Name = "btnCancelEntry";
-            this.btnCancelEntry.Size = new System.Drawing.Size(100, 36);
-            this.btnCancelEntry.TabIndex = 20;
-            this.btnCancelEntry.Text = "Cancel";
-            this.btnCancelEntry.UseVisualStyleBackColor = true;
-            this.btnCancelEntry.Click += new System.EventHandler(this.btnCancelEntry_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 207);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 16);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Score";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(251, 207);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 16);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "Max Score";
             // 
             // Builder
             // 
@@ -789,6 +793,7 @@
             this.ClientSize = new System.Drawing.Size(1008, 730);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabBuilder);
+            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.lvEntries);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -805,12 +810,11 @@
             this.groupClassList.PerformLayout();
             this.tabBuilder.ResumeLayout(false);
             this.tabSection.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgBuild)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -834,13 +838,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.ListView lvActivities;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.TextBox txtWeight;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblTotalWeight;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.GroupBox groupClassList;
         private System.Windows.Forms.ListView lvSection;
@@ -876,7 +874,6 @@
         private System.Windows.Forms.TextBox txtMaxScore;
         private System.Windows.Forms.TextBox txtScore;
         private System.Windows.Forms.TextBox txtDescription;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnCancelEntry;
         private System.Windows.Forms.Button btnDeleteEntry;
@@ -884,5 +881,12 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTotalWeight;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtWeight;
+        private System.Windows.Forms.ListView lvActivities;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
     }
 }
