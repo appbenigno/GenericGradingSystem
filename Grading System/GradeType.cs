@@ -15,7 +15,6 @@ namespace Grading_System
         public GradeType()
         {
             InitializeComponent();
-
         }
 
         public void gradeTypeListViewFormat()
@@ -24,13 +23,13 @@ namespace Grading_System
             lvGradePreview.Columns.Add("Grade", 100);
             lvGradePreview.View = View.Details;
             lvGradePreview.GridLines = true;
-            lvGradePreview.FullRowSelect = true;
+            lvGradePreview.FullRowSelect = true;            
         }
 
         public void btnPercentage_Click(object sender, EventArgs e)
         {
             Globals.GradeType.gradeTypeChoice = "percentage";
-            
+            gradeTypeListViewFormat();
 
             //Add items in the listview
             string[] arr = new string[4];
@@ -73,14 +72,12 @@ namespace Grading_System
             arr[0] = "0";
             itm = new ListViewItem(arr);
             lvGradePreview.Items.Add(itm);
-
         }
 
         public void btnLetter_Click(object sender, EventArgs e)
         {
             Globals.GradeType.gradeTypeChoice = "letter";
             gradeTypeListViewFormat();
-
 
             //Add items in the listview
             string[] arr = new string[4];
@@ -152,6 +149,9 @@ namespace Grading_System
             itm = new ListViewItem(arr);
             lvGradePreview.Items.Add(itm);
             arr[0] = "2.25";
+            itm = new ListViewItem(arr);
+            lvGradePreview.Items.Add(itm);
+            arr[0] = "2.50";
             itm = new ListViewItem(arr);
             lvGradePreview.Items.Add(itm);
             arr[0] = "2.75";

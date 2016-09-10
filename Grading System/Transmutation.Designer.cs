@@ -30,11 +30,11 @@
         {
             this.lvGrade = new System.Windows.Forms.ListView();
             this.Range1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Separator = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Range2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lvEquivalent = new System.Windows.Forms.ListView();
             this.equivalent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Separator = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Range2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lvGrade
@@ -44,18 +44,31 @@
             this.Separator,
             this.Range2});
             this.lvGrade.GridLines = true;
+            this.lvGrade.LabelEdit = true;
             this.lvGrade.Location = new System.Drawing.Point(39, 25);
             this.lvGrade.Name = "lvGrade";
-            this.lvGrade.Scrollable = false;
             this.lvGrade.Size = new System.Drawing.Size(117, 308);
             this.lvGrade.TabIndex = 3;
             this.lvGrade.UseCompatibleStateImageBehavior = false;
             this.lvGrade.View = System.Windows.Forms.View.Details;
+            this.lvGrade.SelectedIndexChanged += new System.EventHandler(this.lvGrade_SelectedIndexChanged);
             // 
             // Range1
             // 
             this.Range1.Text = "From";
             this.Range1.Width = 50;
+            // 
+            // Separator
+            // 
+            this.Separator.Text = "-";
+            this.Separator.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Separator.Width = 26;
+            // 
+            // Range2
+            // 
+            this.Range2.Text = "To";
+            this.Range2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Range2.Width = 50;
             // 
             // lvEquivalent
             // 
@@ -80,18 +93,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 5;
-            // 
-            // Separator
-            // 
-            this.Separator.Text = "-";
-            this.Separator.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Separator.Width = 26;
-            // 
-            // Range2
-            // 
-            this.Range2.Text = "To";
-            this.Range2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Range2.Width = 50;
             // 
             // Transmutation
             // 
