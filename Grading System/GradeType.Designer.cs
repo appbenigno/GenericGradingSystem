@@ -55,17 +55,17 @@
             // 
             // btnPercentage
             // 
-            this.btnPercentage.Location = new System.Drawing.Point(199, 31);
+            this.btnPercentage.Location = new System.Drawing.Point(197, 151);
             this.btnPercentage.Name = "btnPercentage";
             this.btnPercentage.Size = new System.Drawing.Size(117, 35);
             this.btnPercentage.TabIndex = 1;
-            this.btnPercentage.Text = "Percentage Grading";
+            this.btnPercentage.Text = "Custom";
             this.btnPercentage.UseVisualStyleBackColor = true;
             this.btnPercentage.Click += new System.EventHandler(this.btnPercentage_Click);
             // 
             // btnLetter
             // 
-            this.btnLetter.Location = new System.Drawing.Point(199, 72);
+            this.btnLetter.Location = new System.Drawing.Point(197, 31);
             this.btnLetter.Name = "btnLetter";
             this.btnLetter.Size = new System.Drawing.Size(117, 35);
             this.btnLetter.TabIndex = 2;
@@ -75,7 +75,7 @@
             // 
             // btnGradePoint1
             // 
-            this.btnGradePoint1.Location = new System.Drawing.Point(199, 113);
+            this.btnGradePoint1.Location = new System.Drawing.Point(197, 72);
             this.btnGradePoint1.Name = "btnGradePoint1";
             this.btnGradePoint1.Size = new System.Drawing.Size(117, 35);
             this.btnGradePoint1.TabIndex = 3;
@@ -85,7 +85,7 @@
             // 
             // btnGradePoint4
             // 
-            this.btnGradePoint4.Location = new System.Drawing.Point(199, 154);
+            this.btnGradePoint4.Location = new System.Drawing.Point(197, 113);
             this.btnGradePoint4.Name = "btnGradePoint4";
             this.btnGradePoint4.Size = new System.Drawing.Size(117, 32);
             this.btnGradePoint4.TabIndex = 4;

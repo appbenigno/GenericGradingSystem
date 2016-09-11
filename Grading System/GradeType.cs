@@ -15,11 +15,22 @@ namespace Grading_System
         public GradeType()
         {
             InitializeComponent();
+            btnOK.Enabled = false;    //OK button is disabled if the user did not pick any gradeType    
+        }
+
+        public void btnOKdisabled() //OK button is enabled if the user pick a gradeType
+        {
+            if (Globals.GradeType.gradeTypeChoice == "")
+            {
+                btnOK.Enabled = false;
+            }
+            else
+                btnOK.Enabled = true;
         }
 
         public void gradeTypeListViewFormat()
         {
-            lvGradePreview.Clear();
+            lvGradePreview.Clear();            
             lvGradePreview.Columns.Add("Grade", 100);
             lvGradePreview.View = View.Details;
             lvGradePreview.GridLines = true;
@@ -28,7 +39,8 @@ namespace Grading_System
 
         public void btnPercentage_Click(object sender, EventArgs e)
         {
-            Globals.GradeType.gradeTypeChoice = "percentage";
+            Globals.GradeType.gradeTypeChoice = "custom";
+            btnOKdisabled();
             gradeTypeListViewFormat();
 
             //Add items in the listview
@@ -39,36 +51,19 @@ namespace Grading_System
             arr[0] = "100";
             itm = new ListViewItem(arr);
             lvGradePreview.Items.Add(itm);
-            arr[0] = "95";
-            itm = new ListViewItem(arr);
-            lvGradePreview.Items.Add(itm);
+          
             arr[0] = "90";
             itm = new ListViewItem(arr);
             lvGradePreview.Items.Add(itm);
-            arr[0] = "85";
-            itm = new ListViewItem(arr);
-            lvGradePreview.Items.Add(itm);
+          
             arr[0] = "80";
             itm = new ListViewItem(arr);
             lvGradePreview.Items.Add(itm);
-            arr[0] = "75";
-            itm = new ListViewItem(arr);
-            lvGradePreview.Items.Add(itm);
+         
             arr[0] = "70";
             itm = new ListViewItem(arr);
             lvGradePreview.Items.Add(itm);
-            arr[0] = "65";
-            itm = new ListViewItem(arr);
-            lvGradePreview.Items.Add(itm);
-            arr[0] = "60";
-            itm = new ListViewItem(arr);
-            lvGradePreview.Items.Add(itm);
-            arr[0] = "55";
-            itm = new ListViewItem(arr);
-            lvGradePreview.Items.Add(itm);
-            arr[0] = "50";
-            itm = new ListViewItem(arr);
-            lvGradePreview.Items.Add(itm);
+          
             arr[0] = "0";
             itm = new ListViewItem(arr);
             lvGradePreview.Items.Add(itm);
@@ -77,6 +72,7 @@ namespace Grading_System
         public void btnLetter_Click(object sender, EventArgs e)
         {
             Globals.GradeType.gradeTypeChoice = "letter";
+            btnOKdisabled();
             gradeTypeListViewFormat();
 
             //Add items in the listview
@@ -127,6 +123,7 @@ namespace Grading_System
         public void btnGradePoint1_Click(object sender, EventArgs e)
         {
             Globals.GradeType.gradeTypeChoice = "gradePoint1";
+            btnOKdisabled();
             gradeTypeListViewFormat();
 
             //Add items in the listview
@@ -167,8 +164,8 @@ namespace Grading_System
 
         public void btnGradePoint4_Click(object sender, EventArgs e)
         {
-
             Globals.GradeType.gradeTypeChoice = "gradePoint4";
+            btnOKdisabled();
             gradeTypeListViewFormat();
 
             //Add items in the listview
@@ -199,7 +196,6 @@ namespace Grading_System
             arr[0] = "0.00";
             itm = new ListViewItem(arr);
             lvGradePreview.Items.Add(itm);
-
         }
 
         public void btnOK_Click(object sender, EventArgs e)
@@ -208,8 +204,6 @@ namespace Grading_System
             f3.Show(); // Show Form3 and
             this.Close(); // closes the GradeType instance.
         }
-
-
     }
 }
 
