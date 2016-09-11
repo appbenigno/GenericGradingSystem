@@ -19,13 +19,13 @@ namespace Grading_System.FormControl
                     {
                         flags.destroy("building");
                         groupClassList.Enabled = true;
-                        buildPicture.Image = ProjResource.button_long;
+                        buildPicture.Image = ProjResource.button_build;
                     }
                     else if (!flags.isRaised("building"))
                     {
                         flags.raise("building");
                         groupClassList.Enabled = false;
-                        buildPicture.Image = ProjResource.button_long;
+                        buildPicture.Image = ProjResource.button_build_hover;
                     }
                     break;
                 }

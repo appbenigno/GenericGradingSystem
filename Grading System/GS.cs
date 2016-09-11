@@ -638,7 +638,7 @@ namespace Grading_System
             catch { }
         }
 
-        public static void getResultsSummary(ListView activities, ListView resultList, ListView entriesList, TreeView resultTree, Label resultLabel)
+        public static void getResultsSummary(ListView activities, ListView resultList, ListView entriesList, TreeView resultTree, TextBox resultLabel)
         {
             resultTree.Nodes.Clear();
             string name = resultList.SelectedItems[0].SubItems[0].Text;

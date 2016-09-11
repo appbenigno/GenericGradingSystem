@@ -157,4 +157,10 @@
   <data name="lbl_entries" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\lbl_entries.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="button_build" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\button_build.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_build_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\button_build_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

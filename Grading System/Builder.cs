@@ -260,6 +260,7 @@ namespace Grading_System
         {
             if (flags.isRaised("building"))
             {
+                tabBuilder.SelectTab(1);
                 FormControl.Entries.Edit(txtDescription, txtScore, txtMaxScore, btnAddEntry, btnUpdateEntry, btnDeleteEntry, btnCancelEntry, lvEntries);
             }
         }
@@ -285,7 +286,7 @@ namespace Grading_System
         {
             //GS.getTreeResultNodes(lvActivities, treeResult);
             GS.getResults(lblResultName, lblResultSection, lvResults, lvEntries, treeResult);
-            GS.getResultsSummary(lvActivities, lvResults, lvEntries, treeResultSummary, lblWeightedAverage);
+            GS.getResultsSummary(lvActivities, lvResults, lvEntries, treeResultSummary, txtWeightedAverage);
         }
     }
 }
