@@ -425,6 +425,12 @@ namespace Grading_System
             }
         }
 
+        /// <summary>
+        /// Add a new entry A
+        /// </summary>
+        /// <param name="classList"></param>
+        /// <param name="activityList"></param>
+        /// <param name="entriesList"></param>
         public static void addEntry(ListView classList, ListView activityList, ListView entriesList)
         {
             if (flags.isRaised("building"))
@@ -471,6 +477,204 @@ namespace Grading_System
             {
                 MessageBox.Show("Unable to create entry without selecting a name and entering build mode.", "Enter build mode first", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        /// <summary>
+        /// Add a new entry B
+        /// </summary>
+        /// <param name="classList"></param>
+        /// <param name="activityList"></param>
+        /// <param name="entriesList"></param>
+        /// <param name="description"></param>
+        /// <param name="score"></param>
+        /// <param name="maxscore"></param>
+        public static void addEntry(ListView classList, string activityName, ListView entriesList, string description, int score=0, int maxscore=100)
+        {
+            if (flags.isRaised("building"))
+            {
+                try
+                {
+                    string name = string.Concat(classList.SelectedItems[0].SubItems[1].Text, ", ", classList.SelectedItems[0].SubItems[2].Text, " ", classList.SelectedItems[0].SubItems[3].Text, ".");
+                    string section = classList.SelectedItems[0].SubItems[0].Text;
+                    string activity = activityName;
+
+                    ListViewItem lvi = new ListViewItem(name);
+                    lvi.SubItems.Add(section);
+                    lvi.SubItems.Add(activity);
+                    lvi.SubItems.Add(description);
+                    lvi.SubItems.Add(score.ToString());
+                    lvi.SubItems.Add(maxscore.ToString());
+
+                    entriesList.Items.Add(lvi);
+                }
+                catch (Exception errAdd)
+                {
+                    MessageBox.Show(errAdd.Message, "Something is wrong", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Unable to create entry without selecting a name and entering build mode.", "Enter build mode first", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        /// <summary>
+        /// Get distinct names from Entires List
+        /// </summary>
+        /// <param name="entriesList"></param>
+        /// <param name="resultsList"></param>
+        public static void getResultNames(ListView entriesList, ListView resultsList)
+        {
+            try
+            {
+                resultsList.Items.Clear();
+                if (entriesList.Items.Count > 0)
+                {
+                    for (int x = 0; x < entriesList.Items.Count; x++)
+                    {
+                        string name = entriesList.Items[x].SubItems[0].Text;
+                        string section = entriesList.Items[x].SubItems[1].Text;
+
+                        ListViewItem lvi = new ListViewItem(name);
+                        lvi.SubItems.Add(section);
+
+                        if (!isResultExist(resultsList, name)) 
+                        {
+                            resultsList.Items.Add(lvi);
+                        }
+                    }
+                }
+            }
+            catch { }
+        }
+
+        /// <summary>
+        /// Check duplicate name entry in results
+        /// </summary>
+        /// <param name="resultList"></param>
+        /// <param name="matchString"></param>
+        /// <returns></returns>
+        public static bool isResultExist(ListView resultList, string matchString)
+        {
+            bool result = false;
+            for (int x = 0; x < resultList.Items.Count; x++)
+            {
+                string tomatch = resultList.Items[x].SubItems[0].Text;
+                if (matchString.Equals(tomatch))
+                {
+                    result = true;
+                    break;
+                }
+                else
+                {
+                    result = false;
+                }
+            }
+            return result;
+        }
+
+        public static int getActivityCount(string name, string activityName, ListView entriesList)
+        {
+            int result = 0;
+            for (int x = 0; x < entriesList.Items.Count; x++)
+            {
+                string matchname = entriesList.Items[x].SubItems[0].Text;
+                string matchactivity = entriesList.Items[x].SubItems[2].Text;
+                if (matchname.Equals(name) && matchactivity.Equals(activityName))
+                {
+                    result += 1;
+                }   
+            }
+            return result;
+        }
+        public static void getTreeResultNodes(ListView sourceList, TreeView resultTree)
+        {
+            try
+            {
+                resultTree.Nodes.Clear();
+                for (int x = 0; x < sourceList.Items.Count; x++)
+                {
+                    resultTree.Nodes.Add(sourceList.Items[x].SubItems[0].Text);
+                }
+            }
+            catch { }
+        }
+
+        /// <summary>
+        /// Get Results
+        /// </summary>
+        /// <param name="targetNameLabel"></param>
+        /// <param name="targetSectionLabel"></param>
+        /// <param name="resultList"></param>
+        /// <param name="entriesList"></param>
+        /// <param name="resultTree"></param>
+        public static void getResults(Label targetNameLabel, Label targetSectionLabel, ListView resultList, ListView entriesList, TreeView resultTree)
+        {
+            try
+            {
+                targetNameLabel.Text = resultList.SelectedItems[0].SubItems[0].Text;
+                targetSectionLabel.Text = resultList.SelectedItems[0].SubItems[1].Text;
+                resultTree.Nodes.Clear();
+
+                for (int x = 0; x < entriesList.Items.Count; x++)
+                {
+                    string name = entriesList.Items[x].SubItems[0].Text;
+                    string activity = entriesList.Items[x].SubItems[2].Text;
+                    string description = entriesList.Items[x].SubItems[3].Text;
+                    int score = Convert.ToInt32(entriesList.Items[x].SubItems[4].Text);
+                    int maxscore = Convert.ToInt32(entriesList.Items[x].SubItems[5].Text);
+                    if (name.Equals(targetNameLabel.Text))
+                    {
+                        TreeNode noder = new TreeNode(activity);
+                        noder.Nodes.Add(string.Concat("Description: ",description));
+                        noder.Nodes.Add(string.Concat("Score: ", score.ToString()));
+                        noder.Nodes.Add(string.Concat("Max Score: ", maxscore.ToString()));
+                        resultTree.Nodes.Add(noder);
+                        
+                    }
+                }
+                resultTree.Sort();
+            }
+            catch { }
+        }
+
+        public static void getResultsSummary(ListView activities, ListView resultList, ListView entriesList, TreeView resultTree, Label resultLabel)
+        {
+            resultTree.Nodes.Clear();
+            string name = resultList.SelectedItems[0].SubItems[0].Text;
+            string section = resultList.SelectedItems[0].SubItems[1].Text;
+            TreeNode noder;
+            
+
+            for (int x = 0; x < activities.Items.Count; x++)
+            {
+                string activityName;
+                int activityWeight;
+                activityName = activities.Items[x].SubItems[0].Text;
+                activityWeight = Convert.ToInt32(activities.Items[x].SubItems[1].Text);
+                noder = new TreeNode(string.Concat(activityName, " ", activityWeight.ToString(), "%"));
+                noder.Nodes.Add(string.Concat("Count = ", compute.getActivityCount(name, activityName, entriesList)));
+                noder.Nodes.Add(string.Concat("Total Score = ", compute.getTotalScore(name, activityName, entriesList)));
+                noder.Nodes.Add(string.Concat("Total Max Score = ", compute.getTotalScoreItems(name, activityName, entriesList)));
+                noder.Nodes.Add(string.Concat("Score Ave. = ", compute.getScoreAve(name, activityName, entriesList)));
+                noder.Nodes.Add(string.Concat("Max Score Ave. = ", compute.getMaxScoreAve(name, activityName, entriesList)));
+                noder.Nodes.Add(string.Concat("Weighted Ave. = ", compute.getWeightedAverage(name, activityName, entriesList, activities)));
+                resultTree.Nodes.Add(noder);
+            }
+
+            double wa = 0;
+            for (int y = 0; y < activities.Items.Count; y++)
+            {
+                string activityName2;
+                int activityWeight2;
+                activityName2 = activities.Items[y].SubItems[0].Text;
+                activityWeight2 = Convert.ToInt32(activities.Items[y].SubItems[1].Text);
+
+                wa += compute.getWeightedAverage(name, activityName2, entriesList, activities);
+            }
+            resultLabel.Text = Math.Round(wa, 2).ToString();
+            resultTree.Sort();
+            resultTree.ExpandAll();
         }
 
         //--------------------------------------------------

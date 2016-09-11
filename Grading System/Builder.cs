@@ -151,8 +151,52 @@ namespace Grading_System
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            double answer = Math.Round(compute.getWeightedAverage("Quiz", lvEntries) * compute.getPercentage("Quiz", lvActivities),2);
-            MessageBox.Show(answer.ToString());
+            if (flags.isRaised("building"))
+            {
+                lvEntries.Items.Clear();
+                GS.addEntry(lvSection, "Quiz", lvEntries, "Quiz 1", 150, 150);
+                GS.addEntry(lvSection, "Quiz", lvEntries, "Quiz 2", 125, 150);
+                GS.addEntry(lvSection, "Quiz", lvEntries, "Quiz 3", 75 + 40, 150);
+                GS.addEntry(lvSection, "Quiz", lvEntries, "Quiz 4", 150, 150);
+                GS.addEntry(lvSection, "Laboratory", lvEntries, "Lab 1", 25, 25);
+                GS.addEntry(lvSection, "Laboratory", lvEntries, "Lab 2", 25, 25);
+                GS.addEntry(lvSection, "Laboratory", lvEntries, "Lab 3", 25, 25);
+                GS.addEntry(lvSection, "Seatwork", lvEntries, "SW 1", 25, 40);
+                GS.addEntry(lvSection, "Seatwork", lvEntries, "SW 2", 20, 20);
+                GS.addEntry(lvSection, "Exercise", lvEntries, "Exer 1", 20, 20);
+                GS.addEntry(lvSection, "Exercise", lvEntries, "Exer 2", 29, 29);
+                GS.addEntry(lvSection, "Exercise", lvEntries, "Exer 3", 24, 24);
+                GS.addEntry(lvSection, "Exercise", lvEntries, "Exer 4", 35, 35);
+                GS.addEntry(lvSection, "Exercise", lvEntries, "Exer 5", 25, 25);
+                GS.addEntry(lvSection, "Finals", lvEntries, "Finals", 35, 50);
+
+                lvActivities.Items.Clear();
+                ListViewItem lvi;
+
+                lvi = new ListViewItem("Quiz");
+                lvi.SubItems.Add("50");
+                lvActivities.Items.Add(lvi);
+
+                lvi = new ListViewItem("Finals");
+                lvi.SubItems.Add("20");
+                lvActivities.Items.Add(lvi);
+
+                lvi = new ListViewItem("Exercise");
+                lvi.SubItems.Add("10");
+                lvActivities.Items.Add(lvi);
+
+                lvi = new ListViewItem("Laboratory");
+                lvi.SubItems.Add("10");
+                lvActivities.Items.Add(lvi);
+
+                lvi = new ListViewItem("Seatwork");
+                lvi.SubItems.Add("10");
+                lvActivities.Items.Add(lvi);
+            }
+            else
+            {
+                MessageBox.Show("Enter build mode first and select name");
+            }
         }
 
         private void imgBuild_Click(object sender, EventArgs e)
@@ -218,6 +262,30 @@ namespace Grading_System
             {
                 FormControl.Entries.Edit(txtDescription, txtScore, txtMaxScore, btnAddEntry, btnUpdateEntry, btnDeleteEntry, btnCancelEntry, lvEntries);
             }
+        }
+
+        private void tabBuilder_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (tabBuilder.SelectedIndex.Equals(2))
+                {
+                    GS.getResultNames(lvEntries, lvResults);
+                }
+            }
+            catch { }
+        }
+
+        private void btnTest2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lvResults_Click(object sender, EventArgs e)
+        {
+            //GS.getTreeResultNodes(lvActivities, treeResult);
+            GS.getResults(lblResultName, lblResultSection, lvResults, lvEntries, treeResult);
+            GS.getResultsSummary(lvActivities, lvResults, lvEntries, treeResultSummary, lblWeightedAverage);
         }
     }
 }
