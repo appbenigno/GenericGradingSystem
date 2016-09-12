@@ -152,6 +152,7 @@ namespace Grading_System
             {
                 FormControl.DeleteStudent.Confirm(txtSection, txtFamilyName, txtGivenName, txtMiddleInitial, btnUpdate, btnCancel, btnAddStudent, btnDeleteStudent, lvSection);
                 flags.destroy("deletingstudent");
+                flags.destroy("modifyingstudent");
             }
         }
 
