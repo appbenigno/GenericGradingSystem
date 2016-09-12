@@ -124,6 +124,7 @@ namespace Grading_System
             try
             {
                 FormControl.ModifyStudent.EditDetails(txtFamilyName, txtGivenName, txtMiddleInitial, btnUpdate, btnCancel,btnAddStudent, btnDeleteStudent, lvSection);
+                flags.raise("modifyingstudent");
             }
             catch { }
         }
@@ -136,6 +137,7 @@ namespace Grading_System
         private void btnCancel_Click(object sender, EventArgs e)
         {
             FormControl.Cancel.EditStudent(txtFamilyName, txtGivenName, txtMiddleInitial, btnUpdate, btnCancel, btnAddStudent, btnDeleteStudent, lvSection);
+            flags.destroy("modifyingstudent");
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -214,7 +216,15 @@ namespace Grading_System
 
         private void imgBuild_Click(object sender, EventArgs e)
         {
-            FormControl.Build.BuildMode(imgBuild, groupClassList, lvSection);
+            if (!flags.isRaised("modifyingstudent"))
+            {
+                FormControl.Build.BuildMode(imgBuild, groupClassList, lvSection);
+            }
+            else
+            {
+                MessageBox.Show("You are still in record edit mode", "Unable to enter build mode", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
             if (flags.isRaised("building"))
             {
                 tabBuilder.SelectTab(1);
