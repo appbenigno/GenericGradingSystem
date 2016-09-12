@@ -35,16 +35,16 @@ namespace Grading_System
             }
         }
 
-        private static Form report;
-        public static Form Report
+        private static Form loader;
+        public static Form Loader
         {
             get
             {
-                if (report == null)
+                if (loader == null)
                 {
-                    report = new Report();
+                    loader = new Loader();
                 }
-                return report;
+                return loader;
             }
         }
 

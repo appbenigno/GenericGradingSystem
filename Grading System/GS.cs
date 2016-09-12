@@ -169,8 +169,24 @@ namespace Grading_System
         /// </summary>
         /// <param name="source"></param>
         /// <param name="targetLabel"></param>
-        public static void validateWeight(ListView source,Label targetLabel)
+        public static void validateWeight(ListView activitiesLister, ListView source,Label targetLabel)
         {
+            try
+            {
+                for (int x = 0; x < source.Items.Count; x++)
+                {
+                    string match1 = source.Items[x].SubItems[0].Text;
+                    for (int y = 0; y < activitiesLister.Items.Count; y++)
+                    {
+                        string match2 = activitiesLister.Items[y].SubItems[0].Text;
+                        if (match2.Equals(match1))
+                        {
+                            activitiesLister.Items[y].Remove();
+                        }
+                    }
+                }
+            }
+            catch { }
             targetLabel.Text = string.Concat(getWeight(source).ToString(), "%");
             if (getWeight(source) > 100)
             {
@@ -225,6 +241,7 @@ namespace Grading_System
             {
                 if (familyName.Text.Length > 0 && givenName.Text.Length > 0 && middleInitial.Text.Length > 0)
                 {
+                    targetList.SelectedItems[0].SubItems[0].Text = section.Text;
                     targetList.SelectedItems[0].SubItems[1].Text = familyName.Text;
                     targetList.SelectedItems[0].SubItems[2].Text = givenName.Text;
                     targetList.SelectedItems[0].SubItems[3].Text = middleInitial.Text;
@@ -446,8 +463,13 @@ namespace Grading_System
                         }
                         else
                         {
-                            MessageBox.Show("Select an activity from the left first.", "No selected activity", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            flags.raise("noactivityselected");
                         }
+                    }
+                    if (flags.isRaised("noactivityselected"))
+                    {
+                        flags.destroy("noactivityselected");
+                        MessageBox.Show("Select an activity name first.", "No activity selected", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     if (flags.isRaised("activityselected"))
                     {
@@ -475,7 +497,7 @@ namespace Grading_System
             }
             else
             {
-                MessageBox.Show("Unable to create entry without selecting a name and entering build mode.", "Enter build mode first", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Unable to create entry without selecting a name from the class list and entering build mode.", "Enter build mode first", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -573,6 +595,13 @@ namespace Grading_System
             return result;
         }
 
+        /// <summary>
+        /// Get activity count by Name
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="activityName"></param>
+        /// <param name="entriesList"></param>
+        /// <returns></returns>
         public static int getActivityCount(string name, string activityName, ListView entriesList)
         {
             int result = 0;
@@ -587,6 +616,12 @@ namespace Grading_System
             }
             return result;
         }
+
+        /// <summary>
+        /// Get tree nodes from listview items
+        /// </summary>
+        /// <param name="sourceList"></param>
+        /// <param name="resultTree"></param>
         public static void getTreeResultNodes(ListView sourceList, TreeView resultTree)
         {
             try
@@ -638,6 +673,14 @@ namespace Grading_System
             catch { }
         }
 
+        /// <summary>
+        /// Get Summary Results to TreeView
+        /// </summary>
+        /// <param name="activities"></param>
+        /// <param name="resultList"></param>
+        /// <param name="entriesList"></param>
+        /// <param name="resultTree"></param>
+        /// <param name="resultLabel"></param>
         public static void getResultsSummary(ListView activities, ListView resultList, ListView entriesList, TreeView resultTree, TextBox resultLabel)
         {
             resultTree.Nodes.Clear();

@@ -64,8 +64,11 @@
     <Compile Include="FormControl\DeleteStudent.cs" />
     <Compile Include="FormControl\Entries.cs" />
     <Compile Include="FormControl\ModifyStudent.cs" />
+    <Compile Include="FormControl\Notify.cs" />
+    <Compile Include="FormControl\XML.cs" />
     <Compile Include="Globals\Builder.cs" />
     <Compile Include="Globals\GradeType.cs" />
+    <Compile Include="Globals\iBuilder.cs" />
     <Compile Include="Globals\Report.cs" />
     <Compile Include="Globals\Templates.cs" />
     <Compile Include="Globals\Theme.cs" />
@@ -88,11 +91,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjResource.resx</DependentUpon>
     </Compile>
-    <Compile Include="Report.cs">
+    <Compile Include="Loader.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Report.Designer.cs">
-      <DependentUpon>Report.cs</DependentUpon>
+    <Compile Include="Loader.Designer.cs">
+      <DependentUpon>Loader.cs</DependentUpon>
     </Compile>
     <Compile Include="Templates.cs">
       <SubType>Form</SubType>
@@ -114,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GradeType.resx">
       <DependentUpon>GradeType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loader.resx">
+      <DependentUpon>Loader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
