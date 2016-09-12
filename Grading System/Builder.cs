@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 using System.IO;
+using System.Xml;
 
 namespace Grading_System
 {
@@ -24,7 +25,7 @@ namespace Grading_System
 
         private void mnuReports_Click(object sender, EventArgs e)
         {
-            Winforms.Report.Show();
+            
         }
 
         private void mnuTransmutationTable_Click(object sender, EventArgs e)
@@ -45,6 +46,14 @@ namespace Grading_System
 
         private void Builder_Load(object sender, EventArgs e)
         {
+            //
+            // Settings Directory
+            //
+            bool settingsDirectoryExist = Directory.Exists(Path.GetFullPath(".\\") + FormControl.XML.FileStructure.settingsPath);
+            if (!settingsDirectoryExist)
+            {
+                Directory.CreateDirectory(Path.GetFullPath(".\\") + FormControl.XML.FileStructure.settingsPath);
+            }
             GS.getActivities(lvActivitiesList);
         }
 
@@ -91,7 +100,7 @@ namespace Grading_System
             if (e.KeyChar == (char)Keys.Enter)
             {
                 GS.modifyActivityChanges(txtWeight, lvActivities);
-                GS.validateWeight(lvActivities, lblTotalWeight);
+                GS.validateWeight(lvActivitiesList, lvActivities, lblTotalWeight);
                 if (GS.getWeight(lvActivities) <= 100)
                 {
                     FormControl.Activities.ModifyConfirm(lvActivitiesList, lvActivities, btnAdd, btnRemove, txtWeight);
@@ -149,7 +158,7 @@ namespace Grading_System
             GS.applySection(txtSection, lvSection);
         }
 
-        private void btnTest_Click(object sender, EventArgs e)
+        private void dummyData()
         {
             if (flags.isRaised("building"))
             {
@@ -198,6 +207,10 @@ namespace Grading_System
                 MessageBox.Show("Enter build mode first and select name");
             }
         }
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            dummyData();
+        }
 
         private void imgBuild_Click(object sender, EventArgs e)
         {
@@ -239,6 +252,7 @@ namespace Grading_System
             if (flags.isRaised("updatingentry"))
             {
                 FormControl.Entries.Confirm(txtDescription, txtScore, txtMaxScore, btnAddEntry, btnUpdateEntry, btnDeleteEntry, btnCancelEntry, lvEntries);
+                flags.destroy("updatingentry");
             }
         }
 
@@ -248,6 +262,7 @@ namespace Grading_System
             if (flags.isRaised("deletingentry"))
             {
                 FormControl.Entries.Delete(txtDescription, txtScore, txtMaxScore, btnAddEntry, btnUpdateEntry, btnDeleteEntry, btnCancelEntry, lvEntries);
+                flags.destroy("deletingentry");
             }
         }
 
@@ -273,13 +288,16 @@ namespace Grading_System
                 {
                     GS.getResultNames(lvEntries, lvResults);
                 }
+                else if (tabBuilder.SelectedIndex.Equals(1))
+                {
+                    GS.validateWeight(lvActivitiesList, lvActivities, lblTotalWeight);
+                }
             }
             catch { }
         }
 
         private void btnTest2_Click(object sender, EventArgs e)
         {
-            
         }
 
         private void lvResults_Click(object sender, EventArgs e)
@@ -287,6 +305,55 @@ namespace Grading_System
             //GS.getTreeResultNodes(lvActivities, treeResult);
             GS.getResults(lblResultName, lblResultSection, lvResults, lvEntries, treeResult);
             GS.getResultsSummary(lvActivities, lvResults, lvEntries, treeResultSummary, txtWeightedAverage);
+        }
+
+        private void mnuLoader_Click(object sender, EventArgs e)
+        {
+            Winforms.Loader.Show();
+            Winforms.Builder.Hide();
+        }
+
+        private void btnSaveSection_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnLoadSection_Click(object sender, EventArgs e)
+        {
+                        
+        }
+
+        private void mnuFileLoad_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dlgLoadClass.InitialDirectory = Path.GetFullPath(".\\") + FormControl.XML.FileStructure.settingsPath;
+                dlgLoadClass.ShowDialog();
+                FormControl.XML.LoadClassList(lvSection, lvActivities, lvEntries, dlgLoadClass, notifyIcon);
+                GS.validateWeight(lvActivitiesList, lvActivities, lblTotalWeight);
+            }
+            catch { }
+        }
+
+        private void mnuFileSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dlgSaveClass.InitialDirectory = Path.GetFullPath(".\\") + FormControl.XML.FileStructure.settingsPath;
+                dlgSaveClass.ShowDialog();
+                FormControl.XML.SaveClassList(lvSection, lvActivities, lvEntries, dlgSaveClass, notifyIcon);
+            }
+            catch { }
+        }
+
+        private void tabActivity_Click(object sender, EventArgs e)
+        {
+            GS.validateWeight(lvActivitiesList, lvActivities, lblTotalWeight);
+        }
+
+        private void tabActivity_Validated(object sender, EventArgs e)
+        {
+            GS.validateWeight(lvActivitiesList, lvActivities, lblTotalWeight);
         }
     }
 }

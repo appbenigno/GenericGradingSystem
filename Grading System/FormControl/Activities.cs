@@ -26,7 +26,7 @@ namespace Grading_System.FormControl
                 remove.Enabled = false;
                 weightTextBox.Enabled = true;
                 weightTextBox.Focus();
-                weightTextBox.Select(0, weightTextBox.TextLength);
+                weightTextBox.SelectAll();
             }
             catch { }
         }

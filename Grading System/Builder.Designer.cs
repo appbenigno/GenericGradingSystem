@@ -29,50 +29,50 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem49 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Science and Technology",
             "150",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem50 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Mathematics",
             "125",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem51 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Spelling",
             "115",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem52 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Cloud Computing",
             "150",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem53 = new System.Windows.Forms.ListViewItem(new string[] {
             "Jedi Knights",
             "Skywalker",
             "Luke",
             "_"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem54 = new System.Windows.Forms.ListViewItem(new string[] {
             "Jedi Masters",
             "Skywalker",
             "Anakin",
             "_"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem55 = new System.Windows.Forms.ListViewItem(new string[] {
             "Jedi Masters",
             "Kenobi",
             "Obi-Wan",
             "_"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem56 = new System.Windows.Forms.ListViewItem(new string[] {
             "Sith Lords",
             "Tyranus",
             "Darth",
@@ -82,7 +82,7 @@
             this.mnuTemplates = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGradeType = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTransmutationTable = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuReports = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuLoader = new System.Windows.Forms.ToolStripMenuItem();
             this.lvEntries = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -96,17 +96,16 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnLoadSection = new System.Windows.Forms.Button();
             this.lvSection = new System.Windows.Forms.ListView();
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnSaveSection = new System.Windows.Forms.Button();
             this.lvActivities = new System.Windows.Forms.ListView();
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtWeight = new System.Windows.Forms.TextBox();
+            this.imgBuild = new System.Windows.Forms.PictureBox();
             this.groupClassList = new System.Windows.Forms.GroupBox();
             this.btnApplySection = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -140,6 +139,7 @@
             this.txtMaxScore = new System.Windows.Forms.TextBox();
             this.tabResults = new System.Windows.Forms.TabPage();
             this.grpResults = new System.Windows.Forms.GroupBox();
+            this.txtWeightedAverage = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.treeResultSummary = new System.Windows.Forms.TreeView();
             this.lblResultSection = new System.Windows.Forms.Label();
@@ -155,9 +155,14 @@
             this.dlgSaveClass = new System.Windows.Forms.SaveFileDialog();
             this.btnTest2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.imgBuild = new System.Windows.Forms.PictureBox();
-            this.txtWeightedAverage = new System.Windows.Forms.TextBox();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuFileLoad = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuFileSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuFileExit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBuild)).BeginInit();
             this.groupClassList.SuspendLayout();
             this.tabBuilder.SuspendLayout();
             this.tabSection.SuspendLayout();
@@ -166,16 +171,16 @@
             this.tabResults.SuspendLayout();
             this.grpResults.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgBuild)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuFile,
             this.mnuTemplates,
             this.mnuGradeType,
             this.mnuTransmutationTable,
-            this.mnuReports});
+            this.mnuLoader});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
@@ -204,12 +209,12 @@
             this.mnuTransmutationTable.Text = "Transmutation Table";
             this.mnuTransmutationTable.Click += new System.EventHandler(this.mnuTransmutationTable_Click);
             // 
-            // mnuReports
+            // mnuLoader
             // 
-            this.mnuReports.Name = "mnuReports";
-            this.mnuReports.Size = new System.Drawing.Size(59, 20);
-            this.mnuReports.Text = "Reports";
-            this.mnuReports.Click += new System.EventHandler(this.mnuReports_Click);
+            this.mnuLoader.Name = "mnuLoader";
+            this.mnuLoader.Size = new System.Drawing.Size(55, 20);
+            this.mnuLoader.Text = "Loader";
+            this.mnuLoader.Click += new System.EventHandler(this.mnuLoader_Click);
             // 
             // lvEntries
             // 
@@ -223,10 +228,10 @@
             this.lvEntries.FullRowSelect = true;
             this.lvEntries.HideSelection = false;
             this.lvEntries.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem9,
-            listViewItem10,
-            listViewItem11,
-            listViewItem12});
+            listViewItem49,
+            listViewItem50,
+            listViewItem51,
+            listViewItem52});
             this.lvEntries.Location = new System.Drawing.Point(12, 524);
             this.lvEntries.Margin = new System.Windows.Forms.Padding(4);
             this.lvEntries.Name = "lvEntries";
@@ -317,16 +322,6 @@
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
-            // btnLoadSection
-            // 
-            this.btnLoadSection.Location = new System.Drawing.Point(341, 37);
-            this.btnLoadSection.Name = "btnLoadSection";
-            this.btnLoadSection.Size = new System.Drawing.Size(75, 23);
-            this.btnLoadSection.TabIndex = 9;
-            this.btnLoadSection.Text = "Load";
-            this.toolTip1.SetToolTip(this.btnLoadSection, "Load Class List");
-            this.btnLoadSection.UseVisualStyleBackColor = true;
-            // 
             // lvSection
             // 
             this.lvSection.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -337,10 +332,10 @@
             this.lvSection.FullRowSelect = true;
             this.lvSection.HideSelection = false;
             this.lvSection.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem13,
-            listViewItem14,
-            listViewItem15,
-            listViewItem16});
+            listViewItem53,
+            listViewItem54,
+            listViewItem55,
+            listViewItem56});
             this.lvSection.Location = new System.Drawing.Point(0, 190);
             this.lvSection.Name = "lvSection";
             this.lvSection.Size = new System.Drawing.Size(429, 191);
@@ -370,16 +365,6 @@
             // 
             this.columnHeader14.Text = "M.I.";
             this.columnHeader14.Width = 36;
-            // 
-            // btnSaveSection
-            // 
-            this.btnSaveSection.Location = new System.Drawing.Point(341, 64);
-            this.btnSaveSection.Name = "btnSaveSection";
-            this.btnSaveSection.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveSection.TabIndex = 15;
-            this.btnSaveSection.Text = "Save";
-            this.toolTip1.SetToolTip(this.btnSaveSection, "Save Cass List");
-            this.btnSaveSection.UseVisualStyleBackColor = true;
             // 
             // lvActivities
             // 
@@ -428,15 +413,24 @@
             this.txtWeight.TextChanged += new System.EventHandler(this.txtWeight_TextChanged);
             this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
+            // imgBuild
+            // 
+            this.imgBuild.Image = ((System.Drawing.Image)(resources.GetObject("imgBuild.Image")));
+            this.imgBuild.Location = new System.Drawing.Point(562, 43);
+            this.imgBuild.Name = "imgBuild";
+            this.imgBuild.Size = new System.Drawing.Size(300, 300);
+            this.imgBuild.TabIndex = 12;
+            this.imgBuild.TabStop = false;
+            this.toolTip1.SetToolTip(this.imgBuild, "CLICK TO ENTER/EXIT BUILD MODE");
+            this.imgBuild.Click += new System.EventHandler(this.imgBuild_Click);
+            // 
             // groupClassList
             // 
             this.groupClassList.Controls.Add(this.btnApplySection);
-            this.groupClassList.Controls.Add(this.btnSaveSection);
             this.groupClassList.Controls.Add(this.btnCancel);
             this.groupClassList.Controls.Add(this.btnUpdate);
             this.groupClassList.Controls.Add(this.btnDeleteStudent);
             this.groupClassList.Controls.Add(this.btnAddStudent);
-            this.groupClassList.Controls.Add(this.btnLoadSection);
             this.groupClassList.Controls.Add(this.lvSection);
             this.groupClassList.Controls.Add(this.label6);
             this.groupClassList.Controls.Add(this.label5);
@@ -455,11 +449,11 @@
             // 
             // btnApplySection
             // 
-            this.btnApplySection.Location = new System.Drawing.Point(341, 93);
+            this.btnApplySection.Location = new System.Drawing.Point(341, 37);
             this.btnApplySection.Name = "btnApplySection";
-            this.btnApplySection.Size = new System.Drawing.Size(75, 50);
+            this.btnApplySection.Size = new System.Drawing.Size(75, 106);
             this.btnApplySection.TabIndex = 16;
-            this.btnApplySection.Text = "Apply to All";
+            this.btnApplySection.Text = "Apply Section to All";
             this.btnApplySection.UseVisualStyleBackColor = true;
             this.btnApplySection.Click += new System.EventHandler(this.btnApplySection_Click);
             // 
@@ -614,6 +608,8 @@
             this.tabActivity.TabIndex = 1;
             this.tabActivity.Text = "Activity Type";
             this.tabActivity.UseVisualStyleBackColor = true;
+            this.tabActivity.Click += new System.EventHandler(this.tabActivity_Click);
+            this.tabActivity.Validated += new System.EventHandler(this.tabActivity_Validated);
             // 
             // groupBox1
             // 
@@ -791,6 +787,17 @@
             this.grpResults.TabStop = false;
             this.grpResults.Text = "Result Details";
             // 
+            // txtWeightedAverage
+            // 
+            this.txtWeightedAverage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtWeightedAverage.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWeightedAverage.Location = new System.Drawing.Point(484, 323);
+            this.txtWeightedAverage.Name = "txtWeightedAverage";
+            this.txtWeightedAverage.Size = new System.Drawing.Size(128, 49);
+            this.txtWeightedAverage.TabIndex = 8;
+            this.txtWeightedAverage.Text = "0";
+            this.txtWeightedAverage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -888,6 +895,14 @@
             this.btnTest.UseVisualStyleBackColor = true;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
+            // dlgLoadClass
+            // 
+            this.dlgLoadClass.Filter = "XML Records|*.xml";
+            // 
+            // dlgSaveClass
+            // 
+            this.dlgSaveClass.Filter = "XML Records|*.xml";
+            // 
             // btnTest2
             // 
             this.btnTest2.Location = new System.Drawing.Point(486, 475);
@@ -908,27 +923,46 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // imgBuild
+            // notifyIcon
             // 
-            this.imgBuild.Image = ((System.Drawing.Image)(resources.GetObject("imgBuild.Image")));
-            this.imgBuild.Location = new System.Drawing.Point(562, 43);
-            this.imgBuild.Name = "imgBuild";
-            this.imgBuild.Size = new System.Drawing.Size(300, 300);
-            this.imgBuild.TabIndex = 12;
-            this.imgBuild.TabStop = false;
-            this.toolTip1.SetToolTip(this.imgBuild, "CLICK TO ENTER/EXIT BUILD MODE");
-            this.imgBuild.Click += new System.EventHandler(this.imgBuild_Click);
+            this.notifyIcon.Text = "notifyIcon1";
+            this.notifyIcon.Visible = true;
             // 
-            // txtWeightedAverage
+            // mnuFile
             // 
-            this.txtWeightedAverage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtWeightedAverage.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWeightedAverage.Location = new System.Drawing.Point(484, 323);
-            this.txtWeightedAverage.Name = "txtWeightedAverage";
-            this.txtWeightedAverage.Size = new System.Drawing.Size(128, 49);
-            this.txtWeightedAverage.TabIndex = 8;
-            this.txtWeightedAverage.Text = "0";
-            this.txtWeightedAverage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.mnuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuFileLoad,
+            this.mnuFileSave,
+            this.toolStripMenuItem1,
+            this.mnuFileExit});
+            this.mnuFile.Name = "mnuFile";
+            this.mnuFile.Size = new System.Drawing.Size(37, 20);
+            this.mnuFile.Text = "File";
+            // 
+            // mnuFileLoad
+            // 
+            this.mnuFileLoad.Name = "mnuFileLoad";
+            this.mnuFileLoad.Size = new System.Drawing.Size(152, 22);
+            this.mnuFileLoad.Text = "Load Record";
+            this.mnuFileLoad.Click += new System.EventHandler(this.mnuFileLoad_Click);
+            // 
+            // mnuFileSave
+            // 
+            this.mnuFileSave.Name = "mnuFileSave";
+            this.mnuFileSave.Size = new System.Drawing.Size(152, 22);
+            this.mnuFileSave.Text = "Save Record";
+            this.mnuFileSave.Click += new System.EventHandler(this.mnuFileSave_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            // 
+            // mnuFileExit
+            // 
+            this.mnuFileExit.Name = "mnuFileExit";
+            this.mnuFileExit.Size = new System.Drawing.Size(152, 22);
+            this.mnuFileExit.Text = "Exit";
             // 
             // Builder
             // 
@@ -946,12 +980,14 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Builder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Builder";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Builder_FormClosing);
             this.Load += new System.EventHandler(this.Builder_Load);
             this.Resize += new System.EventHandler(this.Builder_Resize);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBuild)).EndInit();
             this.groupClassList.ResumeLayout(false);
             this.groupClassList.PerformLayout();
             this.tabBuilder.ResumeLayout(false);
@@ -963,7 +999,6 @@
             this.grpResults.ResumeLayout(false);
             this.grpResults.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgBuild)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -975,7 +1010,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuTemplates;
         private System.Windows.Forms.ToolStripMenuItem mnuGradeType;
         private System.Windows.Forms.ToolStripMenuItem mnuTransmutationTable;
-        private System.Windows.Forms.ToolStripMenuItem mnuReports;
+        private System.Windows.Forms.ToolStripMenuItem mnuLoader;
         private System.Windows.Forms.ListView lvEntries;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -1003,7 +1038,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.ColumnHeader columnHeader14;
-        private System.Windows.Forms.Button btnLoadSection;
         private System.Windows.Forms.TabControl tabBuilder;
         private System.Windows.Forms.TabPage tabSection;
         private System.Windows.Forms.TabPage tabActivity;
@@ -1014,7 +1048,6 @@
         private System.Windows.Forms.OpenFileDialog dlgLoadClass;
         private System.Windows.Forms.SaveFileDialog dlgSaveClass;
         private System.Windows.Forms.TabPage tabResults;
-        private System.Windows.Forms.Button btnSaveSection;
         private System.Windows.Forms.Button btnApplySection;
         private System.Windows.Forms.Button btnTest;
         private System.Windows.Forms.PictureBox imgBuild;
@@ -1050,5 +1083,11 @@
         private System.Windows.Forms.TreeView treeResultSummary;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtWeightedAverage;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.ToolStripMenuItem mnuFile;
+        private System.Windows.Forms.ToolStripMenuItem mnuFileLoad;
+        private System.Windows.Forms.ToolStripMenuItem mnuFileSave;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem mnuFileExit;
     }
 }
