@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace Grading_System
 {
@@ -19,8 +20,8 @@ namespace Grading_System
             lvGrade.Columns.Add("From", 44);
             lvGrade.Columns.Add("-", 26);
             lvGrade.Columns.Add("To", 50);
-            lvGrade.Columns.Add("Equivalent",70);
-            lvGrade.Columns.Add("Description",100);
+            lvGrade.Columns.Add("Equivalent", 70);
+            lvGrade.Columns.Add("Description", 100);
             lvGrade.View = View.Details;
             //lvGrade.Scrollable = true;
             //lvGrade.GridLines = true;
@@ -318,7 +319,7 @@ namespace Grading_System
             }
         }
 
-        
+
 
         public void codeNiGab()
         {
@@ -656,6 +657,60 @@ namespace Grading_System
         {
 
         }
+
+        private void lvGrade_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Point mousePos = lvGrade.PointToClient(Control.MousePosition);
+            ListViewHitTestInfo hitTest = lvGrade.HitTest(mousePos);
+            int columnIndex = hitTest.Item.SubItems.IndexOf(hitTest.SubItem);
+            int rowIndex = hitTest.Item.Index;
+            MessageBox.Show(columnIndex.ToString(), "columnIndex"); // to test x y coordinates
+            MessageBox.Show(rowIndex.ToString(), "RowIndex");
+
+            //selectedItem = row
+            //subitem = column
+            //var userInput = Interaction.InputBox("Input","input");
+
+            try
+            {
+                if (lvGrade.LabelEdit == true && columnIndex != -1 && rowIndex != -1 && columnIndex < 4)
+                {
+                    var scoreRange1 = Convert.ToInt32(Interaction.InputBox("Score", "Enter Grade"));
+
+                    if (scoreRange1.GetType() == typeof(int))
+                    {
+                        lvGrade.Items[rowIndex].SubItems[columnIndex].Text = scoreRange1.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Numbers Only", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else if (lvGrade.LabelEdit == true && columnIndex != -1 && rowIndex != -1)
+                {
+                    var description = Interaction.InputBox("Desciption", "Enter Description");
+
+                    if (description.GetType() == typeof(string))
+                    {
+                        lvGrade.Items[rowIndex].SubItems[columnIndex].Text = description;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Must be in Words", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Out of Bounds", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Out of Bounds", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+        }
+
     }
 
 }

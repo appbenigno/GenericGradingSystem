@@ -50,6 +50,7 @@
             this.Range2,
             this.equiv,
             this.descr});
+            this.lvGrade.FullRowSelect = true;
             this.lvGrade.GridLines = true;
             this.lvGrade.HoverSelection = true;
             this.lvGrade.LabelEdit = true;
@@ -61,6 +62,7 @@
             this.lvGrade.UseCompatibleStateImageBehavior = false;
             this.lvGrade.View = System.Windows.Forms.View.Details;
             this.lvGrade.SelectedIndexChanged += new System.EventHandler(this.lvGrade_SelectedIndexChanged);
+            this.lvGrade.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvGrade_MouseDoubleClick);
             // 
             // Range1
             // 
