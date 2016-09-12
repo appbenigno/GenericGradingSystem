@@ -667,10 +667,6 @@ namespace Grading_System
             MessageBox.Show(columnIndex.ToString(), "columnIndex"); // to test x y coordinates
             MessageBox.Show(rowIndex.ToString(), "RowIndex");
 
-            //selectedItem = row
-            //subitem = column
-            //var userInput = Interaction.InputBox("Input","input");
-
             try
             {
                 if (lvGrade.LabelEdit == true && columnIndex != -1 && rowIndex != -1 && columnIndex < 4)
