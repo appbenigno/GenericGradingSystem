@@ -47,13 +47,26 @@ namespace Grading_System
         private void Builder_Load(object sender, EventArgs e)
         {
             //
-            // Settings Directory
+            // XML Records Directory
             //
-            bool settingsDirectoryExist = Directory.Exists(Path.GetFullPath(".\\") + FormControl.XML.FileStructure.settingsPath);
-            if (!settingsDirectoryExist)
+            bool recordsDirectoryExist = Directory.Exists(Path.GetFullPath(".\\") + FormControl.XML.FileStructure.recordsPath);
+            if (!recordsDirectoryExist)
             {
-                Directory.CreateDirectory(Path.GetFullPath(".\\") + FormControl.XML.FileStructure.settingsPath);
+                Directory.CreateDirectory(Path.GetFullPath(".\\") + FormControl.XML.FileStructure.recordsPath);
             }
+
+            //
+            // HTML Reports Directory
+            //
+            bool reportsDirectoryExist = Directory.Exists(Path.GetFullPath(".\\") + FormControl.HTML.FileStructure.htmlPath);
+            if (!reportsDirectoryExist)
+            {
+                Directory.CreateDirectory(Path.GetFullPath(".\\") + FormControl.HTML.FileStructure.htmlPath);
+            }
+
+            //
+            // Populate Activities List
+            //
             GS.getActivities(lvActivitiesList);
         }
 
@@ -309,6 +322,10 @@ namespace Grading_System
 
         private void btnTest2_Click(object sender, EventArgs e)
         {
+            txtTest.Text = FormControl.HTML.write(lvActivities, lvEntries);
+            StreamWriter xWrite = new StreamWriter("test.html");
+            xWrite.WriteLine(FormControl.HTML.write(lvActivities, lvEntries));
+            xWrite.Close();
         }
 
         private void lvResults_Click(object sender, EventArgs e)
@@ -338,7 +355,7 @@ namespace Grading_System
         {
             try
             {
-                dlgLoadClass.InitialDirectory = Path.GetFullPath(".\\") + FormControl.XML.FileStructure.settingsPath;
+                dlgLoadClass.InitialDirectory = Path.GetFullPath(".\\") + FormControl.XML.FileStructure.recordsPath;
                 dlgLoadClass.ShowDialog();
                 FormControl.XML.LoadClassList(lvSection, lvActivities, lvEntries, dlgLoadClass, notifyIcon);
                 GS.validateWeight(lvActivitiesList, lvActivities, lblTotalWeight);
@@ -350,7 +367,7 @@ namespace Grading_System
         {
             try
             {
-                dlgSaveClass.InitialDirectory = Path.GetFullPath(".\\") + FormControl.XML.FileStructure.settingsPath;
+                dlgSaveClass.InitialDirectory = Path.GetFullPath(".\\") + FormControl.XML.FileStructure.recordsPath;
                 dlgSaveClass.ShowDialog();
                 FormControl.XML.SaveClassList(lvSection, lvActivities, lvEntries, dlgSaveClass, notifyIcon);
             }

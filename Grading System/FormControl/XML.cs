@@ -11,7 +11,7 @@ namespace Grading_System.FormControl
     {
         public static class FileStructure
         {
-            public static string settingsPath = "records";
+            public static string recordsPath = "records";
         }
         public static void SaveClassList(ListView classList, ListView activitiesList, ListView entriesList, SaveFileDialog saveDialog, NotifyIcon notifyIcon)
         {

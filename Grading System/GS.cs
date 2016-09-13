@@ -347,6 +347,11 @@ namespace Grading_System
                 familyName.Text = targetList.SelectedItems[0].SubItems[1].Text;
                 givenName.Text = targetList.SelectedItems[0].SubItems[2].Text;
                 middleInitial.Text = targetList.SelectedItems[0].SubItems[3].Text;
+
+                Globals.Report.Section = targetList.SelectedItems[0].SubItems[0].Text; ;
+                Globals.Report.FamilyName = targetList.SelectedItems[0].SubItems[1].Text;
+                Globals.Report.GivenName = targetList.SelectedItems[0].SubItems[2].Text; ;
+                Globals.Report.MiddleInitial = targetList.SelectedItems[0].SubItems[3].Text;
             }
             catch { }
         }
@@ -716,6 +721,7 @@ namespace Grading_System
                 wa += compute.getWeightedAverage(name, activityName2, entriesList, activities);
             }
             resultLabel.Text = Math.Round(wa, 2).ToString();
+            Globals.Report.Gwa = Math.Round(wa, 2);
             resultTree.Sort();
             resultTree.ExpandAll();
         }

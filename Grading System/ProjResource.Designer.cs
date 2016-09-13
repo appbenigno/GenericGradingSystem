@@ -191,6 +191,15 @@ namespace Grading_System {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Grading System.
+        /// </summary>
+        internal static string ProjectTitle {
+            get {
+                return ResourceManager.GetString("ProjectTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap splashlogo {
