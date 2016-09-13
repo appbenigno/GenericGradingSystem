@@ -34,10 +34,9 @@
             this.Range2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.equiv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.descr = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnGrade2 = new System.Windows.Forms.Button();
-            this.btnGradePt2 = new System.Windows.Forms.Button();
-            this.btnGradePt3 = new System.Windows.Forms.Button();
+            this.btnGradePt125 = new System.Windows.Forms.Button();
+            this.btnGradePt420 = new System.Windows.Forms.Button();
             this.btnCustom = new System.Windows.Forms.Button();
             this.btnOKtrans = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -57,7 +56,7 @@
             this.lvGrade.Location = new System.Drawing.Point(22, 25);
             this.lvGrade.MultiSelect = false;
             this.lvGrade.Name = "lvGrade";
-            this.lvGrade.Size = new System.Drawing.Size(359, 308);
+            this.lvGrade.Size = new System.Drawing.Size(308, 308);
             this.lvGrade.TabIndex = 3;
             this.lvGrade.UseCompatibleStateImageBehavior = false;
             this.lvGrade.View = System.Windows.Forms.View.Details;
@@ -93,13 +92,6 @@
             this.descr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.descr.Width = 100;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(22, 404);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
-            // 
             // btnGrade2
             // 
             this.btnGrade2.Location = new System.Drawing.Point(387, 25);
@@ -108,24 +100,27 @@
             this.btnGrade2.TabIndex = 6;
             this.btnGrade2.Text = "Letter Grading";
             this.btnGrade2.UseVisualStyleBackColor = true;
+            this.btnGrade2.Click += new System.EventHandler(this.btnGrade2_Click);
             // 
-            // btnGradePt2
+            // btnGradePt125
             // 
-            this.btnGradePt2.Location = new System.Drawing.Point(387, 117);
-            this.btnGradePt2.Name = "btnGradePt2";
-            this.btnGradePt2.Size = new System.Drawing.Size(109, 23);
-            this.btnGradePt2.TabIndex = 7;
-            this.btnGradePt2.Text = "Grade Point(1 to 5)";
-            this.btnGradePt2.UseVisualStyleBackColor = true;
+            this.btnGradePt125.Location = new System.Drawing.Point(387, 117);
+            this.btnGradePt125.Name = "btnGradePt125";
+            this.btnGradePt125.Size = new System.Drawing.Size(109, 23);
+            this.btnGradePt125.TabIndex = 7;
+            this.btnGradePt125.Text = "Grade Point(1 to 5)";
+            this.btnGradePt125.UseVisualStyleBackColor = true;
+            this.btnGradePt125.Click += new System.EventHandler(this.btnGradePt125_Click);
             // 
-            // btnGradePt3
+            // btnGradePt420
             // 
-            this.btnGradePt3.Location = new System.Drawing.Point(387, 72);
-            this.btnGradePt3.Name = "btnGradePt3";
-            this.btnGradePt3.Size = new System.Drawing.Size(109, 23);
-            this.btnGradePt3.TabIndex = 8;
-            this.btnGradePt3.Text = "Grade Point(4 to 0)";
-            this.btnGradePt3.UseVisualStyleBackColor = true;
+            this.btnGradePt420.Location = new System.Drawing.Point(387, 72);
+            this.btnGradePt420.Name = "btnGradePt420";
+            this.btnGradePt420.Size = new System.Drawing.Size(109, 23);
+            this.btnGradePt420.TabIndex = 8;
+            this.btnGradePt420.Text = "Grade Point(4 to 0)";
+            this.btnGradePt420.UseVisualStyleBackColor = true;
+            this.btnGradePt420.Click += new System.EventHandler(this.btnGradePt420_Click);
             // 
             // btnCustom
             // 
@@ -152,16 +147,14 @@
             this.ClientSize = new System.Drawing.Size(508, 451);
             this.Controls.Add(this.btnOKtrans);
             this.Controls.Add(this.btnCustom);
-            this.Controls.Add(this.btnGradePt3);
-            this.Controls.Add(this.btnGradePt2);
+            this.Controls.Add(this.btnGradePt420);
+            this.Controls.Add(this.btnGradePt125);
             this.Controls.Add(this.btnGrade2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lvGrade);
             this.MaximizeBox = false;
             this.Name = "Transmutation";
             this.Text = "Transmutation Table";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -170,12 +163,11 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ListView lvGrade;
         private System.Windows.Forms.ColumnHeader Range1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ColumnHeader Separator;
         private System.Windows.Forms.ColumnHeader Range2;
         private System.Windows.Forms.Button btnGrade2;
-        private System.Windows.Forms.Button btnGradePt2;
-        private System.Windows.Forms.Button btnGradePt3;
+        private System.Windows.Forms.Button btnGradePt125;
+        private System.Windows.Forms.Button btnGradePt420;
         private System.Windows.Forms.Button btnCustom;
         private System.Windows.Forms.Button btnOKtrans;
         private System.Windows.Forms.ColumnHeader equiv;

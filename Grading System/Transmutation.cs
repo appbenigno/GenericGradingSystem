@@ -126,7 +126,7 @@ namespace Grading_System
             gradeRange12.SubItems.Add("Insufficient");
             lvGrade.Items.Add(gradeRange12);
         }
-        public void gradePoint1()
+        public void gradePoint125()
         {
             transmuteListViewFormat();
 
@@ -200,7 +200,7 @@ namespace Grading_System
             gradeRange9.SubItems.Add("Failure");
             lvGrade.Items.Add(gradeRange9);
         }
-        public void gradePoint5()
+        public void gradePoint420()
         {
             ListViewItem gradeRange0 = new ListViewItem("92");
             gradeRange0.SubItems.Add("-");
@@ -305,22 +305,20 @@ namespace Grading_System
             else if (gradeTypeChoice == "gradePoint1")
             {
                 transmuteListViewFormat();
-                gradePoint1();
+                gradePoint125();
             }
             else if (gradeTypeChoice == "gradePoint4")
             {
                 transmuteListViewFormat();
-                gradePoint5();
+                gradePoint420();
             }
             else
             {
                 transmuteListViewFormat();
-                gradePoint1(); // default value
+                gradePoint125(); // default value
             }
         }
-
-
-
+        
         public void codeNiGab()
         {
             //    if (gradeTypeChoice == "letter")
@@ -667,46 +665,79 @@ namespace Grading_System
             MessageBox.Show(columnIndex.ToString(), "columnIndex"); // to test x y coordinates
             MessageBox.Show(rowIndex.ToString(), "RowIndex");
 
-            try
+            if (lvGrade.LabelEdit == true && columnIndex != -1 && rowIndex != -1 && columnIndex < 4 && columnIndex != 1)
             {
-                if (lvGrade.LabelEdit == true && columnIndex != -1 && rowIndex != -1 && columnIndex < 4)
+                try
                 {
-                    var scoreRange1 = Convert.ToInt32(Interaction.InputBox("Score", "Enter Grade"));
+                    var scoreRange1 = Convert.ToDouble(Interaction.InputBox("Score", "Enter Grade"));
 
-                    if (scoreRange1.GetType() == typeof(int))
+                    if (scoreRange1.GetType() == typeof(double))
                     {
-                        lvGrade.Items[rowIndex].SubItems[columnIndex].Text = scoreRange1.ToString();
+                        lvGrade.Items[rowIndex].SubItems[columnIndex].Text = Math.Round(scoreRange1, 1).ToString("#.00");
                     }
                     else
                     {
-                        MessageBox.Show("Numbers Only", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Numbers Only", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
-                else if (lvGrade.LabelEdit == true && columnIndex != -1 && rowIndex != -1)
+                catch
+                {
+                    MessageBox.Show("Numbers Only", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else if (lvGrade.LabelEdit == true && columnIndex != -1 && rowIndex != -1 && columnIndex != 1)
+            {
+                try
                 {
                     var description = Interaction.InputBox("Desciption", "Enter Description");
 
-                    if (description.GetType() == typeof(string))
+                    int n;
+                    bool isNumeric;
+                    isNumeric = int.TryParse(description, out n); //to test if input is numeric
+
+                    if (description.GetType() == typeof(string) && isNumeric == false)
                     {
                         lvGrade.Items[rowIndex].SubItems[columnIndex].Text = description;
                     }
                     else
                     {
-                        MessageBox.Show("Must be in Words", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Must be in words!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
-                else
+                catch
                 {
-                    MessageBox.Show("Out of Bounds", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Must be in words!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            catch
+            else if (columnIndex == 1)
             {
-                MessageBox.Show("Out of Bounds", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //do nothing
             }
-
+            else
+            {
+                MessageBox.Show("Out of Bounds", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-    }
+        private void btnGrade2_Click(object sender, EventArgs e)
+        {
+            Globals.GradeType.gradeTypeChoice = "letter";
+            transmuteListViewFormat();
+            letterGrade();
+        }
 
+        private void btnGradePt420_Click(object sender, EventArgs e)
+        {
+            Globals.GradeType.gradeTypeChoice = "gradePoint4";
+            transmuteListViewFormat();
+            gradePoint420();
+        }
+
+        private void btnGradePt125_Click(object sender, EventArgs e)
+        {
+            Globals.GradeType.gradeTypeChoice = "gradePoint1";
+            transmuteListViewFormat();
+            gradePoint125();
+        }
+    }
 }
