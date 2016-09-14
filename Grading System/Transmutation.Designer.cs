@@ -56,7 +56,7 @@
             this.lvGrade.Location = new System.Drawing.Point(22, 25);
             this.lvGrade.MultiSelect = false;
             this.lvGrade.Name = "lvGrade";
-            this.lvGrade.Size = new System.Drawing.Size(308, 308);
+            this.lvGrade.Size = new System.Drawing.Size(335, 321);
             this.lvGrade.TabIndex = 3;
             this.lvGrade.UseCompatibleStateImageBehavior = false;
             this.lvGrade.View = System.Windows.Forms.View.Details;
@@ -139,6 +139,7 @@
             this.btnOKtrans.TabIndex = 10;
             this.btnOKtrans.Text = "OK";
             this.btnOKtrans.UseVisualStyleBackColor = true;
+            this.btnOKtrans.Click += new System.EventHandler(this.btnOKtrans_Click);
             // 
             // Transmutation
             // 
@@ -154,6 +155,8 @@
             this.MaximizeBox = false;
             this.Name = "Transmutation";
             this.Text = "Transmutation Table";
+            this.Activated += new System.EventHandler(this.Transmutation_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Transmutation_FormClosing);
             this.ResumeLayout(false);
 
         }

@@ -260,21 +260,41 @@ namespace Grading_System
             return Math.Round(result, 2);
         }
 
-        public static double getPointAverage(ListView transmutationList, string value)
-        {
-            double result = 0;
-            return result;
-        }
-
-        public static string getPointAverage(ListView transmutationList, double value)
+        public static string getPointAverage(ListView transmutationList, double val)
         {
             string result = "";
+            try
+            {
+                for (int x = 0; x < transmutationList.Items.Count; x++)
+                {
+                    double min = Convert.ToDouble(transmutationList.Items[x].SubItems[0].Text);
+                    double max = Convert.ToDouble(transmutationList.Items[x].SubItems[2].Text);
+                    string equivalent = transmutationList.Items[x].SubItems[3].Text;
+                    if (val >= min && val <= max)
+                    {
+                        result = equivalent;
+                    }
+                }
+            }
+            catch { }
             return result;
         }
 
         public static string getRemarks(ListView transmutationList, double value)
         {
             string result = "";
+            try
+            {
+                for (int x = 0; x < transmutationList.Items.Count; x++)
+                {
+                    int min = Convert.ToInt32(transmutationList.Items[x].SubItems[0].Text);
+                    int max = Convert.ToInt32(transmutationList.Items[x].SubItems[2].Text);
+                    string description = transmutationList.Items[x].SubItems[4].Text;
+                    MessageBox.Show(description);
+                    
+                }
+            }
+            catch { }
             return result;
         }
     }

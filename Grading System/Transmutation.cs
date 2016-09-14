@@ -314,7 +314,7 @@ namespace Grading_System
 
         private void lvGrade_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Globals.Transmutation.transferTransmutation(lvGrade, Globals.Transmutation.TransmuteTable);
         }
 
         private void lvGrade_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -429,6 +429,40 @@ namespace Grading_System
             Globals.GradeType.gradeTypeChoice = "gradePoint1";
             transmuteListViewFormat();
             gradePoint125();
+        }
+
+        private void Transmutation_Activated(object sender, EventArgs e)
+        {
+            Globals.Transmutation.transferTransmutation(lvGrade, Globals.Transmutation.TransmuteTable);
+        }
+
+        private void Transmutation_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                e.Cancel = true;
+                Winforms.TransmutationTable.Hide();
+            }
+            Globals.Transmutation.transferTransmutation(lvGrade, Globals.Transmutation.TransmuteTable);
+        }
+
+        private void btnOKtrans_Click(object sender, EventArgs e)
+        {
+            /*
+            Globals.Transmutation.TransmuteTable.Items.Clear();
+            for (int x = 0; x < lvGrade.Items.Count; x++)
+            {
+                ListViewItem lvi = new ListViewItem(lvGrade.Items[x].SubItems[0].Text);
+                lvi.SubItems.Add(lvGrade.Items[x].SubItems[1].Text);
+                lvi.SubItems.Add(lvGrade.Items[x].SubItems[2].Text);
+                lvi.SubItems.Add(lvGrade.Items[x].SubItems[3].Text);
+                lvi.SubItems.Add(lvGrade.Items[x].SubItems[4].Text);
+
+                Globals.Transmutation.TransmuteTable.Items.Add(lvi);
+            }
+            */
+            Globals.Transmutation.transferTransmutation(lvGrade, Globals.Transmutation.TransmuteTable);
+            compute.getRemarks(Globals.Transmutation.TransmuteTable,1.10);
         }
     }
 }

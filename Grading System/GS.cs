@@ -721,7 +721,11 @@ namespace Grading_System
                 wa += compute.getWeightedAverage(name, activityName2, entriesList, activities);
             }
             resultLabel.Text = Math.Round(wa, 2).ToString();
+
             Globals.Report.Gwa = Math.Round(wa, 2);
+            Globals.Report.Gpa = compute.getPointAverage(Globals.Transmutation.TransmuteTable, Globals.Report.Gwa);
+            Globals.Report.Remarks = compute.getRemarks(Globals.Transmutation.TransmuteTable, Globals.Report.Gwa);
+            
             resultTree.Sort();
             resultTree.ExpandAll();
         }

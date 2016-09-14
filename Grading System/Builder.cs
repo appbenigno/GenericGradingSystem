@@ -324,6 +324,7 @@ namespace Grading_System
         {
             MessageBox.Show(Globals.Theme.selected.Text);
             FormControl.HTML.Write(Globals.Theme.selected, lvActivities, lvEntries);
+            MessageBox.Show(Globals.Report.Gwa.ToString() + "\n" + Globals.Report.Gpa + "\n" + Globals.Report.Remarks);
         }
 
         private void lvResults_Click(object sender, EventArgs e)

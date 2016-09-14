@@ -14,7 +14,7 @@ namespace Grading_System.Globals
         private static string section;
         private static string period;
         private static string remarks;
-        private static double gpa;
+        private static string gpa;
         private static double gwa;
 
         public static string Name
@@ -103,7 +103,7 @@ namespace Grading_System.Globals
             }
         }
 
-        public static double Gpa
+        public static string Gpa
         {
             get
             {
