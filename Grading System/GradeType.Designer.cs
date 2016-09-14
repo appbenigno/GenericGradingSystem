@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GradeType));
             this.lvGradePreview = new System.Windows.Forms.ListView();
             this.chGradePreview = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnPercentage = new System.Windows.Forms.Button();
@@ -114,6 +115,7 @@
             this.Controls.Add(this.btnLetter);
             this.Controls.Add(this.btnPercentage);
             this.Controls.Add(this.lvGradePreview);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GradeType";
             this.Text = "GradeType";
             this.ResumeLayout(false);

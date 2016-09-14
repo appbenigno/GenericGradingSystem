@@ -62,7 +62,7 @@ namespace Grading_System.FormControl
             xWrite.WriteEndDocument();
             xWrite.Close();
 
-            FormControl.Notify.ShowBalloon(notifyIcon, "Settings Saved", "Class list saved successfully");
+            FormControl.Notify.ShowBalloon(notifyIcon, "Settings Saved", "Class list saved successfully at " + saveDialog.FileName);
         }
 
         public static void LoadClassList(ListView classList, ListView activityList, ListView entriesList, OpenFileDialog openDialog, NotifyIcon notifyIcon)

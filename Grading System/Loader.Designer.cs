@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Loader));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -42,6 +43,9 @@
             this.lblGPA = new System.Windows.Forms.Label();
             this.lblRemarks = new System.Windows.Forms.Label();
             this.imgGenerateHtml = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.saveHTML = new System.Windows.Forms.SaveFileDialog();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -49,6 +53,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgGenerateHtml)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -121,7 +126,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(123, 43);
+            this.lblName.Location = new System.Drawing.Point(16, 31);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(30, 32);
             this.lblName.TabIndex = 15;
@@ -131,7 +136,7 @@
             // 
             this.lblSection.AutoSize = true;
             this.lblSection.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSection.Location = new System.Drawing.Point(123, 78);
+            this.lblSection.Location = new System.Drawing.Point(16, 66);
             this.lblSection.Name = "lblSection";
             this.lblSection.Size = new System.Drawing.Size(30, 32);
             this.lblSection.TabIndex = 16;
@@ -141,7 +146,7 @@
             // 
             this.lblPeriod.AutoSize = true;
             this.lblPeriod.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeriod.Location = new System.Drawing.Point(123, 114);
+            this.lblPeriod.Location = new System.Drawing.Point(16, 102);
             this.lblPeriod.Name = "lblPeriod";
             this.lblPeriod.Size = new System.Drawing.Size(30, 32);
             this.lblPeriod.TabIndex = 17;
@@ -151,7 +156,7 @@
             // 
             this.lblGWA.AutoSize = true;
             this.lblGWA.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGWA.Location = new System.Drawing.Point(127, 200);
+            this.lblGWA.Location = new System.Drawing.Point(20, 188);
             this.lblGWA.Name = "lblGWA";
             this.lblGWA.Size = new System.Drawing.Size(30, 32);
             this.lblGWA.TabIndex = 18;
@@ -161,7 +166,7 @@
             // 
             this.lblGPA.AutoSize = true;
             this.lblGPA.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGPA.Location = new System.Drawing.Point(127, 236);
+            this.lblGPA.Location = new System.Drawing.Point(20, 224);
             this.lblGPA.Name = "lblGPA";
             this.lblGPA.Size = new System.Drawing.Size(30, 32);
             this.lblGPA.TabIndex = 19;
@@ -171,7 +176,7 @@
             // 
             this.lblRemarks.AutoSize = true;
             this.lblRemarks.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRemarks.Location = new System.Drawing.Point(127, 272);
+            this.lblRemarks.Location = new System.Drawing.Point(20, 260);
             this.lblRemarks.Name = "lblRemarks";
             this.lblRemarks.Size = new System.Drawing.Size(30, 32);
             this.lblRemarks.TabIndex = 20;
@@ -180,7 +185,7 @@
             // imgGenerateHtml
             // 
             this.imgGenerateHtml.Image = global::Grading_System.ProjResource.button_generatehtml;
-            this.imgGenerateHtml.Location = new System.Drawing.Point(674, 197);
+            this.imgGenerateHtml.Location = new System.Drawing.Point(686, 230);
             this.imgGenerateHtml.Name = "imgGenerateHtml";
             this.imgGenerateHtml.Size = new System.Drawing.Size(310, 105);
             this.imgGenerateHtml.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -190,19 +195,38 @@
             this.imgGenerateHtml.MouseLeave += new System.EventHandler(this.imgGenerateHtml_MouseLeave);
             this.imgGenerateHtml.MouseHover += new System.EventHandler(this.imgGenerateHtml_MouseHover);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblGWA);
+            this.groupBox1.Controls.Add(this.lblName);
+            this.groupBox1.Controls.Add(this.lblRemarks);
+            this.groupBox1.Controls.Add(this.lblSection);
+            this.groupBox1.Controls.Add(this.lblGPA);
+            this.groupBox1.Controls.Add(this.lblPeriod);
+            this.groupBox1.Location = new System.Drawing.Point(127, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(541, 323);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Details";
+            // 
+            // saveHTML
+            // 
+            this.saveHTML.Filter = "HTM Report|*.htm";
+            // 
+            // notifyIcon
+            // 
+            this.notifyIcon.Text = "notifyIcon1";
+            this.notifyIcon.Visible = true;
+            // 
             // Loader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1008, 347);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.imgGenerateHtml);
-            this.Controls.Add(this.lblRemarks);
-            this.Controls.Add(this.lblGPA);
-            this.Controls.Add(this.lblGWA);
-            this.Controls.Add(this.lblPeriod);
-            this.Controls.Add(this.lblSection);
-            this.Controls.Add(this.lblName);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -210,12 +234,14 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Loader";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loader";
             this.Activated += new System.EventHandler(this.Loader_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Loader_FormClosing);
+            this.Load += new System.EventHandler(this.Loader_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -223,8 +249,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgGenerateHtml)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -243,5 +270,8 @@
         private System.Windows.Forms.Label lblGPA;
         private System.Windows.Forms.Label lblRemarks;
         private System.Windows.Forms.PictureBox imgGenerateHtml;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.SaveFileDialog saveHTML;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
     }
 }

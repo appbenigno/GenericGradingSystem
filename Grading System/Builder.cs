@@ -322,8 +322,7 @@ namespace Grading_System
 
         private void btnTest2_Click(object sender, EventArgs e)
         {
-            Globals.Builder.transferAll(lvActivities, lvEntries, lvSection);
-            MessageBox.Show(Globals.Builder.Activities.Items[0].SubItems[0].Text);
+            
         }
 
         private void lvResults_Click(object sender, EventArgs e)
@@ -336,6 +335,10 @@ namespace Grading_System
         private void mnuLoader_Click(object sender, EventArgs e)
         {
             Globals.Builder.transferAll(lvActivities, lvEntries, lvSection);
+            if (txtPeriod.Text.Length < 1)
+            {
+                Globals.Report.Period = "-";
+            }
             GS.computeGrades(Globals.Report.Name, Globals.Builder.Activities, Globals.Builder.Entries, Globals.Transmutation.TransmuteTable);
             Winforms.Loader.Show();
             Winforms.Builder.Hide();
@@ -382,6 +385,11 @@ namespace Grading_System
         private void tabActivity_Validated(object sender, EventArgs e)
         {
             GS.validateWeight(lvActivitiesList, lvActivities, lblTotalWeight);
+        }
+
+        private void txtPeriod_TextChanged(object sender, EventArgs e)
+        {
+            Globals.Report.Period = txtPeriod.Text;
         }
     }
 }

@@ -29,50 +29,50 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Science and Technology",
             "150",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Mathematics",
             "125",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Spelling",
             "115",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Cloud Computing",
             "150",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
             "Jedi Knights",
             "Skywalker",
             "Luke",
             "_"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
             "Jedi Masters",
             "Skywalker",
             "Anakin",
             "_"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
             "Jedi Masters",
             "Kenobi",
             "Obi-Wan",
             "_"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
             "Sith Lords",
             "Tyranus",
             "Darth",
@@ -109,7 +109,6 @@
             this.btnTest = new System.Windows.Forms.Button();
             this.dlgLoadClass = new System.Windows.Forms.OpenFileDialog();
             this.dlgSaveClass = new System.Windows.Forms.SaveFileDialog();
-            this.btnTest2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.tabResults = new System.Windows.Forms.TabPage();
@@ -161,6 +160,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabBuilder = new System.Windows.Forms.TabControl();
+            this.txtPeriod = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgBuild)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -264,10 +265,10 @@
             this.lvEntries.FullRowSelect = true;
             this.lvEntries.HideSelection = false;
             this.lvEntries.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4});
+            listViewItem9,
+            listViewItem10,
+            listViewItem11,
+            listViewItem12});
             this.lvEntries.Location = new System.Drawing.Point(12, 524);
             this.lvEntries.Margin = new System.Windows.Forms.Padding(4);
             this.lvEntries.Name = "lvEntries";
@@ -365,10 +366,10 @@
             this.lvSection.FullRowSelect = true;
             this.lvSection.HideSelection = false;
             this.lvSection.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5,
-            listViewItem6,
-            listViewItem7,
-            listViewItem8});
+            listViewItem13,
+            listViewItem14,
+            listViewItem15,
+            listViewItem16});
             this.lvSection.Location = new System.Drawing.Point(0, 190);
             this.lvSection.Name = "lvSection";
             this.lvSection.Size = new System.Drawing.Size(429, 191);
@@ -427,16 +428,6 @@
             // dlgSaveClass
             // 
             this.dlgSaveClass.Filter = "XML Records|*.xml";
-            // 
-            // btnTest2
-            // 
-            this.btnTest2.Location = new System.Drawing.Point(486, 475);
-            this.btnTest2.Name = "btnTest2";
-            this.btnTest2.Size = new System.Drawing.Size(75, 23);
-            this.btnTest2.TabIndex = 13;
-            this.btnTest2.Text = "Test2";
-            this.btnTest2.UseVisualStyleBackColor = true;
-            this.btnTest2.Click += new System.EventHandler(this.btnTest2_Click);
             // 
             // pictureBox1
             // 
@@ -598,6 +589,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.txtPeriod);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lblTotalWeight);
@@ -644,7 +637,7 @@
             this.lblTotalWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalWeight.Location = new System.Drawing.Point(174, 352);
             this.lblTotalWeight.Name = "lblTotalWeight";
-            this.lblTotalWeight.Size = new System.Drawing.Size(16, 16);
+            this.lblTotalWeight.Size = new System.Drawing.Size(17, 16);
             this.lblTotalWeight.TabIndex = 10;
             this.lblTotalWeight.Text = "0";
             // 
@@ -663,7 +656,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(54, 352);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 16);
+            this.label2.Size = new System.Drawing.Size(118, 16);
             this.label2.TabIndex = 9;
             this.label2.Text = "Overall Weight:";
             // 
@@ -964,13 +957,29 @@
             this.tabBuilder.TabIndex = 12;
             this.tabBuilder.SelectedIndexChanged += new System.EventHandler(this.tabBuilder_SelectedIndexChanged);
             // 
+            // txtPeriod
+            // 
+            this.txtPeriod.Location = new System.Drawing.Point(250, 321);
+            this.txtPeriod.Name = "txtPeriod";
+            this.txtPeriod.Size = new System.Drawing.Size(412, 22);
+            this.txtPeriod.TabIndex = 23;
+            this.txtPeriod.TextChanged += new System.EventHandler(this.txtPeriod_TextChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(252, 302);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(48, 16);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "Period";
+            // 
             // Builder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1008, 730);
-            this.Controls.Add(this.btnTest2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabBuilder);
             this.Controls.Add(this.btnTest);
@@ -1023,7 +1032,6 @@
         private System.Windows.Forms.SaveFileDialog dlgSaveClass;
         private System.Windows.Forms.Button btnTest;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnTest2;
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.ToolStripMenuItem mnuFile;
         private System.Windows.Forms.ToolStripMenuItem mnuFileLoad;
@@ -1089,5 +1097,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabControl tabBuilder;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtPeriod;
     }
 }

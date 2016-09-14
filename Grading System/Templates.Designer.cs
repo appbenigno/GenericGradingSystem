@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Templates));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -45,9 +46,6 @@
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.statusLabel});
             this.statusStrip1.Location = new System.Drawing.Point(0, 471);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(811, 22);
@@ -57,7 +55,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(106, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(107, 17);
             this.toolStripStatusLabel1.Text = "Selected Template:";
             // 
             // statusLabel
@@ -132,6 +130,7 @@
             this.Controls.Add(this.lstTemplates);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.imgTemplatePreview);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Templates";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

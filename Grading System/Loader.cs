@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -40,7 +41,9 @@ namespace Grading_System
         {
             if (flags.isRaised("selectedtemplate"))
             {
-                FormControl.HTML.Write(Globals.Theme.selected, Globals.Builder.Activities, Globals.Builder.Entries);
+                saveHTML.InitialDirectory = Path.GetFullPath(".\\") + FormControl.HTML.FileStructure.htmlPath;
+                saveHTML.ShowDialog();
+                FormControl.HTML.Write(Globals.Theme.selected, Globals.Builder.Activities, Globals.Builder.Entries, saveHTML, notifyIcon);
             }
             else
             {
@@ -56,6 +59,11 @@ namespace Grading_System
             lblGPA.Text = Globals.Report.Gpa;
             lblGWA.Text = Globals.Report.Gwa.ToString();
             lblRemarks.Text = Globals.Report.Remarks;
+        }
+
+        private void Loader_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

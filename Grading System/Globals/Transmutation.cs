@@ -356,77 +356,91 @@ namespace Grading_System.Globals
             lvi.SubItems.Add("-");
             lvi.SubItems.Add("100.00");
             lvi.SubItems.Add("1.00");
-            lvi.SubItems.Add("");
+            lvi.SubItems.Add("Excellent");
             targetList.Items.Add(lvi);
 
             lvi = new ListViewItem("93.33");
             lvi.SubItems.Add("-");
             lvi.SubItems.Add("96.66");
             lvi.SubItems.Add("1.25");
-            lvi.SubItems.Add("");
+            lvi.SubItems.Add("Highly Meritorious");
             targetList.Items.Add(lvi);
 
             lvi = new ListViewItem("90.00");
             lvi.SubItems.Add("-");
             lvi.SubItems.Add("93.32");
             lvi.SubItems.Add("1.50");
-            lvi.SubItems.Add("");
+            lvi.SubItems.Add("Meritorious");
             targetList.Items.Add(lvi);
 
             lvi = new ListViewItem("86.67");
             lvi.SubItems.Add("-");
             lvi.SubItems.Add("89.99");
             lvi.SubItems.Add("1.75");
-            lvi.SubItems.Add("");
+            lvi.SubItems.Add("Meritorious");
             targetList.Items.Add(lvi);
 
             lvi = new ListViewItem("83.33");
             lvi.SubItems.Add("-");
             lvi.SubItems.Add("86.66");
             lvi.SubItems.Add("2.00");
-            lvi.SubItems.Add("");
+            lvi.SubItems.Add("Very Satisfactory");
             targetList.Items.Add(lvi);
 
             lvi = new ListViewItem("80.00");
             lvi.SubItems.Add("-");
             lvi.SubItems.Add("83.32");
             lvi.SubItems.Add("2.25");
-            lvi.SubItems.Add("");
+            lvi.SubItems.Add("Very Satisfactory");
             targetList.Items.Add(lvi);
 
             lvi = new ListViewItem("76.67");
             lvi.SubItems.Add("-");
             lvi.SubItems.Add("79.99");
             lvi.SubItems.Add("2.50");
-            lvi.SubItems.Add("");
+            lvi.SubItems.Add("Satisfactory");
             targetList.Items.Add(lvi);
 
             lvi = new ListViewItem("73.33");
             lvi.SubItems.Add("-");
             lvi.SubItems.Add("76.66");
             lvi.SubItems.Add("2.75");
-            lvi.SubItems.Add("");
+            lvi.SubItems.Add("Satisfactory");
             targetList.Items.Add(lvi);
 
             lvi = new ListViewItem("70.00");
             lvi.SubItems.Add("-");
             lvi.SubItems.Add("73.32");
             lvi.SubItems.Add("3.00");
-            lvi.SubItems.Add("");
+            lvi.SubItems.Add("Lowest Passing Grade");
             targetList.Items.Add(lvi);
 
-            lvi = new ListViewItem("0.01");
+            lvi = new ListViewItem("50.00");
             lvi.SubItems.Add("-");
             lvi.SubItems.Add("69.99");
             lvi.SubItems.Add("5.00");
-            lvi.SubItems.Add("");
+            lvi.SubItems.Add("	Failure");
+            targetList.Items.Add(lvi);
+
+            lvi = new ListViewItem("30.00");
+            lvi.SubItems.Add("-");
+            lvi.SubItems.Add("49.99");
+            lvi.SubItems.Add("7.00");
+            lvi.SubItems.Add("Incomplete");
+            targetList.Items.Add(lvi);
+
+            lvi = new ListViewItem("10.00");
+            lvi.SubItems.Add("-");
+            lvi.SubItems.Add("29.99");
+            lvi.SubItems.Add("8.00");
+            lvi.SubItems.Add("Absent");
             targetList.Items.Add(lvi);
 
             lvi = new ListViewItem("0.00");
             lvi.SubItems.Add("-");
-            lvi.SubItems.Add("0.00");
-            lvi.SubItems.Add("8.00");
-            lvi.SubItems.Add("");
+            lvi.SubItems.Add("9.99");
+            lvi.SubItems.Add("9.00");
+            lvi.SubItems.Add("Dropped");
             targetList.Items.Add(lvi);
         }
     }
