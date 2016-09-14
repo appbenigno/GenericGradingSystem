@@ -259,5 +259,23 @@ namespace Grading_System
             catch { }
             return Math.Round(result, 2);
         }
+
+        public static double getPointAverage(ListView transmutationList, string value)
+        {
+            double result = 0;
+            return result;
+        }
+
+        public static string getPointAverage(ListView transmutationList, double value)
+        {
+            string result = "";
+            return result;
+        }
+
+        public static string getRemarks(ListView transmutationList, double value)
+        {
+            string result = "";
+            return result;
+        }
     }
 }

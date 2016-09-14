@@ -57,7 +57,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(107, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(106, 17);
             this.toolStripStatusLabel1.Text = "Selected Template:";
             // 
             // statusLabel
@@ -138,6 +138,7 @@
             this.Text = "Templates";
             this.Activated += new System.EventHandler(this.Templates_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Templates_FormClosing);
+            this.Load += new System.EventHandler(this.Templates_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgOK)).EndInit();

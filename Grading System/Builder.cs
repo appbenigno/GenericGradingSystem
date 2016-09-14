@@ -322,10 +322,8 @@ namespace Grading_System
 
         private void btnTest2_Click(object sender, EventArgs e)
         {
-            txtTest.Text = FormControl.HTML.write(lvActivities, lvEntries);
-            StreamWriter xWrite = new StreamWriter("test.html");
-            xWrite.WriteLine(FormControl.HTML.write(lvActivities, lvEntries));
-            xWrite.Close();
+            MessageBox.Show(Globals.Theme.selected.Text);
+            FormControl.HTML.Write(Globals.Theme.selected, lvActivities, lvEntries);
         }
 
         private void lvResults_Click(object sender, EventArgs e)

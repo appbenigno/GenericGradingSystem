@@ -42,7 +42,7 @@ namespace Grading_System
         {
             try
             {
-                Template.setTemplate(lstTemplates, Globals.Theme.selectedTheme, imgTemplatePreview, statusLabel);
+                Template.setTemplate(lstTemplates, Globals.Theme.selected, imgTemplatePreview, statusLabel);
             }
             catch { }
         }
@@ -68,6 +68,15 @@ namespace Grading_System
                 Winforms.Builder.Show();
                 Winforms.Templates.Hide();
             }
+        }
+
+        private void Templates_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                lstTemplates.SetSelected(0, true);
+            }
+            catch { }
         }
     }
 }

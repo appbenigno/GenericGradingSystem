@@ -9,7 +9,6 @@ namespace Grading_System.Globals
 {
     public class Theme
     {
-        //public static string selected = "";
-        public static Lister.TableTemplates selectedTheme;
+        public static Label selected = new Label();
     }
 }
