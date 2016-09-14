@@ -23,13 +23,6 @@ namespace Grading_System
             lvGrade.Columns.Add("Equivalent", 70);
             lvGrade.Columns.Add("Description", 100);
             lvGrade.View = View.Details;
-            //lvGrade.Scrollable = true;
-            //lvGrade.GridLines = true;
-            //lvGrade.LabelEdit = true;
-            //lvGrade.MultiSelect = false;
-            //lvGrade.FullRowSelect = true;
-            equiv.TextAlign = HorizontalAlignment.Center;
-            descr.TextAlign = HorizontalAlignment.Center;
         }
         public void letterGrade()
         {
@@ -318,338 +311,6 @@ namespace Grading_System
                 gradePoint125(); // default value
             }
         }
-        
-        public void codeNiGab()
-        {
-            //    if (gradeTypeChoice == "letter")
-            //    {
-            //        ListViewFormat();
-
-            //        Add items in the listview
-
-            //    string[] arr = new string[4];
-
-            //        ListViewItem itm;
-
-            //        Add first item
-
-            //        arr[0] = "A+";
-            //        itm = new ListViewItem(arr);
-            //        lvGrade.Items.Add(itm);
-            //        arr[2] = "A";
-            //        itm = new ListViewItem(arr);
-            //        lvGrade.Items.Add(itm);
-            //        arr[0] = "A-";
-            //        itm = new ListViewItem(arr);
-            //        lvGrade.Items.Add(itm);
-            //        arr[0] = "B+";
-            //        itm = new ListViewItem(arr);
-            //        lvGrade.Items.Add(itm);
-            //        arr[0] = "B";
-            //        itm = new ListViewItem(arr);
-            //        lvGrade.Items.Add(itm);
-            //        arr[0] = "B-";
-            //        itm = new ListViewItem(arr);
-            //        lvGrade.Items.Add(itm);
-            //        arr[0] = "C+";
-            //        itm = new ListViewItem(arr);
-            //        lvGrade.Items.Add(itm);
-            //        arr[0] = "C";
-            //        itm = new ListViewItem(arr);
-            //        lvGrade.Items.Add(itm);
-            //        arr[0] = "C-";
-            //        itm = new ListViewItem(arr);
-            //        lvGrade.Items.Add(itm);
-            //        arr[0] = "D+";
-            //        itm = new ListViewItem(arr);
-            //        lvGrade.Items.Add(itm);
-            //        arr[0] = "D";
-            //        itm = new ListViewItem(arr);
-            //        lvGrade.Items.Add(itm);
-            //        arr[0] = "D-";
-            //        itm = new ListViewItem(arr);
-            //        lvGrade.Items.Add(itm);
-            //        arr[0] = "F";
-            //        itm = new ListViewItem(arr);
-            //        lvGrade.Items.Add(itm);
-            //    }
-            //}
-
-            //private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-            //{
-            //    if (comboBox1.Text == "Letters")
-            //    {
-            //        lvGPA.Clear();
-
-            //        lvGPA.View = View.Details;
-            //        lvGPA.GridLines = true;
-            //        lvGPA.FullRowSelect = true;
-
-            //        lvGPA.Columns.Add("Grade", 100);
-            //        lvGPA.Columns.Add("Range From", 100);
-            //        lvGPA.Columns.Add("Range To", 100);
-
-
-            //        Add items in the listview
-            //        string[] arr = new string[4];
-            //        ListViewItem itm;
-
-            //        Add first item
-            //        arr[0] = "A+";
-            //        arr[1] = "97";
-            //        arr[2] = "100";                
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "A";
-            //        arr[1] = "93";
-            //        arr[2] = "97";                
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "A-";
-            //        arr[1] = "90";
-            //        arr[2] = "92";                
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-
-            //        arr[0] = "B+";
-            //        arr[1] = "87";
-            //        arr[2] = "89";                
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "B";
-            //        arr[1] = "83";
-            //        arr[2] = "86";                
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "B-";
-            //        arr[1] = "80";
-            //        arr[2] = "82";                
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-
-            //        arr[0] = "C+";
-            //        arr[1] = "77";
-            //        arr[2] = "79";                
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "C";
-            //        arr[1] = "73";
-            //        arr[2] = "76";                
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "C-";
-            //        arr[1] = "70";
-            //        arr[2] = "72";                
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-
-            //        arr[0] = "D+";
-            //        arr[1] = "67";
-            //        arr[2] = "69";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "D";
-            //        arr[1] = "63";
-            //        arr[2] = "66";                
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "D-";
-            //        arr[1] = "60";
-            //        arr[2] = "62";                
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-
-            //        arr[0] = "F";
-            //        arr[1] = "0";
-            //        arr[2] = "59";                
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //    }
-
-
-            //    if (comboBox1.Text == "4 is Gold")
-            //    {
-            //        lvGPA.Clear();
-            //        lvGPA.LabelEdit = true;
-
-            //        lvGPA.View = View.Details;
-            //        lvGPA.GridLines = true;
-            //        lvGPA.FullRowSelect = true;
-
-            //        lvGPA.Columns.Add("Grade", 100);
-            //        lvGPA.Columns.Add("Range From", 100);
-            //        lvGPA.Columns.Add("Range To", 100);
-
-
-            //        Add items in the listview
-            //        string[] arr = new string[4];
-            //        ListViewItem itm;
-
-            //        Add first item
-            //        arr[0] = "4.0";
-            //        arr[1] = "97";
-            //        arr[2] = "100";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "4.0";
-            //        arr[1] = "93";
-            //        arr[2] = "97";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "3.7";
-            //        arr[1] = "90";
-            //        arr[2] = "92";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-
-            //        arr[0] = "3.3";
-            //        arr[1] = "87";
-            //        arr[2] = "89";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "3.0";
-            //        arr[1] = "83";
-            //        arr[2] = "86";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "2.7";
-            //        arr[1] = "80";
-            //        arr[2] = "82";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-
-            //        arr[0] = "2.3";
-            //        arr[1] = "77";
-            //        arr[2] = "79";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "2.0";
-            //        arr[1] = "73";
-            //        arr[2] = "76";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "1.7";
-            //        arr[1] = "70";
-            //        arr[2] = "72";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-
-            //        arr[0] = "1.3";
-            //        arr[1] = "67";
-            //        arr[2] = "69";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "1.0";
-            //        arr[1] = "63";
-            //        arr[2] = "66";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "0.7";
-            //        arr[1] = "60";
-            //        arr[2] = "62";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-
-            //        arr[0] = "0";
-            //        arr[1] = "0";
-            //        arr[2] = "59";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //    }
-
-
-            //    if (comboBox1.Text == "UNO is Gold")
-            //    {
-            //        lvGPA.Clear();
-            //        lvGPA.LabelEdit = true;
-
-            //        lvGPA.View = View.Details;
-            //        lvGPA.GridLines = true;
-            //        lvGPA.FullRowSelect = true;
-
-            //        lvGPA.Columns.Add("Grade", 100);
-            //        lvGPA.Columns.Add("Range From", 100);
-            //        lvGPA.Columns.Add("Range To", 100);
-
-
-            //        Add items in the listview
-            //        string[] arr = new string[4];
-            //        ListViewItem itm;
-
-            //        Add first item
-            //        arr[0] = "4.0";
-            //        arr[1] = "97";
-            //        arr[2] = "100";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "4.0";
-            //        arr[1] = "93";
-            //        arr[2] = "97";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "3.7";
-            //        arr[1] = "90";
-            //        arr[2] = "92";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-
-            //        arr[0] = "3.3";
-            //        arr[1] = "87";
-            //        arr[2] = "89";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "3.0";
-            //        arr[1] = "83";
-            //        arr[2] = "86";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "2.7";
-            //        arr[1] = "80";
-            //        arr[2] = "82";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-
-            //        arr[0] = "2.3";
-            //        arr[1] = "77";
-            //        arr[2] = "79";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "2.0";
-            //        arr[1] = "73";
-            //        arr[2] = "76";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "1.7";
-            //        arr[1] = "70";
-            //        arr[2] = "72";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-
-            //        arr[0] = "1.3";
-            //        arr[1] = "67";
-            //        arr[2] = "69";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "1.0";
-            //        arr[1] = "63";
-            //        arr[2] = "66";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //        arr[0] = "0.7";
-            //        arr[1] = "60";
-            //        arr[2] = "62";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-
-            //        arr[0] = "0";
-            //        arr[1] = "0";
-            //        arr[2] = "59";
-            //        itm = new ListViewItem(arr);
-            //        lvGPA.Items.Add(itm);
-            //    }
-            //}
-
-        }
 
         private void lvGrade_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -665,15 +326,15 @@ namespace Grading_System
             MessageBox.Show(columnIndex.ToString(), "columnIndex"); // to test x y coordinates
             MessageBox.Show(rowIndex.ToString(), "RowIndex");
 
-            if (lvGrade.LabelEdit == true && columnIndex != -1 && rowIndex != -1 && columnIndex < 4 && columnIndex != 1)
+            if (columnIndex != -1 && rowIndex != -1 && columnIndex < 3 && columnIndex != 1) // for columns 0 and 1 grade range 1 and 2
             {
                 try
                 {
-                    var scoreRange1 = Convert.ToDouble(Interaction.InputBox("Score", "Enter Grade"));
+                    var userInput = Convert.ToDouble(Interaction.InputBox("Score", "Enter Score"));
 
-                    if (scoreRange1.GetType() == typeof(double))
+                    if (userInput.GetType() == typeof(double))
                     {
-                        lvGrade.Items[rowIndex].SubItems[columnIndex].Text = Math.Round(scoreRange1, 1).ToString("#.00");
+                        lvGrade.Items[rowIndex].SubItems[columnIndex].Text = userInput.ToString();
                     }
                     else
                     {
@@ -685,19 +346,49 @@ namespace Grading_System
                     MessageBox.Show("Numbers Only", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else if (lvGrade.LabelEdit == true && columnIndex != -1 && rowIndex != -1 && columnIndex != 1)
+            else if (columnIndex != -1 && rowIndex != -1 && columnIndex > 2 && columnIndex < 4) // for column 3 equivalent
             {
                 try
                 {
-                    var description = Interaction.InputBox("Desciption", "Enter Description");
+                    var userInput = Interaction.InputBox("Score", "Enter Grade");
+
+                    int parsedInput;
+                    bool isNumeric;
+                    isNumeric = int.TryParse(userInput, out parsedInput);
+
+                    if (isNumeric)
+                    {
+                        var equivalent = Convert.ToDouble(parsedInput);
+
+                        lvGrade.Items[rowIndex].SubItems[columnIndex].Text = Math.Round(equivalent, 1).ToString("#.00");
+                    }
+                    else if (isNumeric == false)
+                    {
+                        lvGrade.Items[rowIndex].SubItems[columnIndex].Text = userInput.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Numbers or Letters Only", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Numbers or Letters Only", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else if (lvGrade.LabelEdit == true && columnIndex != -1 && rowIndex != -1 && columnIndex != 1) //for column 4 description
+            {
+                try
+                {
+                    var userInput = Interaction.InputBox("Desciption", "Enter Description");
 
                     int n;
                     bool isNumeric;
-                    isNumeric = int.TryParse(description, out n); //to test if input is numeric
+                    isNumeric = int.TryParse(userInput, out n); //to test if input is numeric
 
-                    if (description.GetType() == typeof(string) && isNumeric == false)
+                    if (userInput.GetType() == typeof(string) && isNumeric == false)
                     {
-                        lvGrade.Items[rowIndex].SubItems[columnIndex].Text = description;
+                        lvGrade.Items[rowIndex].SubItems[columnIndex].Text = userInput;
                     }
                     else
                     {
@@ -709,7 +400,7 @@ namespace Grading_System
                     MessageBox.Show("Must be in words!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else if (columnIndex == 1)
+            else if (columnIndex == 1) // for column 1
             {
                 //do nothing
             }
