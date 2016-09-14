@@ -322,9 +322,8 @@ namespace Grading_System
 
         private void btnTest2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Globals.Theme.selected.Text);
-            FormControl.HTML.Write(Globals.Theme.selected, lvActivities, lvEntries);
-            MessageBox.Show(Globals.Report.Gwa.ToString() + "\n" + Globals.Report.Gpa + "\n" + Globals.Report.Remarks);
+            Globals.Builder.transferAll(lvActivities, lvEntries, lvSection);
+            MessageBox.Show(Globals.Builder.Activities.Items[0].SubItems[0].Text);
         }
 
         private void lvResults_Click(object sender, EventArgs e)
@@ -336,6 +335,8 @@ namespace Grading_System
 
         private void mnuLoader_Click(object sender, EventArgs e)
         {
+            Globals.Builder.transferAll(lvActivities, lvEntries, lvSection);
+            GS.computeGrades(Globals.Report.Name, Globals.Builder.Activities, Globals.Builder.Entries, Globals.Transmutation.TransmuteTable);
             Winforms.Loader.Show();
             Winforms.Builder.Hide();
         }

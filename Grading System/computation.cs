@@ -260,6 +260,36 @@ namespace Grading_System
             return Math.Round(result, 2);
         }
 
+        /// <summary>
+        /// Get GWA
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="activities"></param>
+        /// <param name="entriesList"></param>
+        /// <returns></returns>
+        public static double getGWA(string name, ListView activities, ListView entriesList)
+        {
+            double gwa = 0;
+            try
+            {
+                for (int x = 0; x < activities.Items.Count; x++)
+                {
+                    string activityName = activities.Items[x].SubItems[0].Text;
+                    int activityWeight = Convert.ToInt32(activities.Items[x].SubItems[1].Text);
+
+                    gwa += compute.getWeightedAverage(name, activityName, entriesList, activities);
+                }
+            }
+            catch { }
+            return Math.Round(gwa, 2);
+        }
+
+        /// <summary>
+        /// Get GPA from range of GWA
+        /// </summary>
+        /// <param name="transmutationList"></param>
+        /// <param name="val"></param>
+        /// <returns></returns>
         public static string getPointAverage(ListView transmutationList, double val)
         {
             string result = "";
@@ -270,9 +300,12 @@ namespace Grading_System
                     double min = Convert.ToDouble(transmutationList.Items[x].SubItems[0].Text);
                     double max = Convert.ToDouble(transmutationList.Items[x].SubItems[2].Text);
                     string equivalent = transmutationList.Items[x].SubItems[3].Text;
-                    if (val >= min && val <= max)
+                    if (val.CompareTo(min).Equals(1) || val.CompareTo(min).Equals(0))
                     {
-                        result = equivalent;
+                        if (val.CompareTo(max).Equals(-1) || val.CompareTo(max).Equals(0))
+                        {
+                            result = equivalent;
+                        }
                     }
                 }
             }
@@ -280,18 +313,29 @@ namespace Grading_System
             return result;
         }
 
-        public static string getRemarks(ListView transmutationList, double value)
+        /// <summary>
+        /// Extract remarks definition from range of GWA
+        /// </summary>
+        /// <param name="transmutationList"></param>
+        /// <param name="val"></param>
+        /// <returns></returns>
+        public static string getRemarks(ListView transmutationList, double val)
         {
             string result = "";
             try
             {
                 for (int x = 0; x < transmutationList.Items.Count; x++)
                 {
-                    int min = Convert.ToInt32(transmutationList.Items[x].SubItems[0].Text);
-                    int max = Convert.ToInt32(transmutationList.Items[x].SubItems[2].Text);
+                    double min = Convert.ToDouble(transmutationList.Items[x].SubItems[0].Text);
+                    double max = Convert.ToDouble(transmutationList.Items[x].SubItems[2].Text);
                     string description = transmutationList.Items[x].SubItems[4].Text;
-                    MessageBox.Show(description);
-                    
+                    if (val.CompareTo(min).Equals(1) || val.CompareTo(min).Equals(0))
+                    {
+                        if (val.CompareTo(max).Equals(-1) || val.CompareTo(max).Equals(0))
+                        {
+                            result = description;
+                        }
+                    }
                 }
             }
             catch { }

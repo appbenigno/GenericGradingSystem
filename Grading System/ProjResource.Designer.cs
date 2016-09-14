@@ -113,6 +113,26 @@ namespace Grading_System {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap button_generatehtml {
+            get {
+                object obj = ResourceManager.GetObject("button_generatehtml", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap button_generatehtml_hover {
+            get {
+                object obj = ResourceManager.GetObject("button_generatehtml_hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap button_long {
             get {
                 object obj = ResourceManager.GetObject("button_long", resourceCulture);
@@ -173,9 +193,69 @@ namespace Grading_System {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lbl_GPA {
+            get {
+                object obj = ResourceManager.GetObject("lbl_GPA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lbl_GWA {
+            get {
+                object obj = ResourceManager.GetObject("lbl_GWA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lbl_name {
+            get {
+                object obj = ResourceManager.GetObject("lbl_name", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lbl_period {
+            get {
+                object obj = ResourceManager.GetObject("lbl_period", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lbl_preview {
             get {
                 object obj = ResourceManager.GetObject("lbl_preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lbl_remarks {
+            get {
+                object obj = ResourceManager.GetObject("lbl_remarks", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lbl_section {
+            get {
+                object obj = ResourceManager.GetObject("lbl_section", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

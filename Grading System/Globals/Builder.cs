@@ -98,19 +98,43 @@ namespace Grading_System.Globals
                 destinationActivitiesList.Items.Add(lvi);
             }
         }
-    }
 
-    public class Section
-    {
+        public static void transferAll(ListView activities, ListView entries, ListView section)
+        {
+            try
+            {
+                Section.Items.Clear();
+                for (int x = 0; x < section.Items.Count; x++)
+                {
+                    ListViewItem lvi = new ListViewItem(section.Items[x].SubItems[0].Text);
+                    lvi.SubItems.Add(section.Items[x].SubItems[1].Text);
+                    lvi.SubItems.Add(section.Items[x].SubItems[2].Text);
+                    lvi.SubItems.Add(section.Items[x].SubItems[3].Text);
 
-    }
-    public class Entries
-    {
+                    Section.Items.Add(lvi);
+                }
+                Entries.Items.Clear();
+                for (int x = 0; x < entries.Items.Count; x++)
+                {
+                    ListViewItem lvi = new ListViewItem(entries.Items[x].SubItems[0].Text);
+                    lvi.SubItems.Add(entries.Items[x].SubItems[1].Text);
+                    lvi.SubItems.Add(entries.Items[x].SubItems[2].Text);
+                    lvi.SubItems.Add(entries.Items[x].SubItems[3].Text);
+                    lvi.SubItems.Add(entries.Items[x].SubItems[4].Text);
+                    lvi.SubItems.Add(entries.Items[x].SubItems[5].Text);
 
-    }
+                    Entries.Items.Add(lvi);
+                }
+                Activities.Items.Clear();
+                for (int x = 0; x < activities.Items.Count; x++)
+                {
+                    ListViewItem lvi = new ListViewItem(activities.Items[x].SubItems[0].Text);
+                    lvi.SubItems.Add(activities.Items[x].SubItems[1].Text);
 
-    public class Results
-    {
-
+                    Activities.Items.Add(lvi);
+                }
+            }
+            catch { }
+        }
     }
 }

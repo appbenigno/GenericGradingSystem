@@ -464,17 +464,7 @@ namespace Grading_System
                         if (activityList.Items[x].Selected)
                         {
                             flags.raise("activityselected");
-                            break;
                         }
-                        else
-                        {
-                            flags.raise("noactivityselected");
-                        }
-                    }
-                    if (flags.isRaised("noactivityselected"))
-                    {
-                        flags.destroy("noactivityselected");
-                        MessageBox.Show("Select an activity name first.", "No activity selected", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     if (flags.isRaised("activityselected"))
                     {
@@ -494,8 +484,13 @@ namespace Grading_System
 
                         entriesList.Items.Add(lvi);
                     }
+                    else if (!flags.isRaised("activityselected"))
+                    {
+                        flags.destroy("noactivityselected");
+                        MessageBox.Show("Select an activity name first.", "No activity selected", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                catch (Exception errAdd)
+                catch (ArgumentOutOfRangeException errAdd)
                 {
                     MessageBox.Show(errAdd.Message, "Something is wrong", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 }
@@ -670,7 +665,6 @@ namespace Grading_System
                         noder.Nodes.Add(string.Concat("Score: ", score.ToString()));
                         noder.Nodes.Add(string.Concat("Max Score: ", maxscore.ToString()));
                         resultTree.Nodes.Add(noder);
-                        
                     }
                 }
                 resultTree.Sort();
@@ -693,7 +687,7 @@ namespace Grading_System
             string section = resultList.SelectedItems[0].SubItems[1].Text;
             TreeNode noder;
             
-
+            
             for (int x = 0; x < activities.Items.Count; x++)
             {
                 string activityName;
@@ -710,22 +704,11 @@ namespace Grading_System
                 resultTree.Nodes.Add(noder);
             }
 
-            double wa = 0;
-            for (int y = 0; y < activities.Items.Count; y++)
-            {
-                string activityName2;
-                int activityWeight2;
-                activityName2 = activities.Items[y].SubItems[0].Text;
-                activityWeight2 = Convert.ToInt32(activities.Items[y].SubItems[1].Text);
+            resultLabel.Text = compute.getGWA(Globals.Report.Name, activities, entriesList).ToString();
 
-                wa += compute.getWeightedAverage(name, activityName2, entriesList, activities);
-            }
-            resultLabel.Text = Math.Round(wa, 2).ToString();
-
-            Globals.Report.Gwa = Math.Round(wa, 2);
+            Globals.Report.Gwa = compute.getGWA(Globals.Report.Name, activities, entriesList);
             Globals.Report.Gpa = compute.getPointAverage(Globals.Transmutation.TransmuteTable, Globals.Report.Gwa);
             Globals.Report.Remarks = compute.getRemarks(Globals.Transmutation.TransmuteTable, Globals.Report.Gwa);
-            
             resultTree.Sort();
             resultTree.ExpandAll();
         }
@@ -750,6 +733,17 @@ namespace Grading_System
                 targetListbox.Items.Clear();
                 targetListbox.Items.Add("Simple");
             }
+        }
+
+        //--------------------------------------------------
+        // Computations
+        //--------------------------------------------------
+
+        public static void computeGrades(string name, ListView activities, ListView entriesList, ListView transmutationTable)
+        {
+            Globals.Report.Gwa = compute.getGWA(name, activities, entriesList);
+            Globals.Report.Gpa = compute.getPointAverage(transmutationTable, Globals.Report.Gwa);
+            Globals.Report.Remarks = compute.getRemarks(transmutationTable, Globals.Report.Gwa);
         }
     }
 }

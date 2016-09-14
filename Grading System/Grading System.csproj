@@ -216,6 +216,30 @@
   <ItemGroup>
     <None Include="Resources\button_build_hover.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lbl_GPA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lbl_GWA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lbl_name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lbl_period.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lbl_remarks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lbl_section.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_generatehtml.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_generatehtml_hover.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

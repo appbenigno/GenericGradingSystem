@@ -56,7 +56,7 @@
             this.lvGrade.Location = new System.Drawing.Point(22, 25);
             this.lvGrade.MultiSelect = false;
             this.lvGrade.Name = "lvGrade";
-            this.lvGrade.Size = new System.Drawing.Size(335, 321);
+            this.lvGrade.Size = new System.Drawing.Size(335, 337);
             this.lvGrade.TabIndex = 3;
             this.lvGrade.UseCompatibleStateImageBehavior = false;
             this.lvGrade.View = System.Windows.Forms.View.Details;

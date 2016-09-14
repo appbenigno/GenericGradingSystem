@@ -65,6 +65,7 @@ namespace Grading_System
             }
             else
             {
+                flags.raise("selectedtemplate");
                 Winforms.Builder.Show();
                 Winforms.Templates.Hide();
             }

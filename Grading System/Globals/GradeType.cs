@@ -9,5 +9,6 @@ namespace Grading_System.Globals
     public class GradeType
     {
         public static string gradeTypeChoice = "";
+        
     }
 }

@@ -8,14 +8,14 @@ namespace Grading_System.Globals
 {
     public class Report
     {
-        private static string familyName;
-        private static string givenName;
-        private static string middleInitial;
-        private static string section;
-        private static string period;
-        private static string remarks;
-        private static string gpa;
-        private static double gwa;
+        private static string familyName = "";
+        private static string givenName = "";
+        private static string middleInitial = "";
+        private static string section = "";
+        private static string period = "";
+        private static string remarks = "";
+        private static string gpa = "0";
+        private static double gwa = 0;
 
         public static string Name
         {

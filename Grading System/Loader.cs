@@ -25,5 +25,37 @@ namespace Grading_System
                 Winforms.Loader.Hide();
             }
         }
+
+        private void imgGenerateHtml_MouseHover(object sender, EventArgs e)
+        {
+            imgGenerateHtml.Image = ProjResource.button_generatehtml_hover;
+        }
+
+        private void imgGenerateHtml_MouseLeave(object sender, EventArgs e)
+        {
+            imgGenerateHtml.Image = ProjResource.button_generatehtml;
+        }
+
+        private void imgGenerateHtml_Click(object sender, EventArgs e)
+        {
+            if (flags.isRaised("selectedtemplate"))
+            {
+                FormControl.HTML.Write(Globals.Theme.selected, Globals.Builder.Activities, Globals.Builder.Entries);
+            }
+            else
+            {
+                MessageBox.Show("Select a template first.", "No selected template");
+            }
+        }
+
+        private void Loader_Activated(object sender, EventArgs e)
+        {
+            lblName.Text = Globals.Report.Name;
+            lblSection.Text = Globals.Report.Section;
+            lblPeriod.Text = Globals.Report.Period;
+            lblGPA.Text = Globals.Report.Gpa;
+            lblGWA.Text = Globals.Report.Gwa.ToString();
+            lblRemarks.Text = Globals.Report.Remarks;
+        }
     }
 }
