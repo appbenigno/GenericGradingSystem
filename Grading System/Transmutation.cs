@@ -255,28 +255,28 @@ namespace Grading_System
 
             ListViewItem gradeRange1 = new ListViewItem("81");
             gradeRange1.SubItems.Add("-");
-            gradeRange1.SubItems.Add("90");
+            gradeRange1.SubItems.Add("90.99");
             gradeRange1.SubItems.Add("90");
             gradeRange1.SubItems.Add("Very Good");
             lvGrade.Items.Add(gradeRange1);
 
             ListViewItem gradeRange2 = new ListViewItem("76");
             gradeRange2.SubItems.Add("-");
-            gradeRange2.SubItems.Add("80");
+            gradeRange2.SubItems.Add("80.99");
             gradeRange2.SubItems.Add("80");
             gradeRange2.SubItems.Add("Good");
             lvGrade.Items.Add(gradeRange2);
 
             ListViewItem gradeRange3 = new ListViewItem("70");
             gradeRange3.SubItems.Add("-");
-            gradeRange3.SubItems.Add("70");
+            gradeRange3.SubItems.Add("75.99");
             gradeRange3.SubItems.Add("75");
             gradeRange3.SubItems.Add("Fair");
             lvGrade.Items.Add(gradeRange3);
 
             ListViewItem gradeRange4 = new ListViewItem("0");
             gradeRange4.SubItems.Add("-");
-            gradeRange4.SubItems.Add("69");
+            gradeRange4.SubItems.Add("69.99");
             gradeRange4.SubItems.Add("0");
             gradeRange4.SubItems.Add("Fail");
             lvGrade.Items.Add(gradeRange4);
@@ -443,12 +443,30 @@ namespace Grading_System
                 e.Cancel = true;
                 Winforms.TransmutationTable.Hide();
             }
-            Globals.Transmutation.transferTransmutation(lvGrade, Globals.Transmutation.TransmuteTable);
         }
 
         private void btnOKtrans_Click(object sender, EventArgs e)
         {
+            flags.raise("selectedtransmutation");
             Globals.Transmutation.transferTransmutation(lvGrade, Globals.Transmutation.TransmuteTable);
+            Winforms.TransmutationTable.Hide();
+        }
+
+        private void btnCustom_Click(object sender, EventArgs e)
+        {
+            Globals.GradeType.gradeTypeChoice = "custom";
+            transmuteListViewFormat();
+            customGrade();
+        }
+
+        private void btnk12_Click(object sender, EventArgs e)
+        {
+            Globals.Transmutation.transmutationK12(lvGrade);
+        }
+
+        private void btnMapua_Click(object sender, EventArgs e)
+        {
+            Globals.Transmutation.transmutationMapua(lvGrade);
         }
     }
 }

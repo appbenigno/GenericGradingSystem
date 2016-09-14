@@ -271,6 +271,16 @@ namespace Grading_System {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lbl_transmutation {
+            get {
+                object obj = ResourceManager.GetObject("lbl_transmutation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Grading System.
         /// </summary>
         internal static string ProjectTitle {
