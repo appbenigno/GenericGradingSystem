@@ -41,5 +41,10 @@ namespace Grading_System
         {
             imgContinue.Image = ProjResource.button_continue;
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            Winforms.Login.Icon = ProjResource.favicon;
+        }
     }
 }

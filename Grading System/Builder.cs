@@ -19,10 +19,6 @@ namespace Grading_System
             InitializeComponent();
         }
 
-        private void Builder_FormClosing(object sender, FormClosingEventArgs e)
-        {
-        }
-
         private void mnuReports_Click(object sender, EventArgs e)
         {
             
@@ -340,6 +336,7 @@ namespace Grading_System
             //GS.getTreeResultNodes(lvActivities, treeResult);
             GS.getResults(lblResultName, lblResultSection, lvResults, lvEntries, treeResult);
             GS.getResultsSummary(lvActivities, lvResults, lvEntries, treeResultSummary, txtWeightedAverage);
+            txtWeightedAverage.Text = compute.getGWA(lblResultName.Text, lvActivities, lvEntries).ToString();
         }
 
         private void mnuLoader_Click(object sender, EventArgs e)
@@ -400,6 +397,21 @@ namespace Grading_System
         private void txtPeriod_TextChanged(object sender, EventArgs e)
         {
             Globals.Report.Period = txtPeriod.Text;
+        }
+
+        private void mnuFileExit_Click(object sender, EventArgs e)
+        {
+            Winforms.Login.Show();
+            Winforms.Builder.Hide();
+        }
+
+        private void Builder_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                Winforms.Login.Show();
+                Winforms.Builder.Hide();
+            }
         }
     }
 }

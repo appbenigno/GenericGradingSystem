@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grading System", "Grading S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSThemes", "Themes\GSThemes.csproj", "{840B91D4-3E63-4157-A130-68825FFB94F4}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "GradingSystemInstaller", "GradingSystemInstaller\GradingSystemInstaller.vdproj", "{DE7E4865-AC0A-4A29-982E-B8F0B1DBC597}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "GradingSystemInstaller", "GradingSystemInstaller\GradingSystemInstaller.vdproj", "{7F77200C-7D22-4E92-83AC-1F6763C41347}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,10 +32,10 @@ Global
 		{840B91D4-3E63-4157-A130-68825FFB94F4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{840B91D4-3E63-4157-A130-68825FFB94F4}.Release|x86.ActiveCfg = Release|Any CPU
 		{840B91D4-3E63-4157-A130-68825FFB94F4}.Release|x86.Build.0 = Release|Any CPU
-		{DE7E4865-AC0A-4A29-982E-B8F0B1DBC597}.Debug|Any CPU.ActiveCfg = Debug
-		{DE7E4865-AC0A-4A29-982E-B8F0B1DBC597}.Debug|x86.ActiveCfg = Debug
-		{DE7E4865-AC0A-4A29-982E-B8F0B1DBC597}.Release|Any CPU.ActiveCfg = Release
-		{DE7E4865-AC0A-4A29-982E-B8F0B1DBC597}.Release|x86.ActiveCfg = Release
+		{7F77200C-7D22-4E92-83AC-1F6763C41347}.Debug|Any CPU.ActiveCfg = Debug
+		{7F77200C-7D22-4E92-83AC-1F6763C41347}.Debug|x86.ActiveCfg = Debug
+		{7F77200C-7D22-4E92-83AC-1F6763C41347}.Release|Any CPU.ActiveCfg = Release
+		{7F77200C-7D22-4E92-83AC-1F6763C41347}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

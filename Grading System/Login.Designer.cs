@@ -68,13 +68,15 @@
             this.BackgroundImage = global::Grading_System.ProjResource.book;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(762, 496);
-            this.ControlBox = false;
             this.Controls.Add(this.imgContinue);
             this.Controls.Add(this.imgLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgContinue)).EndInit();
             this.ResumeLayout(false);

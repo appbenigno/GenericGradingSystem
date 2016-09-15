@@ -29,50 +29,50 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem41 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Science and Technology",
             "150",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem42 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Mathematics",
             "125",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem19 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem43 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Spelling",
             "115",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem20 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem44 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Cloud Computing",
             "150",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem21 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem45 = new System.Windows.Forms.ListViewItem(new string[] {
             "Jedi Knights",
             "Skywalker",
             "Luke",
             "_"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem22 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem46 = new System.Windows.Forms.ListViewItem(new string[] {
             "Jedi Masters",
             "Skywalker",
             "Anakin",
             "_"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem23 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem47 = new System.Windows.Forms.ListViewItem(new string[] {
             "Jedi Masters",
             "Kenobi",
             "Obi-Wan",
             "_"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem24 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem48 = new System.Windows.Forms.ListViewItem(new string[] {
             "Sith Lords",
             "Tyranus",
             "Darth",
@@ -106,7 +106,6 @@
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imgBuild = new System.Windows.Forms.PictureBox();
-            this.btnTest = new System.Windows.Forms.Button();
             this.dlgLoadClass = new System.Windows.Forms.OpenFileDialog();
             this.dlgSaveClass = new System.Windows.Forms.SaveFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -126,6 +125,8 @@
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabActivity = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtPeriod = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTotalWeight = new System.Windows.Forms.Label();
@@ -160,8 +161,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabBuilder = new System.Windows.Forms.TabControl();
-            this.txtPeriod = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgBuild)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -222,27 +221,28 @@
             // mnuFileExit
             // 
             this.mnuFileExit.Name = "mnuFileExit";
-            this.mnuFileExit.Size = new System.Drawing.Size(140, 22);
+            this.mnuFileExit.Size = new System.Drawing.Size(152, 22);
             this.mnuFileExit.Text = "Exit";
+            this.mnuFileExit.Click += new System.EventHandler(this.mnuFileExit_Click);
             // 
             // mnuTemplates
             // 
             this.mnuTemplates.Name = "mnuTemplates";
-            this.mnuTemplates.Size = new System.Drawing.Size(74, 20);
+            this.mnuTemplates.Size = new System.Drawing.Size(73, 20);
             this.mnuTemplates.Text = "Templates";
             this.mnuTemplates.Click += new System.EventHandler(this.mnuTemplates_Click);
             // 
             // mnuGradeType
             // 
             this.mnuGradeType.Name = "mnuGradeType";
-            this.mnuGradeType.Size = new System.Drawing.Size(79, 20);
+            this.mnuGradeType.Size = new System.Drawing.Size(78, 20);
             this.mnuGradeType.Text = "Grade Type";
             this.mnuGradeType.Click += new System.EventHandler(this.mnuGradeType_Click);
             // 
             // mnuTransmutationTable
             // 
             this.mnuTransmutationTable.Name = "mnuTransmutationTable";
-            this.mnuTransmutationTable.Size = new System.Drawing.Size(129, 20);
+            this.mnuTransmutationTable.Size = new System.Drawing.Size(127, 20);
             this.mnuTransmutationTable.Text = "Transmutation Table";
             this.mnuTransmutationTable.Click += new System.EventHandler(this.mnuTransmutationTable_Click);
             // 
@@ -265,10 +265,10 @@
             this.lvEntries.FullRowSelect = true;
             this.lvEntries.HideSelection = false;
             this.lvEntries.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem17,
-            listViewItem18,
-            listViewItem19,
-            listViewItem20});
+            listViewItem41,
+            listViewItem42,
+            listViewItem43,
+            listViewItem44});
             this.lvEntries.Location = new System.Drawing.Point(12, 524);
             this.lvEntries.Margin = new System.Windows.Forms.Padding(4);
             this.lvEntries.Name = "lvEntries";
@@ -366,10 +366,10 @@
             this.lvSection.FullRowSelect = true;
             this.lvSection.HideSelection = false;
             this.lvSection.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem21,
-            listViewItem22,
-            listViewItem23,
-            listViewItem24});
+            listViewItem45,
+            listViewItem46,
+            listViewItem47,
+            listViewItem48});
             this.lvSection.Location = new System.Drawing.Point(0, 190);
             this.lvSection.Name = "lvSection";
             this.lvSection.Size = new System.Drawing.Size(429, 191);
@@ -410,16 +410,6 @@
             this.imgBuild.TabStop = false;
             this.toolTip1.SetToolTip(this.imgBuild, "CLICK TO ENTER/EXIT BUILD MODE");
             this.imgBuild.Click += new System.EventHandler(this.imgBuild_Click);
-            // 
-            // btnTest
-            // 
-            this.btnTest.Location = new System.Drawing.Point(343, 475);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(136, 23);
-            this.btnTest.TabIndex = 11;
-            this.btnTest.Text = "Enter Dummy Data";
-            this.btnTest.UseVisualStyleBackColor = true;
-            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
             // dlgLoadClass
             // 
@@ -613,6 +603,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Edit/Delete Entries";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(252, 302);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(48, 16);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "Period";
+            // 
+            // txtPeriod
+            // 
+            this.txtPeriod.Location = new System.Drawing.Point(250, 321);
+            this.txtPeriod.Name = "txtPeriod";
+            this.txtPeriod.Size = new System.Drawing.Size(412, 22);
+            this.txtPeriod.TabIndex = 23;
+            this.txtPeriod.TextChanged += new System.EventHandler(this.txtPeriod_TextChanged);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -637,7 +644,7 @@
             this.lblTotalWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalWeight.Location = new System.Drawing.Point(174, 352);
             this.lblTotalWeight.Name = "lblTotalWeight";
-            this.lblTotalWeight.Size = new System.Drawing.Size(17, 16);
+            this.lblTotalWeight.Size = new System.Drawing.Size(16, 16);
             this.lblTotalWeight.TabIndex = 10;
             this.lblTotalWeight.Text = "0";
             // 
@@ -656,7 +663,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(54, 352);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 16);
+            this.label2.Size = new System.Drawing.Size(114, 16);
             this.label2.TabIndex = 9;
             this.label2.Text = "Overall Weight:";
             // 
@@ -957,23 +964,6 @@
             this.tabBuilder.TabIndex = 12;
             this.tabBuilder.SelectedIndexChanged += new System.EventHandler(this.tabBuilder_SelectedIndexChanged);
             // 
-            // txtPeriod
-            // 
-            this.txtPeriod.Location = new System.Drawing.Point(250, 321);
-            this.txtPeriod.Name = "txtPeriod";
-            this.txtPeriod.Size = new System.Drawing.Size(412, 22);
-            this.txtPeriod.TabIndex = 23;
-            this.txtPeriod.TextChanged += new System.EventHandler(this.txtPeriod_TextChanged);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(252, 302);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(48, 16);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "Period";
-            // 
             // Builder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -982,7 +972,6 @@
             this.ClientSize = new System.Drawing.Size(1008, 730);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabBuilder);
-            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.lvEntries);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1031,7 +1020,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.OpenFileDialog dlgLoadClass;
         private System.Windows.Forms.SaveFileDialog dlgSaveClass;
-        private System.Windows.Forms.Button btnTest;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.ToolStripMenuItem mnuFile;
