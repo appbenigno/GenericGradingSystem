@@ -29,50 +29,50 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Science and Technology",
             "150",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Mathematics",
             "125",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem19 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Spelling",
             "115",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem20 = new System.Windows.Forms.ListViewItem(new string[] {
             "Skywalker, Luke _.",
             "Jedi Knights",
             "Quiz",
             "Introduction to Cloud Computing",
             "150",
             "150"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem21 = new System.Windows.Forms.ListViewItem(new string[] {
             "Jedi Knights",
             "Skywalker",
             "Luke",
             "_"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem22 = new System.Windows.Forms.ListViewItem(new string[] {
             "Jedi Masters",
             "Skywalker",
             "Anakin",
             "_"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem23 = new System.Windows.Forms.ListViewItem(new string[] {
             "Jedi Masters",
             "Kenobi",
             "Obi-Wan",
             "_"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem24 = new System.Windows.Forms.ListViewItem(new string[] {
             "Sith Lords",
             "Tyranus",
             "Darth",
@@ -265,10 +265,10 @@
             this.lvEntries.FullRowSelect = true;
             this.lvEntries.HideSelection = false;
             this.lvEntries.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem9,
-            listViewItem10,
-            listViewItem11,
-            listViewItem12});
+            listViewItem17,
+            listViewItem18,
+            listViewItem19,
+            listViewItem20});
             this.lvEntries.Location = new System.Drawing.Point(12, 524);
             this.lvEntries.Margin = new System.Windows.Forms.Padding(4);
             this.lvEntries.Name = "lvEntries";
@@ -366,10 +366,10 @@
             this.lvSection.FullRowSelect = true;
             this.lvSection.HideSelection = false;
             this.lvSection.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem13,
-            listViewItem14,
-            listViewItem15,
-            listViewItem16});
+            listViewItem21,
+            listViewItem22,
+            listViewItem23,
+            listViewItem24});
             this.lvSection.Location = new System.Drawing.Point(0, 190);
             this.lvSection.Name = "lvSection";
             this.lvSection.Size = new System.Drawing.Size(429, 191);
@@ -986,6 +986,7 @@
             this.Controls.Add(this.lvEntries);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Builder";

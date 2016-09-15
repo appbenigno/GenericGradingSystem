@@ -65,6 +65,16 @@ namespace Grading_System
             }
 
             //
+            // Transmutation Table Directory
+            //
+            bool matrixDirectoryExist = Directory.Exists(Path.GetFullPath(".\\") + FormControl.XML.FileStructure.matrixPath);
+            if (!matrixDirectoryExist)
+            {
+                Directory.CreateDirectory(Path.GetFullPath(".\\") + FormControl.XML.FileStructure.matrixPath);
+            }
+
+
+            //
             // Populate Activities List
             //
             GS.getActivities(lvActivitiesList);

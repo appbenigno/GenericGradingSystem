@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
+using System.IO;
 
 namespace Grading_System
 {
@@ -323,8 +324,8 @@ namespace Grading_System
             ListViewHitTestInfo hitTest = lvGrade.HitTest(mousePos);
             int columnIndex = hitTest.Item.SubItems.IndexOf(hitTest.SubItem);
             int rowIndex = hitTest.Item.Index;
-            MessageBox.Show(columnIndex.ToString(), "columnIndex"); // to test x y coordinates
-            MessageBox.Show(rowIndex.ToString(), "RowIndex");
+            //MessageBox.Show(columnIndex.ToString(), "columnIndex"); // to test x y coordinates
+            //MessageBox.Show(rowIndex.ToString(), "RowIndex");
 
             if (columnIndex != -1 && rowIndex != -1 && columnIndex < 3 && columnIndex != 1) // for columns 0 and 1 grade range 1 and 2
             {
@@ -467,6 +468,17 @@ namespace Grading_System
         private void btnMapua_Click(object sender, EventArgs e)
         {
             Globals.Transmutation.transmutationMapua(lvGrade);
+        }
+
+        private void btnLoadMatrix_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                openMatrix.InitialDirectory = Path.GetFullPath(".\\") + FormControl.XML.FileStructure.matrixPath;
+                openMatrix.ShowDialog();
+                FormControl.XML.LoadMatrix(lvGrade, openMatrix, notifyIcon);
+            }
+            catch { }
         }
     }
 }

@@ -48,7 +48,8 @@
             this.btnLoadMatrix = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.openMatrix = new System.Windows.Forms.OpenFileDialog();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -221,6 +222,7 @@
             this.btnLoadMatrix.Text = "Load Matrix";
             this.toolTip1.SetToolTip(this.btnLoadMatrix, "Load a transmutation matrix");
             this.btnLoadMatrix.UseVisualStyleBackColor = true;
+            this.btnLoadMatrix.Click += new System.EventHandler(this.btnLoadMatrix_Click);
             // 
             // pictureBox1
             // 
@@ -233,9 +235,14 @@
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
-            // openFileDialog1
+            // openMatrix
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openMatrix.Filter = "XML Records|*.xml";
+            // 
+            // notifyIcon
+            // 
+            this.notifyIcon.Text = "notifyIcon1";
+            this.notifyIcon.Visible = true;
             // 
             // Transmutation
             // 
@@ -286,7 +293,8 @@
         private System.Windows.Forms.Button btnLoadMatrix;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openMatrix;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
     }
 }
 

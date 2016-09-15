@@ -41,13 +41,20 @@ namespace Grading_System
         {
             if (flags.isRaised("selectedtemplate"))
             {
-                saveHTML.InitialDirectory = Path.GetFullPath(".\\") + FormControl.HTML.FileStructure.htmlPath;
-                saveHTML.ShowDialog();
-                FormControl.HTML.Write(Globals.Theme.selected, Globals.Builder.Activities, Globals.Builder.Entries, saveHTML, notifyIcon);
+                if (flags.isRaised("selectedtransmutation"))
+                {
+                    saveHTML.InitialDirectory = Path.GetFullPath(".\\") + FormControl.HTML.FileStructure.htmlPath;
+                    saveHTML.ShowDialog();
+                    FormControl.HTML.Write(Globals.Theme.selected, Globals.Builder.Activities, Globals.Builder.Entries, saveHTML, notifyIcon);
+                }
+                else
+                {
+                    MessageBox.Show("Select a transmutation matrix before generating html as basis for computation.", "No selected base of computation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {
-                MessageBox.Show("Select a template first.", "No selected template");
+                MessageBox.Show("Select a template first.", "No selected template", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

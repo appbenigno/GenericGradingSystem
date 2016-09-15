@@ -28,108 +28,190 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GradeType));
-            this.lvGradePreview = new System.Windows.Forms.ListView();
-            this.chGradePreview = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnPercentage = new System.Windows.Forms.Button();
-            this.btnLetter = new System.Windows.Forms.Button();
-            this.btnGradePoint1 = new System.Windows.Forms.Button();
-            this.btnGradePoint4 = new System.Windows.Forms.Button();
-            this.btnOK = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lvGrade = new System.Windows.Forms.ListView();
+            this.Range1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Separator = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Range2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.equiv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.descr = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.openMatrix = new System.Windows.Forms.OpenFileDialog();
+            this.saveMatrix = new System.Windows.Forms.SaveFileDialog();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lvGradePreview
+            // pictureBox1
             // 
-            this.lvGradePreview.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.chGradePreview});
-            this.lvGradePreview.Location = new System.Drawing.Point(50, 31);
-            this.lvGradePreview.Name = "lvGradePreview";
-            this.lvGradePreview.Size = new System.Drawing.Size(108, 251);
-            this.lvGradePreview.TabIndex = 0;
-            this.lvGradePreview.UseCompatibleStateImageBehavior = false;
-            this.lvGradePreview.View = System.Windows.Forms.View.Details;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Grading_System.ProjResource.lbl_transmutation;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 21);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(275, 37);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
-            // chGradePreview
+            // lvGrade
             // 
-            this.chGradePreview.Text = "Grade Peview";
-            this.chGradePreview.Width = 102;
+            this.lvGrade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lvGrade.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Range1,
+            this.Separator,
+            this.Range2,
+            this.equiv,
+            this.descr});
+            this.lvGrade.FullRowSelect = true;
+            this.lvGrade.GridLines = true;
+            this.lvGrade.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvGrade.HoverSelection = true;
+            this.lvGrade.LabelEdit = true;
+            this.lvGrade.Location = new System.Drawing.Point(17, 66);
+            this.lvGrade.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.lvGrade.MultiSelect = false;
+            this.lvGrade.Name = "lvGrade";
+            this.lvGrade.Size = new System.Drawing.Size(383, 481);
+            this.lvGrade.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.lvGrade, "Double click a row to edit data");
+            this.lvGrade.UseCompatibleStateImageBehavior = false;
+            this.lvGrade.View = System.Windows.Forms.View.Details;
+            this.lvGrade.DoubleClick += new System.EventHandler(this.lvGrade_DoubleClick);
             // 
-            // btnPercentage
+            // Range1
             // 
-            this.btnPercentage.Location = new System.Drawing.Point(197, 151);
-            this.btnPercentage.Name = "btnPercentage";
-            this.btnPercentage.Size = new System.Drawing.Size(117, 35);
-            this.btnPercentage.TabIndex = 1;
-            this.btnPercentage.Text = "Custom";
-            this.btnPercentage.UseVisualStyleBackColor = true;
-            this.btnPercentage.Click += new System.EventHandler(this.btnPercentage_Click);
+            this.Range1.Text = "From";
+            this.Range1.Width = 50;
             // 
-            // btnLetter
+            // Separator
             // 
-            this.btnLetter.Location = new System.Drawing.Point(197, 31);
-            this.btnLetter.Name = "btnLetter";
-            this.btnLetter.Size = new System.Drawing.Size(117, 35);
-            this.btnLetter.TabIndex = 2;
-            this.btnLetter.Text = "Letter Grading";
-            this.btnLetter.UseVisualStyleBackColor = true;
-            this.btnLetter.Click += new System.EventHandler(this.btnLetter_Click);
+            this.Separator.Text = "-";
+            this.Separator.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Separator.Width = 26;
             // 
-            // btnGradePoint1
+            // Range2
             // 
-            this.btnGradePoint1.Location = new System.Drawing.Point(197, 72);
-            this.btnGradePoint1.Name = "btnGradePoint1";
-            this.btnGradePoint1.Size = new System.Drawing.Size(117, 35);
-            this.btnGradePoint1.TabIndex = 3;
-            this.btnGradePoint1.Text = "Grade Point (1 to 5)";
-            this.btnGradePoint1.UseVisualStyleBackColor = true;
-            this.btnGradePoint1.Click += new System.EventHandler(this.btnGradePoint1_Click);
+            this.Range2.Text = "To";
+            this.Range2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Range2.Width = 50;
             // 
-            // btnGradePoint4
+            // equiv
             // 
-            this.btnGradePoint4.Location = new System.Drawing.Point(197, 113);
-            this.btnGradePoint4.Name = "btnGradePoint4";
-            this.btnGradePoint4.Size = new System.Drawing.Size(117, 32);
-            this.btnGradePoint4.TabIndex = 4;
-            this.btnGradePoint4.Text = "Grade Point (4 to 0)";
-            this.btnGradePoint4.UseVisualStyleBackColor = true;
-            this.btnGradePoint4.Click += new System.EventHandler(this.btnGradePoint4_Click);
+            this.equiv.Text = "Equivalent";
+            this.equiv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.equiv.Width = 96;
             // 
-            // btnOK
+            // descr
             // 
-            this.btnOK.Location = new System.Drawing.Point(219, 259);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
-            this.btnOK.TabIndex = 5;
-            this.btnOK.Text = "OK";
-            this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            this.descr.Text = "Description";
+            this.descr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.descr.Width = 151;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(418, 90);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(100, 28);
+            this.btnAdd.TabIndex = 17;
+            this.btnAdd.Text = "Add Values";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // openMatrix
+            // 
+            this.openMatrix.Filter = "XML Records|*.xml";
+            // 
+            // saveMatrix
+            // 
+            this.saveMatrix.Filter = "XML Records|*.xml";
+            // 
+            // notifyIcon
+            // 
+            this.notifyIcon.Text = "notifyIcon1";
+            this.notifyIcon.Visible = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(418, 126);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(100, 28);
+            this.btnDelete.TabIndex = 18;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(418, 191);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(100, 28);
+            this.btnSave.TabIndex = 19;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(418, 227);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(100, 28);
+            this.btnLoad.TabIndex = 20;
+            this.btnLoad.Text = "Load";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // GradeType
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 310);
-            this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.btnGradePoint4);
-            this.Controls.Add(this.btnGradePoint1);
-            this.Controls.Add(this.btnLetter);
-            this.Controls.Add(this.btnPercentage);
-            this.Controls.Add(this.lvGradePreview);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(535, 597);
+            this.Controls.Add(this.btnLoad);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lvGrade);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
             this.Name = "GradeType";
             this.Text = "GradeType";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GradeType_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListView lvGradePreview;
-        private System.Windows.Forms.ColumnHeader chGradePreview;
-        private System.Windows.Forms.Button btnPercentage;
-        private System.Windows.Forms.Button btnLetter;
-        private System.Windows.Forms.Button btnGradePoint1;
-        private System.Windows.Forms.Button btnGradePoint4;
-        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ListView lvGrade;
+        private System.Windows.Forms.ColumnHeader Range1;
+        private System.Windows.Forms.ColumnHeader Separator;
+        private System.Windows.Forms.ColumnHeader Range2;
+        private System.Windows.Forms.ColumnHeader equiv;
+        private System.Windows.Forms.ColumnHeader descr;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.OpenFileDialog openMatrix;
+        private System.Windows.Forms.SaveFileDialog saveMatrix;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

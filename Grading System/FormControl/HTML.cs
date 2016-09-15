@@ -18,20 +18,24 @@ namespace Grading_System.FormControl
 
         public static void Write(Label selectedTheme, ListView activityList, ListView entryList, SaveFileDialog saveDialog, NotifyIcon notifyIcon)
         {
-            if (selectedTheme.Text.Equals("Simple"))
+            try
             {
-                StreamWriter xWrite = new StreamWriter("test.html");
-                xWrite.WriteLine(Globals.Templates.Simple(activityList, entryList));
-                xWrite.Close();
-                FormControl.Notify.ShowBalloon(notifyIcon, "HTM File Saved", "HTM page generated successfully at " + saveDialog.FileName);
+                if (selectedTheme.Text.Equals("Simple"))
+                {
+                    StreamWriter xWrite = new StreamWriter(saveDialog.FileName);
+                    xWrite.WriteLine(Globals.Templates.Simple(activityList, entryList));
+                    xWrite.Close();
+                    FormControl.Notify.ShowBalloon(notifyIcon, "HTM File Saved", "HTM page generated successfully at " + saveDialog.FileName);
+                }
+                else if (selectedTheme.Text.Equals("Blue"))
+                {
+                    StreamWriter xWrite = new StreamWriter(saveDialog.FileName);
+                    xWrite.WriteLine(Globals.Templates.Blue(activityList, entryList));
+                    xWrite.Close();
+                    FormControl.Notify.ShowBalloon(notifyIcon, "HTM File Saved", "Class list saved successfully");
+                }
             }
-            else if (selectedTheme.Text.Equals("Blue"))
-            {
-                StreamWriter xWrite = new StreamWriter("test.html");
-                xWrite.WriteLine(Globals.Templates.Blue(activityList, entryList));
-                xWrite.Close();
-                FormControl.Notify.ShowBalloon(notifyIcon, "HTM File Saved", "Class list saved successfully");
-            }
+            catch { }
         } 
 
         

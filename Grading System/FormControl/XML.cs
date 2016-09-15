@@ -12,6 +12,46 @@ namespace Grading_System.FormControl
         public static class FileStructure
         {
             public static string recordsPath = "records";
+            public static string matrixPath = "matrix";
+        }
+
+        public static void SaveMatrix(ListView matrixList, SaveFileDialog saveDialog, NotifyIcon notifyIcon)
+        {
+            XmlWriterSettings mysettings = new XmlWriterSettings();
+            mysettings.Indent = true;
+            XmlWriter xWrite = XmlWriter.Create(saveDialog.FileName, mysettings);
+
+            xWrite.WriteStartDocument();
+            xWrite.WriteStartElement("GradingSystem");
+
+            xWrite.WriteStartElement("TransmutationTable");
+            for (int x1 = 0; x1 < matrixList.Items.Count; x1++)
+            {
+                xWrite.WriteStartElement("Record");
+                xWrite.WriteAttributeString("From", matrixList.Items[x1].SubItems[0].Text);
+                xWrite.WriteAttributeString("Separator", matrixList.Items[x1].SubItems[1].Text);
+                xWrite.WriteAttributeString("To", matrixList.Items[x1].SubItems[2].Text);
+                xWrite.WriteAttributeString("Equivalent", matrixList.Items[x1].SubItems[3].Text);
+                xWrite.WriteAttributeString("Description", matrixList.Items[x1].SubItems[4].Text);
+                xWrite.WriteEndElement();
+            }
+            xWrite.WriteEndElement();
+
+            xWrite.WriteEndElement();
+            xWrite.WriteEndDocument();
+            xWrite.Close();
+
+            FormControl.Notify.ShowBalloon(notifyIcon, "Transmutation Table Saved", "Matrix list saved successfully at " + saveDialog.FileName);
+        }
+
+        public static void LoadMatrix(ListView matrixList, OpenFileDialog openDialog, NotifyIcon notifyIcon)
+        {
+            try
+            {
+                readMatrixList(matrixList, "TransmutationTable", "Record", openDialog);
+                FormControl.Notify.ShowBalloon(notifyIcon, "Transmutation Table Loaded", "Matrix list loaded successfully");
+            }
+            catch { }
         }
         public static void SaveClassList(ListView classList, ListView activitiesList, ListView entriesList, SaveFileDialog saveDialog, NotifyIcon notifyIcon)
         {
@@ -150,6 +190,35 @@ namespace Grading_System.FormControl
                                 lviItems.SubItems.Add(xRead.GetAttribute("Description").ToString());
                                 lviItems.SubItems.Add(xRead.GetAttribute("Score").ToString());
                                 lviItems.SubItems.Add(xRead.GetAttribute("MaxScore").ToString());
+                                targetList.Items.Add(lviItems);
+                            }
+                        }
+                    }
+                }
+            }
+            xRead.Close();
+        }
+
+        protected static void readMatrixList(ListView targetList, string elementParent, string elementChild, OpenFileDialog openDialog)
+        {
+            XmlReader xRead = XmlReader.Create(openDialog.FileName);
+            xRead.ReadStartElement("GradingSystem");
+            targetList.Items.Clear();
+            while (xRead.Read())
+            {
+                if (xRead.NodeType == XmlNodeType.Element && xRead.Name == elementParent)
+                {
+                    while (xRead.Read())
+                    {
+                        if (xRead.NodeType == XmlNodeType.Element && xRead.Name == elementChild)
+                        {
+                            if (xRead.HasAttributes)
+                            {
+                                ListViewItem lviItems = new ListViewItem(xRead.GetAttribute("From").ToString());
+                                lviItems.SubItems.Add(xRead.GetAttribute("Separator").ToString());
+                                lviItems.SubItems.Add(xRead.GetAttribute("To").ToString());
+                                lviItems.SubItems.Add(xRead.GetAttribute("Equivalent").ToString());
+                                lviItems.SubItems.Add(xRead.GetAttribute("Description").ToString());
                                 targetList.Items.Add(lviItems);
                             }
                         }

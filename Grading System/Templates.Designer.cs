@@ -37,7 +37,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imgTemplatePreview = new System.Windows.Forms.PictureBox();
-            this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgOK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -130,6 +129,7 @@
             this.Controls.Add(this.lstTemplates);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.imgTemplatePreview);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Templates";
@@ -138,8 +138,6 @@
             this.Activated += new System.EventHandler(this.Templates_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Templates_FormClosing);
             this.Load += new System.EventHandler(this.Templates_Load);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgOK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
